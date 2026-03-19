@@ -191,7 +191,7 @@ function CircularFlywheel({vis}){
   const nodes=[
     {color:"#FF6B35",title:"STRC Treasury Adoption",body:"Idle treasury cash moves into STRC, lifting internal yield, improving capital efficiency, and giving Tipolis direct operating familiarity with the asset.",top:"2%",left:"50%",transform:"translate(-50%,0)"},
     {color:"#F5A623",title:"Digital Money Becomes Credible",body:"Treasury use creates proof of concept. The same STRC logic can now support SATS as a resident-facing, yield-bearing digital dollar.",top:"18%",right:"0%"},
-    {color:"#2ECC71",title:"SATS AUM and Recurring Fees Grow",body:"As residents and businesses adopt SATS, deposits compound into AUM, recurring fee income appears, and the city gains a financially engaged user base.",top:"60%",right:"0%"},
+    {color:"#F5A623",title:"SATS AUM and Recurring Fees Grow",body:"As residents and businesses adopt SATS, deposits compound into AUM, recurring fee income appears, and the city gains a financially engaged user base.",top:"60%",right:"0%"},
     {color:"#3B82F6",title:"City Bonds Gain Natural Distribution",body:"AUM is no longer passive savings. SATS holders become the first buyer base for City Bonds, reducing funding friction and aligning city finance with city users.",bottom:"2%",left:"50%",transform:"translate(-50%,0)"},
     {color:"#3B82F6",title:"Infrastructure Quality Improves",body:"Bond proceeds fund real infrastructure. Better utilities, services, and urban quality raise the attractiveness of the International City.",top:"60%",left:"0%"},
     {color:"#FF6B35",title:"More Residents, More Deposits, Larger Treasury",body:"A stronger city attracts more residents, more companies, more deposits, and a larger corporate treasury, which expands the next STRC allocation and restarts the cycle.",top:"18%",left:"0%"},
@@ -1673,6 +1673,108 @@ function PageWhyNow(){
   ];;
   return(
     <div style={{padding:"60px 0"}}>
+
+      {/* ── ANSOFF MATRIX ────────────────────────────────────────── */}
+      <div style={{marginBottom:40}}>
+        <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#A78BFA"}}>Strategic Framework 01</div>
+        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>Ansoff Matrix — Where Do the Three Initiatives Fit?</h2>
+        <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>The Ansoff Matrix is a classic strategic planning tool that maps growth strategies across two axes: products (existing vs. new) and markets (existing vs. new). Each quadrant carries a different risk profile and resource requirement. As a Business Development framework, it reveals how Tipolis is executing a deliberate, sequenced expansion — starting low-risk and progressively entering higher-growth, higher-impact territory.</p>
+        <div style={{display:"grid",gridTemplateColumns:"60px 1fr 1fr",gridTemplateRows:"auto 1fr 1fr",gap:3,marginBottom:16,maxWidth:720}}>
+          {/* Axes labels */}
+          <div style={{gridRow:"1",gridColumn:"1"}}/>
+          <div style={{gridRow:"1",gridColumn:"2",textAlign:"center",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E",paddingBottom:6}}>Existing Products</div>
+          <div style={{gridRow:"1",gridColumn:"3",textAlign:"center",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E",paddingBottom:6}}>New Products</div>
+          {/* Row label: Existing Markets */}
+          <div style={{gridRow:"2",gridColumn:"1",display:"flex",alignItems:"center",justifyContent:"flex-end",paddingRight:8}}>
+            <span style={{writingMode:"vertical-rl",transform:"rotate(180deg)",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E"}}>Existing Markets</span>
+          </div>
+          {/* Cell 1: Market Penetration — STRC */}
+          <div style={{gridRow:"2",gridColumn:"2",background:"rgba(46,204,113,.12)",border:"2px solid #2ECC71",borderRadius:2,padding:"16px 18px"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#2ECC71",textTransform:"uppercase",marginBottom:6}}>Market Penetration</div>
+            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",marginBottom:6}}>STRC Treasury</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>Same market (Tipolis's own balance sheet), same need (treasury yield) — but a radically better instrument. No new customers, no new channels. The lowest-risk quadrant: proven product, proven customer, immediate implementation. STRC replaces T-Bills on an existing line item and delivers 3× the yield. This is where the journey starts — minimal execution risk, maximum financial impact on Day 1.</div>
+          </div>
+          {/* Cell 2: Product Development — Digital Money */}
+          <div style={{gridRow:"2",gridColumn:"3",background:"rgba(245,166,35,.10)",border:"2px solid #F5A623",borderRadius:2,padding:"16px 18px"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#F5A623",textTransform:"uppercase",marginBottom:6}}>Product Development</div>
+            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",marginBottom:6}}>Digital Money (SATS)</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>New product (a yield-bearing stablecoin and Digital Bank) delivered to an existing and captive market — the residents and businesses already inside the ICT. The infrastructure, trust relationship, and distribution channel already exist. Tipolis is not acquiring new customers; it is deepening value for the ones it already has. This is where financial lock-in is built and where AUM compounds over time.</div>
+          </div>
+          {/* Row label: New Markets */}
+          <div style={{gridRow:"3",gridColumn:"1",display:"flex",alignItems:"center",justifyContent:"flex-end",paddingRight:8}}>
+            <span style={{writingMode:"vertical-rl",transform:"rotate(180deg)",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E"}}>New Markets</span>
+          </div>
+          {/* Cell 3: Market Development — empty */}
+          <div style={{gridRow:"3",gridColumn:"2",background:"rgba(255,255,255,.03)",border:"1px dashed rgba(255,255,255,.1)",borderRadius:2,padding:"16px 18px",display:"flex",alignItems:"center",justifyContent:"center"}}>
+            <div style={{fontSize:11,color:"#3A4A5A",fontStyle:"italic",textAlign:"center",lineHeight:1.6}}>Market Development<br/><span style={{fontSize:10,color:"#3A4A5A"}}>Not pursued — Tipolis's existing infrastructure would be offered to new geographies without new products. City expansion serves this function organically.</span></div>
+          </div>
+          {/* Cell 4: Diversification — City Bonds */}
+          <div style={{gridRow:"3",gridColumn:"3",background:"rgba(59,130,246,.12)",border:"2px solid #3B82F6",borderRadius:2,padding:"16px 18px"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#3B82F6",textTransform:"uppercase",marginBottom:6}}>Diversification</div>
+            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",marginBottom:6}}>City Bonds</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>New product (tokenized municipal debt instruments) for a new market (qualified institutional and individual investors in global capital markets). The highest-risk quadrant — but critically, Tipolis arrives here already armed: SATS AUM creates the distribution channel and pre-qualified investor pool, making this a de-risked diversification, not a cold-start one. The risk is sequenced away by building Phases 1 and 2 first.</div>
+          </div>
+        </div>
+        <div style={{background:"rgba(167,139,250,.06)",border:"1px solid rgba(167,139,250,.2)",borderRadius:2,padding:"12px 16px",fontSize:12,color:"#C8D4E0",lineHeight:1.75}}>
+          <strong style={{color:"#A78BFA"}}>Strategic insight:</strong> The three initiatives are not independent bets — they are a sequenced risk ladder. STRC (Market Penetration) proves the thesis internally. SATS (Product Development) builds the distribution moat. City Bonds (Diversification) monetizes it at scale. Each step reduces the risk of the next. This is intentional design, not coincidence.
+        </div>
+      </div>
+
+      {/* ── NPD PROCESS ─────────────────────────────────────────── */}
+      <div style={{marginBottom:40}}>
+        <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#F5A623"}}>Strategic Framework 02</div>
+        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>New Product Development — Where Is Each Initiative Today?</h2>
+        <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>The NPD (New Product Development) framework maps the journey from idea to launch across seven stages. Tracking each initiative on this axis removes ambiguity: it shows what has already been validated, what decisions remain, and what execution is required. Critically, it reveals that Tipolis is not at Stage 1 for any of these initiatives — significant validation work has already been done.</p>
+        {/* Stage timeline */}
+        {(function(){
+          var stages=["Idea Generation","Idea Screening","Concept Dev. & Testing","Strategy & Business Analysis","Product Development","Test Marketing","Product Launch"];
+          var initiatives=[
+            {label:"STRC Treasury",color:"#2ECC71",stage:6,note:"Ready to implement today. The product (STRC) already exists on NYSE, the business case is proven, risk is quantified, and zero new infrastructure is required. This is a treasury reallocation decision, not a product build."},
+            {label:"Digital Money · SATS",color:"#F5A623",stage:4,note:"Saturn Labs (usdat.xyz) provides a live proof of concept. The Digital Bank structure is defined, the revenue model is modeled, and regulatory pathways (MiCA, GENIUS Act) are mapped. Currently in Product Development — the banking partner selection and licensing process is the active workstream."},
+            {label:"City Bonds",color:"#3B82F6",stage:3,note:"Business analysis is complete. The BitBonds precedent (US Treasury proposal, 2025) provides market validation at sovereign scale. The model is financially modeled across scenarios. Moving to Product Development is contingent on Digital Money reaching sufficient AUM — a defined, trackable threshold."},
+          ];
+          return(
+            <div>
+              {/* Stage headers */}
+              <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:3,marginBottom:16}}>
+                {stages.map(function(s,i){
+                  return(
+                    <div key={i} style={{background:"rgba(255,255,255,.04)",border:"1px solid rgba(255,255,255,.08)",borderRadius:2,padding:"8px 6px",textAlign:"center"}}>
+                      <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#7A8A9E",letterSpacing:1,textTransform:"uppercase",lineHeight:1.4}}>{s}</div>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* Initiative progress bars */}
+              {initiatives.map(function(ini){
+                return(
+                  <div key={ini.label} style={{marginBottom:14}}>
+                    <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:3,marginBottom:6}}>
+                      {stages.map(function(s,i){
+                        var active=i<=ini.stage;
+                        var isCurrent=i===ini.stage;
+                        return(
+                          <div key={i} style={{height:28,borderRadius:2,background:active?ini.color+(isCurrent?"":"99"):"rgba(255,255,255,.04)",border:isCurrent?"2px solid "+ini.color:"1px solid rgba(255,255,255,.06)",display:"flex",alignItems:"center",justifyContent:"center",position:"relative",transition:"all .2s"}}>
+                            {isCurrent&&<span style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#001829",fontWeight:700,letterSpacing:.5}}>NOW</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div style={{display:"flex",gap:10,alignItems:"flex-start",padding:"10px 14px",background:ini.color+"10",border:"1px solid "+ini.color+"30",borderLeft:"3px solid "+ini.color,borderRadius:2}}>
+                      <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:15,color:ini.color,minWidth:140,flexShrink:0}}>{ini.label}</div>
+                      <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>{ini.note}</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })()}
+        <div style={{background:"rgba(245,166,35,.06)",border:"1px solid rgba(245,166,35,.2)",borderRadius:2,padding:"12px 16px",fontSize:12,color:"#C8D4E0",lineHeight:1.75,marginTop:8}}>
+          <strong style={{color:"#F5A623"}}>Key takeaway:</strong> The NPD stage of each initiative is not a coincidence — it reflects a deliberate sequencing. STRC can be decided and executed this quarter. SATS is in active development. City Bonds have a clear trigger condition. The question is not whether to build — the question is how fast.
+        </div>
+      </div>
+      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"8px 0 36px"}}/>
       {/* Business Model Navigator — moved from Digital Money */}
       <IBadge label="Business Model Analysis" color="#A78BFA"/>
       <div style={{fontSize:10,color:"#A78BFA",fontFamily:"'DM Mono',monospace",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Business Navigator Analysis</div>
@@ -1816,303 +1918,129 @@ const PAGES=[
    PAGE: QUESTIONS — AI Chat powered by OpenAI
    ══════════════════════════════════════════════════ */
 function PageQuestions(){
-  var [apiKey,setApiKey]=React.useState("");
-  var [model,setModel]=React.useState("gpt-4o");
+  var KEY="tipolis_oai_key";
+  var [apiKey,setApiKey]=React.useState(function(){try{return localStorage.getItem(KEY)||"";}catch(e){return "";}});
   var [messages,setMessages]=React.useState([]);
   var [input,setInput]=React.useState("");
   var [loading,setLoading]=React.useState(false);
   var [error,setError]=React.useState("");
-  var [configured,setConfigured]=React.useState(false);
-  var [streaming,setStreaming]=React.useState(false);
+  var [adminOpen,setAdminOpen]=React.useState(false);
+  var [adminKey,setAdminKey]=React.useState("");
+  var [logoClicks,setLogoClicks]=React.useState(0);
   var bottomRef=React.useRef(null);
-
-  // ── System prompt: full Tipolis knowledge base ──────────────────
-  var SYSTEM_PROMPT = [
-    "Você é um especialista no projeto Tipolis — uma proposta estratégica de capital para 2026 que apresenta três iniciativas financeiras interligadas para Internacional Cities (ICTs). Responda sempre de forma clara, objetiva e bem fundamentada com base no conhecimento abaixo.",
-    "",
-    "## ESTRUTURA GERAL DO PROJETO",
-    "O projeto apresenta 3 iniciativas auto-reforçantes que formam uma arquitetura financeira unificada:",
-    "1. STRC Treasury — Otimização do tesouro de reservas",
-    "2. Digital Money (SATS) — Dólar digital yield-bearing para ICTs",
-    "3. City Bonds — Bonds municipais estilo BitBonds para financiamento de infraestrutura",
-    "",
-    "## STRC TREASURY",
-    "- STRC é a ação preferencial da Strategy (antiga MicroStrategy), negociada na NYSE",
-    "- Denominado em USD, paga distribuições mensais lastreadas em ~US$49B em Bitcoin",
-    "- Yield histórico: 9–12% a.a. vs ~3,7% dos T-Bills",
-    "- Return-of-capital (imposto diferido até a venda)",
-    "- A Tipolis pode realocar 20–40% de suas reservas operacionais em STRC",
-    "- Em US$100M de reservas: ganho adicional de até US$7,8M/ano sem capital novo",
-    "- Cobertura: BTC precisaria cair ~94% para comprometer as obrigações do STRC",
-    "- Risco mínimo: sem custódia cripto, sem alavancagem, sem lock-up",
-    "- OranjeBTC, Prevalon Energy e Anchorage Digital já adicionaram STRC ao balanço (Strategy World 2026)",
-    "",
-    "## DIGITAL MONEY — SATS (Satoshi Dollar)",
-    "- Stablecoin USD-pegged, totalmente lastreada em STRC",
-    "- Tier 1 (moradores ICT): 10% a.a. yield | Tier 2 (usuários globais): 8% a.a.",
-    "- Tipolis forma JV com parceiro bancário; capital investido pela Tipolis: ~zero",
-    "- Tipolis recebe 0,25% de AUM recorrente do primeiro dia",
-    "- Prova de conceito: Saturn Labs (usdat.xyz) — STRC-collateralized, $8.5B mercado",
-    "- Breakeven: ~US$74M AUM (OpEx fixo ~US$543K/yr na fase ultra-enxuta)",
-    "- Equipe fase 1: CEO/BD $75K, CTO $72K, CFO $66K, 2× Engineer $60K = $333K total pessoal",
-    "- Infraestrutura: $110–150K | Contingência: $80K | Total: $523–563K/yr",
-    "- Lançamento conservador: 5–6% para ambos os tiers, aumentando conforme confiança cresce",
-    "- Option A (JV): 0,25% AUM, sem opex para Tipolis",
-    "- Option B (operação própria): 1,0% AUM minus $543K fixo + 0,015% variável",
-    "- Benefícios para moradores: $1 par USD, sem risco cripto, liquidez diária, integração total na cidade",
-    "- Benefícios Host Nation: inclusão financeira, inflows de capital estrangeiro, sandbox fintech",
-    "- Riscos: STRC sobrecolateralizado 4,5×; backing real (não algorítmico); Tipolis perde somente receita se encerrar",
-    "- TAM combinado: ~$12,3T | Stablecoin yield market + $12T tesouraria corporativa + $400–600B SEZs",
-    "",
-    "## CITY BONDS",
-    "- Fase 2 do Banco Digital — camada de banco de investimento",
-    "- Bonds de prazo fixo (10 ou 20 anos) negociáveis em mercado secundário",
-    "- Cupom base: 6% a.a. (10yr) ou 4,5% a.a. (20yr) sobre o TOTAL investido",
-    "- Investidor recebe: principal + cupom + 50% da valorização do BTC",
-    "- Tipolis retém: 50% da valorização do BTC; usa capital operacional para gerar renda STRC (11%)",
-    "- Estrutura de alocação configurável: 90% ops / 10% BTC ou 50% ops / 50% BTC",
-    "- Inspirado no BitBonds (proposta ao Tesouro EUA 2025): bonds com menor cupom + upside BTC",
-    "- Emitir $2T em BitBonds geraria $70B/ano em economia de juros para os EUA",
-    "- Mecanismo auto-reforçante: cupons em fiat, reserva BTC nunca vendida, aprecia com o tempo",
-    "- Retornos Base Case (BTC 29% CAGR, P=$100K):",
-    "  - 90/10 · 10yr: IRR 9,7%, Portfolio $218.8K",
-    "  - 50/50 · 10yr: IRR 18,3%, Portfolio $454K",
-    "  - 90/10 · 20yr: IRR 13,7%, Portfolio $999K",
-    "  - 50/50 · 20yr: IRR 21,8%, Portfolio $4,237K",
-    "- Tipolis cashflow: renda STRC 11% × capital ops − cupom pago ao investidor",
-    "- Fluxo de caixa Tipolis (net/yr após ano 3):",
-    "  - 90/10 · 10yr: +$3.900/yr | 50/50 · 10yr: -$500/yr",
-    "  - 90/10 · 20yr: +$5.400/yr | 50/50 · 20yr: +$1.000/yr",
-    "- Infraestrutura tech: Botanix (Bitcoin L2, smart contracts) + Liquid Network (settlement institucional)",
-    "- Mercado secundário: bonds compráveis/vendíveis antes do vencimento",
-    "- TAM: $180T+ | SAM: $200–500B SEZs/cidades privadas | SOM: $3–18B (6 ICTs até 2035)",
-    "",
-    "## FLYWHEEL E ESTRATÉGIA",
-    "- Loop Digital Money: SATS AUM → receita Banco Digital → yield melhora → mais moradores",
-    "- Loop City Bonds: SATS AUM → pool investidores pré-qualificados → bonds financiam infraestrutura → mais moradores",
-    "- Business Model Navigator (St. Gallen, 6000+ transformações): Tipolis mapeia para 7 padrões:",
-    "  1. Layer Player (padrão central) — cobra pela camada, não pelo produto",
-    "  2. Two-Sided Platform — conecta moradores/investidores com infraestrutura",
-    "  3. White Label — usa parceiro bancário sem construir do zero",
-    "  4. Democratização — yield institucional acessível a moradores comuns",
-    "  5. Subscription / Recurring Revenue — 0,25% AUM + taxas de CB",
-    "  6. Lock-in Benevolente — histórico financeiro embutido na plataforma",
-    "  7. Razor & Blade — residência é o razor; SATS, CB, crédito são as blades",
-    "- Precedentes históricos: Veneza/Gênova (bonds soberanos séc. XII), Amsterdã (Wisselbank), Hong Kong, Singapura",
-    "- Timing: janela de entrada ótima — USDe Ethena cresceu $0→$5,6B em 12 meses; Tether/Circle não repassam yield",
-    "- GENIUS Act + CLARITY Act + US Strategic Bitcoin Reserve = confirmação do ambiente regulatório",
-    "- Custo de aquisição SATS: estruturalmente ~zero (canal exclusivo cidade)",
-    "- SATS AUM em $2B: 10% realocação = $200M em capital para City Bonds a custo zero de distribuição",
-    "",
-    "## OBJEÇÕES COMUNS E RESPOSTAS",
-    "Q: STRC é muito arriscado — é ligado ao Bitcoin?",
-    "A: STRC é denominado em USD com distribuições fixas contratualmente. O BTC precisaria cair ~94% para comprometer a cobertura. Durante o bear market de 2022 (BTC -75%), a Strategy permaneceu solvente. Não requer carteira cripto.",
-    "",
-    "Q: Por que não usar apenas T-Bills?",
-    "A: T-Bills rendem ~3,7%. STRC rende 9–12% com liquidez diária equivalente. A diferença em $100M de reservas é até $7,8M/ano sem capital adicional ou complexidade operacional.",
-    "",
-    "Q: O SATS pode colapsar como o Terra/Luna?",
-    "A: Não. SATS é 100% lastreado por ativos STRC reais (não algorítmico). O Banco Digital mantém cobertura total a todo momento. STRC tem $150M+ em volume diário, permitindo saída rápida.",
-    "",
-    "Q: A Tipolis tem capacidade de operar um banco?",
-    "A: Na estrutura JV (recomendada), o parceiro bancário opera tudo. A Tipolis contribui com a plataforma, moradores e posicionamento regulatório. Capital investido pela Tipolis: ~zero.",
-    "",
-    "Q: City Bonds são legais/regulatórios viáveis?",
-    "A: ICTs operam sob sandboxes regulatórios exclusivos. A camada de banco de investimento do Banco Digital estrutura os bonds como instrumentos de dívida regulados. A tokenização usa Botanix/Liquid Network para compliance institucional.",
-    "",
-    "Q: Por que o investidor aceitaria cupom menor (4,5–6%) vs bonds convencionais?",
-    "A: Em troca, recebe 50% da valorização do BTC. No Base Case (BTC 29% CAGR), o IRR de 9,7–21,8% supera amplamente qualquer bond convencional de mesmo prazo.",
-    "",
-    "Responda sempre baseado neste conhecimento. Se a pergunta estiver fora do escopo do projeto Tipolis, diga isso claramente e ofereça o que puder dentro do contexto disponível."
-  ].join("\n");
 
   React.useEffect(function(){
     if(bottomRef.current) bottomRef.current.scrollIntoView({behavior:"smooth"});
   },[messages,loading]);
 
-  function handleConfigure(e){
-    e.preventDefault();
-    if(!apiKey.trim()){setError("Por favor insira sua OpenAI API Key.");return;}
-    setConfigured(true);
-    setError("");
-    setMessages([{
-      role:"assistant",
-      content:"Olá! Sou especialista no projeto Tipolis. Pode me perguntar sobre STRC, Digital Money (SATS), City Bonds, o modelo financeiro, estratégia, fluxos de caixa, IRR, riscos ou qualquer outro aspecto do projeto."
-    }]);
+  function handleLogoClick(){
+    var n=logoClicks+1;
+    setLogoClicks(n);
+    if(n>=5){setAdminOpen(true);setAdminKey(apiKey);setLogoClicks(0);}
+  }
+  function saveKey(){
+    try{localStorage.setItem(KEY,adminKey);}catch(e){}
+    setApiKey(adminKey);
+    setAdminOpen(false);
   }
 
-  async function sendMessage(){
+  async function send(){
     if(!input.trim()||loading) return;
-    var userMsg={role:"user",content:input.trim()};
-    var history=[...messages,userMsg];
-    setMessages(history);
-    setInput("");
-    setLoading(true);
-    setError("");
+    if(!apiKey){setError("No API key configured. Contact the administrator.");return;}
+    var userText=input.trim();
+    var nextMsgs=[...messages,{role:"user",content:userText}];
+    setMessages(nextMsgs);
+    setInput("");setLoading(true);setError("");
     try{
-      var response=await fetch("https://api.openai.com/v1/chat/completions",{
+      var res=await fetch("https://api.openai.com/v1/chat/completions",{
         method:"POST",
         headers:{"Content-Type":"application/json","Authorization":"Bearer "+apiKey},
         body:JSON.stringify({
-          model:model,
-          messages:[{role:"system",content:SYSTEM_PROMPT}].concat(history),
-          temperature:0.6,
+          model:"gpt-4o",
+          messages:nextMsgs,
+          temperature:0.65,
           max_tokens:1200
         })
       });
-      if(!response.ok){
-        var err=await response.json().catch(function(){return {};});
-        throw new Error(err.error&&err.error.message?err.error.message:"Erro na API ("+response.status+")");
-      }
-      var data=await response.json();
-      var reply=data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content?""+data.choices[0].message.content:"(sem resposta)";
-      setMessages(history.concat([{role:"assistant",content:reply}]));
-    }catch(e){
-      setError("Erro: "+e.message);
-    }finally{
-      setLoading(false);
-    }
+      if(!res.ok){var e=await res.json().catch(function(){return{};});throw new Error((e.error&&e.error.message)||"API error ("+res.status+")");}
+      var d=await res.json();
+      var reply=(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content)||"(no response)";
+      setMessages([...nextMsgs,{role:"assistant",content:reply}]);
+    }catch(ex){setError("Error: "+ex.message);}
+    finally{setLoading(false);}
   }
 
-  function handleKeyDown(e){
-    if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();sendMessage();}
-  }
-
-  function resetChat(){
-    setMessages([{
-      role:"assistant",
-      content:"Conversa reiniciada. Como posso ajudar com o projeto Tipolis?"
-    }]);
-  }
-
-  // ── CONFIG PANEL ──────────────────────────────────────────────
-  if(!configured){
-    return(
-      <div style={{minHeight:"70vh",display:"flex",alignItems:"center",justifyContent:"center"}}>
-        <div style={{background:"rgba(168,85,247,.05)",border:"1px solid rgba(168,85,247,.3)",borderRadius:4,padding:"36px 40px",maxWidth:500,width:"100%"}}>
-          <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:"#A855F7",letterSpacing:3,textTransform:"uppercase",marginBottom:12}}>Configuração</div>
-          <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"#FFF",marginBottom:6,lineHeight:1}}>Questions</h2>
-          <p style={{fontSize:13,color:"#9AAABB",marginBottom:28,lineHeight:1.7}}>Esta página conecta ao ChatGPT via API da OpenAI. O assistente já vem pré-alimentado com todo o conhecimento do projeto Tipolis.</p>
-
-          <div style={{marginBottom:16}}>
-            <div style={{fontSize:11,fontFamily:"'DM Mono',monospace",color:"#7A8A9E",letterSpacing:1,textTransform:"uppercase",marginBottom:6}}>OpenAI API Key</div>
-            <input
-              type="password"
-              placeholder="sk-..."
-              value={apiKey}
-              onChange={function(e){setApiKey(e.target.value);}}
-              style={{width:"100%",boxSizing:"border-box",background:"#001829",border:"1px solid rgba(168,85,247,.4)",borderRadius:3,padding:"10px 14px",color:"#FFF",fontFamily:"'DM Mono',monospace",fontSize:13,outline:"none"}}
-            />
-            <div style={{fontSize:10,color:"#5A6A7A",marginTop:5}}>Sua chave fica apenas no browser. Nunca é enviada para nenhum servidor além da OpenAI.</div>
-          </div>
-
-          <div style={{marginBottom:24}}>
-            <div style={{fontSize:11,fontFamily:"'DM Mono',monospace",color:"#7A8A9E",letterSpacing:1,textTransform:"uppercase",marginBottom:6}}>Modelo</div>
-            <select value={model} onChange={function(e){setModel(e.target.value);}} style={{width:"100%",background:"#001829",border:"1px solid rgba(168,85,247,.4)",borderRadius:3,padding:"10px 14px",color:"#FFF",fontFamily:"'DM Mono',monospace",fontSize:13,outline:"none",cursor:"pointer"}}>
-              <option value="gpt-4o">GPT-4o (recomendado)</option>
-              <option value="gpt-4o-mini">GPT-4o Mini (rápido)</option>
-              <option value="gpt-4-turbo">GPT-4 Turbo</option>
-              <option value="gpt-4">GPT-4</option>
-              <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
-            </select>
-          </div>
-
-          {error&&<div style={{background:"rgba(239,68,68,.08)",border:"1px solid rgba(239,68,68,.3)",borderRadius:3,padding:"10px 14px",fontSize:12,color:"#EF4444",marginBottom:16}}>{error}</div>}
-
-          <button
-            onClick={handleConfigure}
-            style={{width:"100%",background:"#A855F7",border:"none",borderRadius:3,padding:"12px",color:"#FFF",fontFamily:"'DM Mono',monospace",fontSize:13,fontWeight:700,cursor:"pointer",letterSpacing:1}}>
-            CONECTAR
-          </button>
-
-          <div style={{marginTop:20,padding:"12px 14px",background:"rgba(59,130,246,.05)",border:"1px solid rgba(59,130,246,.15)",borderRadius:3}}>
-            <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:"#60A5FA",letterSpacing:1,marginBottom:6}}>CONHECIMENTO PRÉ-CARREGADO</div>
-            <div style={{fontSize:11,color:"#7A8A9E",lineHeight:1.7}}>
-              O assistente já conhece: STRC Treasury, Digital Money / SATS, City Bonds, modelo financeiro, cashflows, IRRs, premissas, riscos, TAM/SAM/SOM, Business Model Navigator, precedentes históricos e objeções comuns.
+  return(
+    <div style={{maxWidth:760,margin:"0 auto",padding:"40px 0 60px"}}>
+      {/* Admin modal */}
+      {adminOpen&&(
+        <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,.75)",zIndex:999,display:"flex",alignItems:"center",justifyContent:"center"}}>
+          <div style={{background:"#001829",border:"1px solid rgba(168,85,247,.4)",borderRadius:4,padding:"28px 32px",width:"100%",maxWidth:400}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:14}}>Admin — API Key</div>
+            <input type="password" placeholder="sk-..." value={adminKey} onChange={function(e){setAdminKey(e.target.value);}}
+              onKeyDown={function(e){if(e.key==="Enter")saveKey();}}
+              style={{width:"100%",background:"#001020",border:"1px solid rgba(255,255,255,.15)",borderRadius:3,padding:"9px 12px",color:"#fff",fontFamily:"'DM Mono',monospace",fontSize:12,outline:"none",marginBottom:6}}/>
+            <div style={{fontSize:10,color:"#3A4A5A",marginBottom:16}}>Stored in browser localStorage. Never sent anywhere except OpenAI.</div>
+            <div style={{display:"flex",gap:8}}>
+              <button onClick={function(){setAdminOpen(false);}} style={{flex:1,background:"rgba(255,255,255,.05)",border:"1px solid rgba(255,255,255,.1)",borderRadius:3,padding:"8px",color:"#7A8A9E",fontSize:10,cursor:"pointer",fontFamily:"'DM Mono',monospace"}}>CANCEL</button>
+              <button onClick={saveKey} style={{flex:1,background:"#A855F7",border:"none",borderRadius:3,padding:"8px",color:"#fff",fontSize:10,cursor:"pointer",fontFamily:"'DM Mono',monospace",fontWeight:700}}>SAVE</button>
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      )}
 
-  // ── CHAT INTERFACE ────────────────────────────────────────────
-  return(
-    <div style={{maxWidth:820,margin:"0 auto",padding:"28px 0 0"}}>
       {/* Header */}
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:20}}>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:28}}>
         <div>
-          <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#A855F7",letterSpacing:3,textTransform:"uppercase",marginBottom:4}}>AI Assistant · {model}</div>
-          <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:28,color:"#FFF",lineHeight:1,margin:0}}>Tipolis Questions</h2>
+          <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#A855F7",letterSpacing:3,textTransform:"uppercase",marginBottom:4}}>AI Assistant</div>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"#fff",lineHeight:1,cursor:"default",userSelect:"none"}} onClick={handleLogoClick}>Questions</div>
         </div>
-        <div style={{display:"flex",gap:8}}>
-          <button onClick={resetChat} style={{background:"rgba(255,255,255,.05)",border:"1px solid rgba(255,255,255,.1)",borderRadius:3,padding:"7px 14px",color:"#9AAABB",fontFamily:"'DM Mono',monospace",fontSize:10,cursor:"pointer",letterSpacing:1}}>
-            LIMPAR
-          </button>
-          <button onClick={function(){setConfigured(false);setMessages([]);setError("");}} style={{background:"rgba(168,85,247,.08)",border:"1px solid rgba(168,85,247,.3)",borderRadius:3,padding:"7px 14px",color:"#A855F7",fontFamily:"'DM Mono',monospace",fontSize:10,cursor:"pointer",letterSpacing:1}}>
-            CONFIG
-          </button>
-        </div>
+        {messages.length>0&&(
+          <button onClick={function(){setMessages([]);setError("");}} style={{background:"rgba(255,255,255,.05)",border:"1px solid rgba(255,255,255,.1)",borderRadius:3,padding:"6px 14px",color:"#7A8A9E",fontSize:10,cursor:"pointer",fontFamily:"'DM Mono',monospace"}}>CLEAR</button>
+        )}
       </div>
 
-      {/* Suggestions */}
-      {messages.length<=1&&(
-        <div style={{display:"flex",flexWrap:"wrap",gap:8,marginBottom:20}}>
-          {[
-            "Como funciona o STRC e qual o yield esperado?",
-            "Explique o modelo de receita do Banco Digital",
-            "Quais são os retornos dos City Bonds no Base Case?",
-            "Como a Tipolis ganha dinheiro com o SATS?",
-            "Qual é o risco do STRC para o balanço da Tipolis?",
-            "O que é o modelo BitBonds e como se aplica aqui?",
-          ].map(function(s){
-            return(
-              <button key={s} onClick={function(){setInput(s);}} style={{background:"rgba(168,85,247,.06)",border:"1px solid rgba(168,85,247,.2)",borderRadius:20,padding:"6px 14px",color:"#C084FC",fontSize:11,fontFamily:"'DM Mono',monospace",cursor:"pointer",textAlign:"left",lineHeight:1.4}}>
-                {s}
-              </button>
-            );
-          })}
+      {/* Empty state */}
+      {messages.length===0&&(
+        <div style={{textAlign:"center",padding:"40px 0 32px"}}>
+          <div style={{fontSize:13,color:"#7A8A9E",lineHeight:1.8,maxWidth:420,margin:"0 auto"}}>Ask anything about the Tipolis project — STRC, Digital Money, City Bonds, financial model, strategy, risks, or returns.</div>
         </div>
       )}
 
       {/* Messages */}
-      <div style={{minHeight:380,maxHeight:520,overflowY:"auto",marginBottom:16,display:"flex",flexDirection:"column",gap:12}}>
+      <div style={{display:"flex",flexDirection:"column",gap:14,minHeight:messages.length>0?200:0,maxHeight:500,overflowY:"auto",marginBottom:16,scrollBehavior:"smooth"}}>
         {messages.map(function(m,i){
           var isUser=m.role==="user";
           return(
             <div key={i} style={{display:"flex",justifyContent:isUser?"flex-end":"flex-start"}}>
               <div style={{
                 maxWidth:"82%",
-                background:isUser?"rgba(168,85,247,.15)":"rgba(59,130,246,.07)",
-                border:isUser?"1px solid rgba(168,85,247,.3)":"1px solid rgba(59,130,246,.15)",
-                borderRadius:isUser?"12px 12px 2px 12px":"12px 12px 12px 2px",
                 padding:"12px 16px",
-                fontSize:13,color:"#C8D4E0",lineHeight:1.75,
-                fontFamily:"'DM Sans',sans-serif"
+                fontSize:13,
+                lineHeight:1.75,
+                whiteSpace:"pre-wrap",
+                borderRadius:isUser?"12px 12px 2px 12px":"12px 12px 12px 2px",
+                background:isUser?"rgba(168,85,247,.14)":"rgba(59,130,246,.07)",
+                border:isUser?"1px solid rgba(168,85,247,.3)":"1px solid rgba(59,130,246,.15)",
+                color:isUser?"#E9D5FF":"#C8D4E0"
               }}>
-                {!isUser&&(
-                  <div style={{fontSize:9,fontFamily:"'DM Mono',monospace",color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>TIPOLIS AI</div>
-                )}
-                <div style={{whiteSpace:"pre-wrap"}}>{m.content}</div>
+                {!isUser&&<div style={{fontSize:8,fontFamily:"'DM Mono',monospace",color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:5}}>TIPOLIS AI</div>}
+                {m.content}
               </div>
             </div>
           );
         })}
         {loading&&(
           <div style={{display:"flex",justifyContent:"flex-start"}}>
-            <div style={{background:"rgba(59,130,246,.07)",border:"1px solid rgba(59,130,246,.15)",borderRadius:"12px 12px 12px 2px",padding:"12px 16px"}}>
-              <div style={{fontSize:9,fontFamily:"'DM Mono',monospace",color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>TIPOLIS AI</div>
+            <div style={{padding:"12px 16px",borderRadius:"12px 12px 12px 2px",background:"rgba(59,130,246,.07)",border:"1px solid rgba(59,130,246,.15)"}}>
+              <div style={{fontSize:8,fontFamily:"'DM Mono',monospace",color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>TIPOLIS AI</div>
               <div style={{display:"flex",gap:5}}>
-                {[0,1,2].map(function(d){return(
-                  <span key={d} style={{width:7,height:7,borderRadius:"50%",background:"#A855F7",animation:"pulse 1.4s ease-in-out "+d*0.2+"s infinite",display:"inline-block"}}/>
-                );})}
+                {[0,1,2].map(function(d){return(<span key={d} style={{width:7,height:7,borderRadius:"50%",background:"#A855F7",display:"inline-block",animation:"pulse 1.2s ease-in-out "+(d*0.2)+"s infinite"}}/>);})}
               </div>
             </div>
           </div>
         )}
-        {error&&(
-          <div style={{background:"rgba(239,68,68,.07)",border:"1px solid rgba(239,68,68,.25)",borderRadius:3,padding:"10px 14px",fontSize:12,color:"#EF4444"}}>{error}</div>
-        )}
+        {error&&<div style={{fontSize:12,color:"#EF4444",padding:"8px 12px",background:"rgba(239,68,68,.07)",border:"1px solid rgba(239,68,68,.2)",borderRadius:3}}>{error}</div>}
         <div ref={bottomRef}/>
       </div>
 
@@ -2121,21 +2049,17 @@ function PageQuestions(){
         <textarea
           value={input}
           onChange={function(e){setInput(e.target.value);}}
-          onKeyDown={handleKeyDown}
-          placeholder="Faça uma pergunta sobre o projeto Tipolis... (Enter para enviar)"
+          onKeyDown={function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send();}}}
+          placeholder="Ask a question about the Tipolis project..."
           rows={2}
-          style={{flex:1,background:"transparent",border:"none",outline:"none",color:"#FFF",fontFamily:"'DM Sans',sans-serif",fontSize:13,resize:"none",lineHeight:1.6}}
+          style={{flex:1,background:"transparent",border:"none",outline:"none",color:"#fff",fontSize:13,resize:"none",lineHeight:1.6,fontFamily:"'DM Sans',sans-serif"}}
         />
-        <button
-          onClick={sendMessage}
-          disabled={loading||!input.trim()}
-          style={{background:loading||!input.trim()?"rgba(168,85,247,.2)":"#A855F7",border:"none",borderRadius:3,padding:"10px 18px",color:loading||!input.trim()?"rgba(255,255,255,.3)":"#FFF",fontFamily:"'DM Mono',monospace",fontSize:11,fontWeight:700,cursor:loading||!input.trim()?"default":"pointer",letterSpacing:1,whiteSpace:"nowrap"}}>
-          {loading?"...":"ENVIAR"}
+        <button onClick={send} disabled={loading||!input.trim()}
+          style={{background:loading||!input.trim()?"rgba(168,85,247,.2)":"#A855F7",border:"none",borderRadius:3,padding:"10px 18px",color:loading||!input.trim()?"rgba(255,255,255,.3)":"#fff",fontFamily:"'DM Mono',monospace",fontSize:10,fontWeight:700,cursor:loading||!input.trim()?"default":"pointer",letterSpacing:1,whiteSpace:"nowrap"}}>
+          {loading?"...":"SEND"}
         </button>
       </div>
-      <div style={{fontSize:10,color:"#3A4A5A",marginTop:6,textAlign:"right",fontFamily:"'DM Mono',monospace"}}>
-        Enter para enviar · Shift+Enter para nova linha · Modelo: {model}
-      </div>
+      <div style={{fontSize:9,color:"#3A4A5A",marginTop:5,textAlign:"right",fontFamily:"'DM Mono',monospace"}}>Enter to send · Shift+Enter for new line</div>
     </div>
   );
 }
