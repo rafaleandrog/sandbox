@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>TIPOLIS — Strategic Capital Proposal 2026</title>
+  <title>Tipolis — Strategic Capital Proposal 2026</title>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -206,7 +206,7 @@ function CircularFlywheel({vis}){
   ];
   return(
     <div style={{maxWidth:980,margin:"0 auto 30px",opacity:vis?1:0,transform:vis?"translateY(0)":"translateY(24px)",transition:"all .8s ease"}}>
-      <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",letterSpacing:2,textTransform:"uppercase",color:"#FF6B35",marginBottom:12,textAlign:"center"}}>Strategic Flywheel — Treasury, Digital Money, and City Bonds</div>
+      <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",letterSpacing:2,textTransform:"uppercase",color:"#2ECC71",marginBottom:12,textAlign:"center"}}>Strategic Flywheel — Treasury, Digital Money, and City Bonds</div>
       <div style={{position:"relative",width:"100%",maxWidth:860,height:760,margin:"0 auto"}}>
         <svg viewBox="0 0 860 760" style={{position:"absolute",inset:0,width:"100%",height:"100%",overflow:"visible"}}>
           <circle cx="430" cy="380" r="300" fill="none" stroke="rgba(255,255,255,.14)" strokeWidth="2"/>
@@ -219,7 +219,7 @@ function CircularFlywheel({vis}){
         </svg>
 
         <div style={{position:"absolute",left:"50%",top:"50%",transform:"translate(-50%,-50%)",width:250,minHeight:170,borderRadius:4,background:"linear-gradient(180deg,rgba(0,42,69,.96),rgba(0,30,53,.96))",border:"1px solid rgba(255,255,255,.08)",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",padding:"18px 22px",textAlign:"center",boxShadow:"0 8px 24px rgba(0,0,0,.25)"}}>
-          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:34,lineHeight:1,color:"#FFF",marginBottom:8}}>STRC → SATS → CITY BONDS</div>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:34,lineHeight:1,color:"#FFF",marginBottom:8}}>Capital Engine Flywheel</div>
           <div style={{fontSize:11,fontFamily:"'DM Mono',monospace",letterSpacing:1.4,textTransform:"uppercase",color:"#7A8A9E",marginBottom:10}}>One capital chain, not three separate products</div>
           <div style={{fontSize:12,color:"#C8D4E0",lineHeight:1.7}}>Treasury adoption strengthens the company first. That credibility powers Digital Money. Digital Money builds AUM. AUM improves City Bond distribution. Bond-funded infrastructure attracts more demand and enlarges the next treasury base.</div>
         </div>
@@ -250,6 +250,183 @@ function CircularFlywheel({vis}){
    PAGE COMPONENTS
 ═══════════════════════════════════════════════════════ */
 
+/* ── OVERVIEW FLOWCHARTS ── */
+function OverviewFlowDigitalMoney(){
+  const lineColor="#0E1633";
+  return(
+    <div style={{marginTop:22}}>
+      <div style={{background:"#F3F6FA",borderRadius:8,padding:"26px 20px 18px",border:"1px solid rgba(255,255,255,.08)"}}>
+        <div style={{position:"relative",display:"grid",gridTemplateColumns:"280px minmax(320px,390px) 280px",justifyContent:"space-between",gap:26,alignItems:"center",minHeight:430}}>
+          <svg viewBox="0 0 1000 430" preserveAspectRatio="none" style={{position:"absolute",inset:0,width:"100%",height:"100%",pointerEvents:"none",overflow:"visible"}}>
+            <line x1="280" y1="150" x2="370" y2="150" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="370,150 358,143 358,157" fill={lineColor}/>
+            <text x="305" y="137" fill={lineColor} fontSize="14" fontWeight="700">01</text>
+
+            <line x1="650" y1="128" x2="740" y2="128" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="740,128 728,121 728,135" fill={lineColor}/>
+            <text x="670" y="115" fill={lineColor} fontSize="14" fontWeight="700">02</text>
+
+            <line x1="740" y1="316" x2="650" y2="316" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="650,316 662,309 662,323" fill={lineColor}/>
+            <text x="718" y="303" fill={lineColor} fontSize="14" fontWeight="700">03</text>
+
+            <line x1="370" y1="290" x2="280" y2="290" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="280,290 292,283 292,297" fill={lineColor}/>
+            <text x="305" y="277" fill={lineColor} fontSize="14" fontWeight="700">04</text>
+          </svg>
+
+          <div style={{background:"linear-gradient(180deg,#2D3CFF,#24358F)",borderRadius:28,padding:"28px 18px",minHeight:300,display:"flex",flexDirection:"column",justifyContent:"center",textAlign:"center",color:"#FFF",boxShadow:"0 12px 30px rgba(0,0,0,.16)",position:"relative",zIndex:1}}>
+            <div style={{fontSize:18,fontWeight:700,lineHeight:1.35,marginBottom:16}}>SATS Investors</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Individuals</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Companies</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Funds</div>
+            <div style={{height:1,background:"rgba(255,255,255,.18)",margin:"16px 28px"}}/>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Intentional communities</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Private cities</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>SEZs, SARs and similar ecosystems</div>
+          </div>
+
+          <div style={{background:"#FFFFFF",border:"1.5px solid rgba(14,22,51,.24)",borderRadius:34,padding:"24px 18px",minHeight:356,display:"flex",flexDirection:"column",justifyContent:"space-between",boxShadow:"0 8px 22px rgba(0,0,0,.08)",position:"relative",zIndex:1}}>
+            <div style={{textAlign:"center"}}>
+              <div style={{fontSize:12,fontFamily:"DM Mono, monospace",letterSpacing:1.8,textTransform:"uppercase",color:"#0E1633",marginBottom:10}}>Tipolis + Partner</div>
+              <div style={{fontSize:28,fontWeight:800,color:"#0E1633",lineHeight:1.1}}>Digital Bank</div>
+            </div>
+
+            <div style={{background:"rgba(59,130,246,.08)",border:"1px solid rgba(59,130,246,.22)",borderRadius:18,padding:"16px 14px",textAlign:"center"}}>
+              <div style={{fontSize:13,fontWeight:700,color:"#3B82F6",marginBottom:6}}>1:1 Backed Stable Dollar</div>
+              <div style={{fontSize:12,color:"#5A6A7A",lineHeight:1.55}}>SATS is issued against deposited dollars and fully backed by STRC-based reserve logic.</div>
+            </div>
+
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+              <div style={{background:"rgba(245,166,35,.10)",border:"1px solid rgba(245,166,35,.28)",borderRadius:16,padding:"14px 12px",textAlign:"center"}}>
+                <div style={{fontSize:12,fontWeight:700,color:"#F5A623",marginBottom:6}}>Capital In</div>
+                <div style={{fontSize:11,color:"#5A6A7A",lineHeight:1.5}}>Bank captures SATS funding and allocates reserve capital.</div>
+              </div>
+              <div style={{background:"rgba(46,204,113,.10)",border:"1px solid rgba(46,204,113,.28)",borderRadius:16,padding:"14px 12px",textAlign:"center"}}>
+                <div style={{fontSize:12,fontWeight:700,color:"#2ECC71",marginBottom:6}}>Yield Out</div>
+                <div style={{fontSize:11,color:"#5A6A7A",lineHeight:1.5}}>SATS holders receive yield ultimately enabled by STRC.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{background:"linear-gradient(180deg,#2D3CFF,#24358F)",borderRadius:28,padding:"28px 18px",minHeight:300,display:"flex",flexDirection:"column",justifyContent:"center",textAlign:"center",color:"#FFF",boxShadow:"0 12px 30px rgba(0,0,0,.16)",position:"relative",zIndex:1}}>
+            <div style={{fontSize:18,fontWeight:700,lineHeight:1.35,marginBottom:16}}>Target Users</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Residents</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Businesses</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Funds</div>
+            <div style={{height:1,background:"rgba(255,255,255,.18)",margin:"16px 28px"}}/>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Safe reserve allocation</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Zero-volatility dollar exposure</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Yield above traditional cash products</div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginTop:14}}>
+        {[
+          ["01","Investors subscribe to SATS through the Digital Bank."],
+          ["02","The bank issues a 1:1 backed stable dollar and distributes it to the user base."],
+          ["03","STRC-driven economics support the yield received by SATS holders."],
+          ["04","As AUM grows, the model scales without heavy balance-sheet deployment by Tipolis."],
+        ].map(([n,t])=>(
+          <div key={n} style={{background:"#002A45",border:"1px solid rgba(255,255,255,.06)",borderTop:"2px solid #F5A623",borderRadius:3,padding:"12px 12px"}}>
+            <div style={{fontSize:10,fontFamily:"DM Mono, monospace",color:"#F5A623",letterSpacing:1.2,marginBottom:6}}>{n}</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.55}}>{t}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function OverviewFlowCityBonds(){
+  const lineColor="#0E1633";
+  return(
+    <div style={{marginTop:22}}>
+      <div style={{background:"#F3F6FA",borderRadius:8,padding:"26px 20px 18px",border:"1px solid rgba(255,255,255,.08)"}}>
+        <div style={{position:"relative",display:"grid",gridTemplateColumns:"280px minmax(330px,400px) 280px",justifyContent:"space-between",gap:26,alignItems:"center",minHeight:430}}>
+          <svg viewBox="0 0 1000 430" preserveAspectRatio="none" style={{position:"absolute",inset:0,width:"100%",height:"100%",pointerEvents:"none",overflow:"visible"}}>
+            <line x1="280" y1="150" x2="370" y2="150" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="370,150 358,143 358,157" fill={lineColor}/>
+            <text x="305" y="137" fill={lineColor} fontSize="14" fontWeight="700">01</text>
+
+            <line x1="650" y1="128" x2="740" y2="128" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="740,128 728,121 728,135" fill={lineColor}/>
+            <text x="670" y="115" fill={lineColor} fontSize="14" fontWeight="700">02</text>
+
+            <line x1="740" y1="316" x2="650" y2="316" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="650,316 662,309 662,323" fill={lineColor}/>
+            <text x="718" y="303" fill={lineColor} fontSize="14" fontWeight="700">03</text>
+
+            <line x1="370" y1="290" x2="280" y2="290" stroke={lineColor} strokeWidth="3" strokeDasharray="3 7"/>
+            <polygon points="280,290 292,283 292,297" fill={lineColor}/>
+            <text x="305" y="277" fill={lineColor} fontSize="14" fontWeight="700">04</text>
+          </svg>
+
+          <div style={{background:"linear-gradient(180deg,#2D3CFF,#24358F)",borderRadius:28,padding:"28px 18px",minHeight:300,display:"flex",flexDirection:"column",justifyContent:"center",textAlign:"center",color:"#FFF",boxShadow:"0 12px 30px rgba(0,0,0,.16)",position:"relative",zIndex:1}}>
+            <div style={{fontSize:18,fontWeight:700,lineHeight:1.35,marginBottom:16}}>Bond Investors</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Individuals</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Companies</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Funds</div>
+            <div style={{height:1,background:"rgba(255,255,255,.18)",margin:"16px 28px"}}/>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Private cities</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Autonomous communities</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>SEZs, SARs and adjacent projects</div>
+          </div>
+
+          <div style={{background:"#FFFFFF",border:"1.5px solid rgba(14,22,51,.24)",borderRadius:34,padding:"24px 18px",minHeight:356,display:"flex",flexDirection:"column",justifyContent:"space-between",boxShadow:"0 8px 22px rgba(0,0,0,.08)",position:"relative",zIndex:1}}>
+            <div style={{textAlign:"center"}}>
+              <div style={{fontSize:12,fontFamily:"DM Mono, monospace",letterSpacing:1.8,textTransform:"uppercase",color:"#0E1633",marginBottom:10}}>Digital Bank</div>
+              <div style={{fontSize:28,fontWeight:800,color:"#0E1633",lineHeight:1.1}}>City Bonds Issuer</div>
+            </div>
+
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+              <div style={{background:"rgba(59,130,246,.08)",border:"1px solid rgba(59,130,246,.22)",borderRadius:16,padding:"14px 12px",textAlign:"center"}}>
+                <div style={{fontSize:12,fontWeight:700,color:"#3B82F6",marginBottom:6}}>Operations</div>
+                <div style={{fontSize:11,color:"#5A6A7A",lineHeight:1.5}}>Funding is allocated to project operations and infrastructure buildout.</div>
+              </div>
+              <div style={{background:"rgba(245,166,35,.10)",border:"1px solid rgba(245,166,35,.28)",borderRadius:16,padding:"14px 12px",textAlign:"center"}}>
+                <div style={{fontSize:12,fontWeight:700,color:"#F5A623",marginBottom:6}}>BTC Reserve</div>
+                <div style={{fontSize:11,color:"#5A6A7A",lineHeight:1.5}}>A defined tranche accumulates BTC exposure inside the structure.</div>
+              </div>
+            </div>
+
+            <div style={{background:"rgba(46,204,113,.10)",border:"1px solid rgba(46,204,113,.28)",borderRadius:18,padding:"16px 14px",textAlign:"center"}}>
+              <div style={{fontSize:13,fontWeight:700,color:"#2ECC71",marginBottom:6}}>Fee and Return Engine</div>
+              <div style={{fontSize:12,color:"#5A6A7A",lineHeight:1.55}}>The Digital Bank earns structuring and distribution fees and retains excess BTC economics over time.</div>
+            </div>
+          </div>
+
+          <div style={{background:"linear-gradient(180deg,#2D3CFF,#24358F)",borderRadius:28,padding:"28px 18px",minHeight:300,display:"flex",flexDirection:"column",justifyContent:"center",textAlign:"center",color:"#FFF",boxShadow:"0 12px 30px rgba(0,0,0,.16)",position:"relative",zIndex:1}}>
+            <div style={{fontSize:18,fontWeight:700,lineHeight:1.35,marginBottom:16}}>Projects / Borrowers</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>ICTs</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Private cities</div>
+            <div style={{fontSize:14,lineHeight:1.55,opacity:.95}}>Strategic adjacent projects</div>
+            <div style={{height:1,background:"rgba(255,255,255,.18)",margin:"16px 28px"}}/>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Targeted and timed funding</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Infrastructure and development use cases</div>
+            <div style={{fontSize:12,lineHeight:1.55,opacity:.88}}>Expandable beyond Tipolis ICTs</div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginTop:14}}>
+        {[
+          ["01","The Digital Bank structures and distributes City Bonds to investors."],
+          ["02","Capital is raised and allocated between operations funding and BTC exposure."],
+          ["03","As the operation performs, the Digital Bank services payments to creditors and investors."],
+          ["04","Investors are paid through the life of the instrument while the Digital Bank keeps fee income and excess BTC-linked upside."],
+        ].map(([n,t])=>(
+          <div key={n} style={{background:"#002A45",border:"1px solid rgba(255,255,255,.06)",borderTop:"2px solid #3B82F6",borderRadius:3,padding:"12px 12px"}}>
+            <div style={{fontSize:10,fontFamily:"DM Mono, monospace",color:"#3B82F6",letterSpacing:1.2,marginBottom:6}}>{n}</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.55}}>{t}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ── PAGE: OVERVIEW ── */
 function PageOverview(){
   const ref=useRef(null);
@@ -258,50 +435,373 @@ function PageOverview(){
     const t=setTimeout(()=>setVis(true),80);
     return()=>clearTimeout(t);
   },[]);
+
+  /* ── shared icon components ── */
+  function Icon({emoji,label}){
+    return(
+      <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
+        <div style={{fontSize:22,lineHeight:1}}>{emoji}</div>
+        <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"rgba(255,255,255,.7)",letterSpacing:1,textTransform:"uppercase",textAlign:"center",lineHeight:1.3}}>{label}</div>
+      </div>
+    );
+  }
+
+  function Panel({color,title,items,icons}){
+    return(
+      <div style={{background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.12)",borderRadius:12,padding:"20px 16px",minWidth:0}}>
+        <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:color,marginBottom:14,textAlign:"center"}}>{title}</div>
+        <div style={{display:"flex",justifyContent:"space-around",marginBottom:14,paddingBottom:14,borderBottom:"1px solid rgba(255,255,255,.1)"}}>
+          {icons.map(function(ic){return <Icon key={ic.label} emoji={ic.emoji} label={ic.label}/>;}) }
+        </div>
+        {items.map(function(item,i){return(
+          <div key={i} style={{fontSize:11,color:"rgba(255,255,255,.65)",lineHeight:1.5,textAlign:"center",marginBottom:4}}>{item}</div>
+        );})}
+      </div>
+    );
+  }
+
+  function ArrowStep({num,color,label,dir="right"}){
+    return(
+      <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6,flexShrink:0,padding:"0 4px"}}>
+        <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:color,lineHeight:1}}>{num}</div>
+        <div style={{display:"flex",alignItems:"center",gap:3}}>
+          {dir==="left" && <span style={{color:color,fontSize:16}}>←</span>}
+          <div style={{width:40,height:2,background:"rgba(255,255,255,.2)",position:"relative"}}>
+            <div style={{position:"absolute",top:0,left:0,right:0,bottom:0,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.4) 0,rgba(255,255,255,.4) 4px,transparent 4px,transparent 9px)"}}/>
+          </div>
+          {dir==="right" && <span style={{color:color,fontSize:16}}>→</span>}
+        </div>
+        {label&&<div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"rgba(255,255,255,.5)",letterSpacing:1,textTransform:"uppercase",textAlign:"center",maxWidth:60}}>{label}</div>}
+      </div>
+    );
+  }
+
   return(
     <div ref={ref}>
       {/* HERO */}
       <div style={{padding:"72px 0 48px",borderBottom:"1px solid rgba(255,255,255,.05)"}}>
         <div style={{opacity:vis?1:0,transform:vis?"translateY(0)":"translateY(24px)",transition:"all .6s ease"}}>
           <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:"#FF6B35",letterSpacing:3,textTransform:"uppercase",marginBottom:14}}>Strategic Capital Proposal · Board Presentation 2026</div>
-          <h1 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(58px,8.5vw,96px)",lineHeight:.9,marginBottom:18}}>
+          <h1 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(58px,8.5vw,96px)",lineHeight:.9,marginBottom:22}}>
             Three Moves.<br/><span style={{color:"#FF6B35"}}>One Strategy.</span>
           </h1>
-          <p style={{fontSize:15,color:"#C8D4E0",lineHeight:1.75,marginBottom:40,maxWidth:620}}>
-            Three coordinated initiatives. One financial architecture. <strong>STRC</strong> unlocks the full yield of Tipolis’s treasury. <strong>Digital Money</strong> turns the ICT (International Cities by Tipolis) into a yield-bearing financial platform. <strong>City Bonds</strong> converts that platform into a self-financing city-building engine. Together, they define what an International City can become.
-          </p>
-        </div>
 
+          {/* INTRO — strategic case */}
+          <div style={{maxWidth:780,marginBottom:40}}>
+            <p style={{fontSize:15,color:"#C8D4E0",lineHeight:1.8,marginBottom:18}}>
+              Tipolis is building International Cities — jurisdictions designed from the ground up for the 21st century. The financial infrastructure these cities require is not an add-on. It is a core competitive advantage, a revenue engine, and a compounding asset that grows with every resident, company, and investment that joins the ecosystem.
+            </p>
+            <p style={{fontSize:15,color:"#C8D4E0",lineHeight:1.8,marginBottom:18}}>
+              This proposal presents three initiatives that are native to what Tipolis already is. They do not require a pivot. They require <strong style={{color:"#fff"}}>expanding what the city platform already does</strong> — capturing value that would otherwise flow to banks, stablecoin issuers, and bond underwriters. Each initiative is self-reinforcing: the first makes the second possible, and the second makes the third inevitable.
+            </p>
+
+            {/* Key thesis cards */}
+            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:12,marginBottom:24}}>
+              {[
+                {icon:"💰",color:"#FF6B35",title:"Treasury Yield",body:"STRC replaces idle T-Bill allocations with an instrument yielding 9–12% p.a. On $100M in reserves: up to $7.8M in additional annual cash flow. Zero new capital. Immediate."},
+                {icon:"🏦",color:"#F5A623",title:"Digital Money Platform",body:"SATS turns the ICT into a financial platform. Asset-light JV model. Near-zero capex for Tipolis. Recurring 0.25% AUM margin from day one — with scale potential in the billions."},
+                {icon:"🏗️",color:"#3B82F6",title:"City Capital Markets",body:"City Bonds let ICTs finance their own infrastructure and attract investors who share in the upside. The same platform can serve private cities, SEZs, and adjacent projects worldwide."},
+              ].map(function(c){return(
+                <div key={c.title} style={{background:"rgba(255,255,255,.04)",border:"1px solid rgba(255,255,255,.1)",borderTop:"2px solid "+c.color,borderRadius:3,padding:"16px 16px 14px"}}>
+                  <div style={{fontSize:20,marginBottom:8}}>{c.icon}</div>
+                  <div style={{fontSize:13,fontWeight:700,color:"#fff",marginBottom:6}}>{c.title}</div>
+                  <div style={{fontSize:12,color:"#9AAABB",lineHeight:1.65}}>{c.body}</div>
+                </div>
+              );})}
+            </div>
+
+            <p style={{fontSize:14,color:"#9AAABB",lineHeight:1.75,marginBottom:6}}>
+              <strong style={{color:"#2ECC71"}}>The competitive advantage is structural.</strong> Tipolis holds something that no bank, fintech, or stablecoin issuer can buy: a captive distribution ecosystem with near-zero customer acquisition cost, exclusive jurisdiction, and a resident base that is financially aligned with the city's success. Every resident who holds SATS is a natural City Bond investor. Every bond sold finances infrastructure that makes the city more valuable — which attracts more residents, grows AUM, and improves the next issuance. The flywheel is self-reinforcing.
+            </p>
+            <p style={{fontSize:14,color:"#9AAABB",lineHeight:1.75}}>
+              <strong style={{color:"#fff"}}>The ask is straightforward:</strong> study these three initiatives, understand how they compound together, and decide whether Tipolis should define what a 21st-century city's financial infrastructure looks like — or leave that space to others.
+            </p>
+          </div>
+        </div>
       </div>
 
-
-
-      {/* THREE PROPOSALS */}
       <div style={{padding:"48px 0 60px"}}>
         <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:10,color:"#7A8A9E"}}>At a Glance</div>
         <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(34px,5vw,54px)",lineHeight:.95,marginBottom:14}}>Three Initiatives</h2>
-        <p style={{fontSize:14,color:"#C8D4E0",lineHeight:1.8,marginBottom:32}}>Three self-reinforcing initiatives. <strong style={{color:"#FF6B35"}}>STRC</strong> is the engine behind initiatives 1 and 2 — Treasury and Digital Money. City Bonds build on top of the financial infrastructure created by Digital Money, using the Joint Venture — the <strong>Digital Bank</strong>, a licensed financial institution — as investment banking layer to issue capital instruments. The flywheel compounds with every new International City.</p>
-        <div style={{display:"grid",gridTemplateColumns:"1fr",gap:16}}>
-          {[
-            {num:"01",color:"#FF6B35",label:"STRC Treasury",title:"Earn 3× More on Idle Cash",desc:"Tipolis reallocates 20–40% of its short-term reserves into STRC — historically yielding 9–12% annually. Instead of earning ~3.7% on T-Bills, Tipolis collects monthly cash distributions backed by $49B in Bitcoin, with no new capital and no operational complexity.",pills:["9–12% yield","Monthly cash","Tax-efficient","No new capital"]},
-            {num:"02",color:"#F5A623",label:"Digital Money",title:"A Bitcoin-Backed Dollar for International Cities",desc:"Powered by STRC. Tipolis forms a Digital Bank with a banking partner to issue SATS — a USD-pegged stablecoin backed by STRC. ICT Residents earn 10% p.a., all users globally earn 8%. Tipolis deploys near-zero capital and earns a recurring 0.25% AUM margin.",pills:["STRC-powered","~$0 Tipolis capex","10% ICT residents / 8% global","0.25% AUM margin"]},
-            {num:"03",color:"#3B82F6",label:"City Bonds",title:"Cities That Finance Themselves",desc:"Built on the Digital Money Digital Bank infrastructure. City Bonds apply the BitBonds model to city-level finance: 90% of proceeds fund ICT infrastructure; 10% builds the city's Bitcoin/STRC reserve. Investors receive a fixed USD coupon (4.5–6% p.a.) plus 50% of Bitcoin appreciation over the bond term. Lower cost of capital for the city; asymmetric upside for the investor.",pills:["BitBond model","4.5–6% + 50% BTC upside","Builds BTC reserve","No sovereign debt"]},
-          ].map(p=>(
-            <div key={p.num} style={{background:"#002A45",border:"1px solid rgba(255,255,255,.06)",borderLeft:`3px solid ${p.color}`,borderRadius:2,padding:"28px 24px",position:"relative",overflow:"hidden"}}>
-              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:80,lineHeight:1,opacity:.06,position:"absolute",top:10,right:16,color:p.color}}>{p.num}</div>
-              <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:2,textTransform:"uppercase",marginBottom:12,color:p.color}}>{p.label}</div>
-              <div style={{fontSize:20,fontWeight:700,marginBottom:10,lineHeight:1.2}}>{p.title}</div>
-              <div style={{fontSize:13,color:"#7A8A9E",lineHeight:1.7,marginBottom:16}}>{p.desc}</div>
-              <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-                {p.pills.map(pl=><div key={pl} style={{fontSize:10,fontFamily:"'DM Mono',monospace",padding:"3px 10px",borderRadius:2,textTransform:"uppercase",letterSpacing:1,background:p.color+"14",border:`1px solid ${p.color}30`,color:p.color}}>{pl}</div>)}
+        <p style={{fontSize:14,color:"#C8D4E0",lineHeight:1.8,marginBottom:40}}>Three self-reinforcing moves. STRC powers both treasury and digital money. City Bonds build on the Digital Money infrastructure to create a capital-markets layer for city financing. The flywheel compounds with every new International City.</p>
+
+        {/* ── 01 STRC ── */}
+        <div style={{background:"#002A45",border:"1px solid rgba(255,255,255,.06)",borderLeft:"3px solid #FF6B35",borderRadius:2,padding:"28px 28px 24px",marginBottom:20,position:"relative",overflow:"hidden"}}>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:80,lineHeight:1,opacity:.06,position:"absolute",top:10,right:16,color:"#FF6B35"}}>01</div>
+          <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:2,textTransform:"uppercase",marginBottom:10,color:"#FF6B35"}}>STRC Treasury</div>
+          <div style={{fontSize:20,fontWeight:700,marginBottom:12}}>Earn 3× More on Idle Cash</div>
+          <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:16}}>
+            Tipolis reallocates 20–40% of its short-term cash reserves into STRC — Strategy's preferred stock on NYSE, backed by ~$49B in Bitcoin. Instead of ~3.7% on T-Bills, Tipolis receives monthly USD distributions historically yielding 9–12% p.a. No crypto wallet, no lock-up, daily liquidity. The same instrument also powers SATS — making the treasury move the foundation for the entire digital money strategy.
+          </p>
+          <div style={{display:"flex",flexWrap:"wrap",gap:8,marginBottom:20}}>
+            {["9–12% yield p.a.","Monthly USD distributions","Tax-efficient (return-of-capital)","No new capital required","Daily NYSE liquidity"].map(pl=>(
+              <div key={pl} style={{fontSize:10,fontFamily:"'DM Mono',monospace",padding:"3px 10px",borderRadius:2,textTransform:"uppercase",letterSpacing:1,background:"rgba(255,107,53,.12)",border:"1px solid rgba(255,107,53,.28)",color:"#FF6B35"}}>{pl}</div>
+            ))}
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+            <div style={{background:"rgba(255,107,53,.08)",border:"1px solid rgba(255,107,53,.2)",borderRadius:2,padding:"14px 16px"}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#FF6B35",marginBottom:4}}>💰 High Yield</div>
+              <div style={{fontSize:12,color:"#C8D4E0",lineHeight:1.65}}>Up to 11.5% p.a. vs 3.7% on T-Bills. On $100M in reserves: up to $7.8M additional annual cash flow with zero new capital. Even a 20% allocation lifts yield from 3.7% to 4.7%.</div>
+            </div>
+            <div style={{background:"rgba(255,107,53,.08)",border:"1px solid rgba(255,107,53,.2)",borderRadius:2,padding:"14px 16px"}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#FF6B35",marginBottom:4}}>🏦 Collateral Opportunity</div>
+              <div style={{fontSize:12,color:"#C8D4E0",lineHeight:1.65}}>STRC on the balance sheet can serve as institutional collateral for credit lines — enabling leverage without selling the asset. Generates yield while improving capital access simultaneously.</div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── 02 DIGITAL MONEY ── */}
+        <div style={{background:"#002A45",border:"1px solid rgba(255,255,255,.06)",borderLeft:"3px solid #F5A623",borderRadius:2,padding:"28px 28px 24px",marginBottom:20,position:"relative",overflow:"hidden"}}>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:80,lineHeight:1,opacity:.06,position:"absolute",top:10,right:16,color:"#F5A623"}}>02</div>
+          <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:2,textTransform:"uppercase",marginBottom:10,color:"#F5A623"}}>Digital Money</div>
+          <div style={{fontSize:20,fontWeight:700,marginBottom:12}}>A Bitcoin-Backed Dollar for International Cities</div>
+          <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:14}}>
+            Tipolis and a banking partner form the <strong>Digital Bank</strong>. The Digital Bank issues <strong>SATS</strong> — a USD-pegged stablecoin backed 1:1 by STRC reserves. Unlike USDT and USDC which keep all yield, SATS distributes it to holders: <strong>10% p.a.</strong> for ICT residents and companies, <strong>8% p.a.</strong> for global users. Tipolis contributes near-zero capital and earns 0.25% of AUM as recurring revenue.
+          </p>
+          <div style={{display:"flex",flexWrap:"wrap",gap:8,marginBottom:24}}>
+            {["~$0 Tipolis capex","10% yield ICT residents","8% yield global users","0.25% AUM recurring","Asset-light JV model"].map(pl=>(
+              <div key={pl} style={{fontSize:10,fontFamily:"'DM Mono',monospace",padding:"3px 10px",borderRadius:2,textTransform:"uppercase",letterSpacing:1,background:"rgba(245,166,35,.12)",border:"1px solid rgba(245,166,35,.28)",color:"#F5A623"}}>{pl}</div>
+            ))}
+          </div>
+
+                    {/* DIGITAL MONEY FLOWCHART — card style matching reference image */}
+          <div style={{background:"rgba(0,15,30,.5)",border:"1px solid rgba(245,166,35,.2)",borderRadius:12,padding:"24px",overflow:"hidden"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#F5A623",letterSpacing:2,textTransform:"uppercase",marginBottom:20,textAlign:"center"}}>How It Works</div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 52px 1fr 52px 1fr",gap:0,alignItems:"center"}}>
+
+              {/* LEFT: SATS Holders */}
+              <div style={{background:"linear-gradient(135deg,#1a3a8a,#1e40af)",borderRadius:12,padding:"20px 16px"}}>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#fff",marginBottom:16,textAlign:"center"}}>SATS Holders</div>
+                <div style={{display:"flex",justifyContent:"space-around",marginBottom:14,paddingBottom:14,borderBottom:"1px solid rgba(255,255,255,.2)"}}>
+                  <Icon emoji="👤" label="Individuals"/>
+                  <Icon emoji="🏢" label="Companies"/>
+                  <Icon emoji="🏦" label="Funds"/>
+                </div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Intentional communities</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Private cities</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center"}}>SEZs, SARs & similar ecosystems</div>
+              </div>
+
+              {/* ARROWS 01 and 04 */}
+              <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:20,padding:"0 4px"}}>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#F5A623"}}>01</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                    <span style={{color:"#F5A623",fontSize:14}}>→</span>
+                  </div>
+                </div>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#2ECC71"}}>04</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <span style={{color:"#2ECC71",fontSize:14}}>←</span>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                  </div>
+                </div>
+              </div>
+
+              {/* CENTER: Digital Bank */}
+              <div style={{background:"rgba(255,255,255,.97)",borderRadius:16,padding:"20px 18px",boxShadow:"0 8px 32px rgba(0,0,0,.4)"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#6B7280",letterSpacing:2,textTransform:"uppercase",textAlign:"center",marginBottom:2}}>Tipolis + Partner</div>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#111827",textAlign:"center",marginBottom:14}}>Digital Bank</div>
+                <div style={{background:"rgba(219,234,254,.6)",borderRadius:8,padding:"12px",marginBottom:10,border:"1px solid rgba(147,197,253,.4)"}}>
+                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#1D4ED8",fontWeight:700,marginBottom:4}}>1:1 Backed Stable Dollar</div>
+                  <div style={{fontSize:10,color:"#374151",lineHeight:1.5}}>SATS issued 1:1 against deposited USD. Every SATS in circulation is backed by an equivalent STRC reserve position.</div>
+                </div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
+                  <div style={{background:"rgba(255,237,213,.7)",borderRadius:8,padding:"10px",border:"1px solid rgba(253,186,116,.4)"}}>
+                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#C2410C",fontWeight:700,marginBottom:3}}>Reserves → STRC</div>
+                    <div style={{fontSize:9,color:"#374151",lineHeight:1.4}}>Deposited USD is used to purchase STRC, building the reserve layer that backs every SATS.</div>
+                  </div>
+                  <div style={{background:"rgba(220,252,231,.7)",borderRadius:8,padding:"10px",border:"1px solid rgba(134,239,172,.4)"}}>
+                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#15803D",fontWeight:700,marginBottom:3}}>Yield Distribution</div>
+                    <div style={{fontSize:9,color:"#374151",lineHeight:1.4}}>STRC yield flows back and is distributed to SATS holders. ICT: 10% p.a. Global: 8% p.a.</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ARROWS 02 and 03 */}
+              <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:20,padding:"0 4px"}}>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#F5A623"}}>02</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                    <span style={{color:"#F5A623",fontSize:14}}>→</span>
+                  </div>
+                </div>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#2ECC71"}}>03</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <span style={{color:"#2ECC71",fontSize:14}}>←</span>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT: STRC / Strategy */}
+              <div style={{background:"linear-gradient(135deg,#1a3a8a,#1e40af)",borderRadius:12,padding:"20px 16px"}}>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#fff",marginBottom:16,textAlign:"center"}}>STRC · Strategy</div>
+                <div style={{display:"flex",justifyContent:"space-around",marginBottom:14,paddingBottom:14,borderBottom:"1px solid rgba(255,255,255,.2)"}}>
+                  <Icon emoji="🏛️" label="NYSE"/>
+                  <Icon emoji="₿" label="BTC Reserve"/>
+                  <Icon emoji="💰" label="High Yield"/>
+                </div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>~$49B in Bitcoin reserves</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>9–12% yield p.a.</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Monthly USD distributions</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center"}}>4.5× overcollateralized</div>
               </div>
             </div>
-          ))}
+
+            {/* STEP-BY-STEP EXPLANATION */}
+            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginTop:20}}>
+              {[
+                {n:"01",color:"#F5A623",title:"Deposit USD",text:"The investor deposits USD into the Digital Bank and receives SATS 1:1. SATS is immediately pegged to $1 and never fluctuates. It behaves like cash — spendable, transferable, and redeemable at any time."},
+                {n:"02",color:"#F5A623",title:"Build STRC Reserve",text:"The Digital Bank deploys the deposited USD to purchase STRC on the NYSE. This STRC position becomes the reserve that backs every SATS in circulation. 1 SATS = 1 USD worth of STRC, always."},
+                {n:"03",color:"#2ECC71",title:"STRC Generates Yield",text:"STRC produces monthly distributions from Strategy's Bitcoin-backed balance sheet — historically 9–12% p.a. This yield flows back into the Digital Bank as reserve income, creating the pool available for distribution."},
+                {n:"04",color:"#2ECC71",title:"Holder Receives Yield",text:"The Digital Bank distributes the STRC yield directly to SATS holders: 10% p.a. for ICT residents and companies, 8% p.a. for all other users. Yield accrues automatically — no staking, no lock-up. In the future, SATS will also serve as collateral for loans and business transactions inside the ICTs."},
+              ].map(function(s){return(
+                <div key={s.n} style={{background:"rgba(255,255,255,.04)",border:"1px solid rgba(255,255,255,.1)",borderTop:"2px solid "+s.color,borderRadius:3,padding:"14px 14px 12px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
+                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:s.color,lineHeight:1}}>{s.n}</div>
+                    <div style={{fontSize:11,fontWeight:700,color:"#fff",lineHeight:1.2}}>{s.title}</div>
+                  </div>
+                  <div style={{fontSize:11,color:"#9AAABB",lineHeight:1.6}}>{s.text}</div>
+                </div>
+              );})}
+            </div>
+          </div>
+
+</div>
+
+        {/* ── 03 CITY BONDS ── */}
+        <div style={{background:"#002A45",border:"1px solid rgba(255,255,255,.06)",borderLeft:"3px solid #3B82F6",borderRadius:2,padding:"28px 28px 24px",position:"relative",overflow:"hidden"}}>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:80,lineHeight:1,opacity:.06,position:"absolute",top:10,right:16,color:"#3B82F6"}}>03</div>
+          <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:2,textTransform:"uppercase",marginBottom:10,color:"#3B82F6"}}>City Bonds</div>
+          <div style={{fontSize:20,fontWeight:700,marginBottom:12}}>Structured Funding for Cities and Adjacent Projects</div>
+          <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:14}}>City Bonds extend the Digital Bank into capital markets. The bank structures and distributes funding instruments, captures investor capital, allocates it between operations and BTC exposure, and services creditor payments through the life of the deal.</p>
+          <div style={{display:"flex",flexWrap:"wrap",gap:8,marginBottom:24}}>
+            {["4.5–6% USD coupon","50% BTC upside","Senior/Mezz/Junior","Tokenized & tradeable","No sovereign debt","IRR 9.7–21.8% base case"].map(pl=>(
+              <div key={pl} style={{fontSize:10,fontFamily:"'DM Mono',monospace",padding:"3px 10px",borderRadius:2,textTransform:"uppercase",letterSpacing:1,background:"rgba(59,130,246,.12)",border:"1px solid rgba(59,130,246,.28)",color:"#3B82F6"}}>{pl}</div>
+            ))}
+          </div>
+
+          {/* CITY BONDS FLOWCHART */}
+          <div style={{background:"rgba(0,15,30,.5)",border:"1px solid rgba(59,130,246,.2)",borderRadius:12,padding:"24px",overflow:"hidden"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#3B82F6",letterSpacing:2,textTransform:"uppercase",marginBottom:20,textAlign:"center"}}>How It Works</div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 52px 1fr 52px 1fr",gap:0,alignItems:"center"}}>
+
+              {/* LEFT: Bond Investors */}
+              <div style={{background:"linear-gradient(135deg,#1a3a8a,#1e40af)",borderRadius:12,padding:"20px 16px"}}>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#fff",marginBottom:16,textAlign:"center"}}>Bond Investors</div>
+                <div style={{display:"flex",justifyContent:"space-around",marginBottom:14,paddingBottom:14,borderBottom:"1px solid rgba(255,255,255,.2)"}}>
+                  <Icon emoji="👤" label="Individuals"/>
+                  <Icon emoji="🏢" label="Companies"/>
+                  <Icon emoji="📊" label="Funds"/>
+                </div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>ICT Residents & Businesses</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Qualified Investors</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Funds, Assets, FOs</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center"}}>Private cities · SEZs · SARs</div>
+              </div>
+
+              {/* ARROWS 01 and 04 */}
+              <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:20,padding:"0 4px"}}>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#3B82F6"}}>01</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                    <span style={{color:"#3B82F6",fontSize:14}}>→</span>
+                  </div>
+                </div>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#2ECC71"}}>04</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <span style={{color:"#2ECC71",fontSize:14}}>←</span>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                  </div>
+                </div>
+              </div>
+
+              {/* CENTER: Digital Bank / City Bonds Issuer */}
+              <div style={{background:"rgba(255,255,255,.97)",borderRadius:16,padding:"20px 18px",boxShadow:"0 8px 32px rgba(0,0,0,.4)"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#6B7280",letterSpacing:2,textTransform:"uppercase",textAlign:"center",marginBottom:2}}>Digital Bank</div>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#111827",textAlign:"center",marginBottom:14}}>City Bonds Issuer</div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:8}}>
+                  <div style={{background:"rgba(219,234,254,.7)",borderRadius:8,padding:"10px",border:"1px solid rgba(147,197,253,.4)"}}>
+                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#1D4ED8",fontWeight:700,marginBottom:3}}>Operations</div>
+                    <div style={{fontSize:9,color:"#374151",lineHeight:1.4}}>Capital deployed to ICT infrastructure: real estate, energy, water, roads, urban services.</div>
+                  </div>
+                  <div style={{background:"rgba(255,237,213,.7)",borderRadius:8,padding:"10px",border:"1px solid rgba(253,186,116,.4)"}}>
+                    <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#C2410C",fontWeight:700,marginBottom:3}}>BTC Reserve</div>
+                    <div style={{fontSize:9,color:"#374151",lineHeight:1.4}}>A defined tranche (10% or 50%) accumulates Bitcoin exposure inside the structure.</div>
+                  </div>
+                </div>
+                <div style={{background:"rgba(220,252,231,.7)",borderRadius:8,padding:"10px",border:"1px solid rgba(134,239,172,.4)"}}>
+                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#15803D",fontWeight:700,marginBottom:3}}>Fee & Return Engine</div>
+                  <div style={{fontSize:9,color:"#374151",lineHeight:1.4}}>Digital Bank earns 1% structuring + 0.5% distribution fees and retains 50% of all BTC upside at maturity.</div>
+                </div>
+              </div>
+
+              {/* ARROWS 02 and 03 */}
+              <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:20,padding:"0 4px"}}>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#3B82F6"}}>02</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                    <span style={{color:"#3B82F6",fontSize:14}}>→</span>
+                  </div>
+                </div>
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:6}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#2ECC71"}}>03</div>
+                  <div style={{display:"flex",alignItems:"center",gap:2}}>
+                    <span style={{color:"#2ECC71",fontSize:14}}>←</span>
+                    <div style={{width:36,height:2,backgroundImage:"repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 4px,transparent 4px,transparent 9px)"}}/>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT: Projects / Borrowers */}
+              <div style={{background:"linear-gradient(135deg,#1a3a8a,#1e40af)",borderRadius:12,padding:"20px 16px"}}>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#fff",marginBottom:16,textAlign:"center"}}>Projects / Borrowers</div>
+                <div style={{display:"flex",justifyContent:"space-around",marginBottom:14,paddingBottom:14,borderBottom:"1px solid rgba(255,255,255,.2)"}}>
+                  <Icon emoji="🏙️" label="ICTs"/>
+                  <Icon emoji="🌆" label="Priv. Cities"/>
+                  <Icon emoji="🏛️" label="Gov."/>
+                </div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>International Cities</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Private City & Autonomous Community Operators</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,.6)",textAlign:"center",marginBottom:4}}>Host Country Government</div>
+                <div style={{height:1,background:"rgba(255,255,255,.15)",margin:"8px 0"}}/>
+                <div style={{fontSize:9,color:"rgba(255,255,255,.45)",textAlign:"center",lineHeight:1.4}}>Targeted and timed funding · Infrastructure and development · Expandable beyond Tipolis ICTs</div>
+              </div>
+            </div>
+
+            {/* STEP-BY-STEP EXPLANATION */}
+            <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginTop:20}}>
+              {[
+                {n:"01",color:"#3B82F6",title:"Investor Subscribes",text:"The investor deposits USD into the Digital Bank and subscribes to a City Bond issuance. They receive a bond certificate representing a fixed-term claim on the project's cash flows plus 50% of Bitcoin appreciation over the bond term."},
+                {n:"02",color:"#3B82F6",title:"Capital Allocation",text:"The Digital Bank deploys the raised capital according to the bond's structure: 90% or 50% to project operations (real estate, infrastructure, urban services) and the remaining 10% or 50% to build a BTC reserve position inside the structure."},
+                {n:"03",color:"#2ECC71",title:"Operations & BTC Run",text:"The funded project generates revenues from operations — rents, service fees, infrastructure income — which service the bond's coupon obligations. Meanwhile, the BTC reserve appreciates independently, compounding the investor's upside without affecting the coupon flow."},
+                {n:"04",color:"#2ECC71",title:"Investor Receives Full Return",text:"Over the bond's life, the investor receives periodic USD coupon payments (4.5–6% p.a. on total invested). At maturity: principal is returned in full, plus 50% of the BTC appreciation over the term. The Digital Bank retains 50% of BTC upside plus all structuring and distribution fees earned at issuance."},
+              ].map(function(s){return(
+                <div key={s.n} style={{background:"rgba(255,255,255,.04)",border:"1px solid rgba(255,255,255,.1)",borderTop:"2px solid "+s.color,borderRadius:3,padding:"14px 14px 12px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
+                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:s.color,lineHeight:1}}>{s.n}</div>
+                    <div style={{fontSize:11,fontWeight:700,color:"#fff",lineHeight:1.2}}>{s.title}</div>
+                  </div>
+                  <div style={{fontSize:11,color:"#9AAABB",lineHeight:1.6}}>{s.text}</div>
+                </div>
+              );})}
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   );
 }
+
 
 /* ── PAGE: STRC TREASURY ── */
 const scenarios=[
@@ -380,8 +880,8 @@ function PageSTRC(){
                 <tr style={{background:"rgba(255,107,53,.08)",fontWeight:600}}>
                   <td style={{padding:"9px",fontSize:12,color:"#FF6B35",fontFamily:"'DM Mono',monospace",fontWeight:700,borderTop:"1px solid rgba(255,107,53,.3)"}}>STRC ★</td>
                   <td style={{padding:"9px",fontSize:11,color:"#FF6B35",borderTop:"1px solid rgba(255,107,53,.3)"}}>Strategy</td>
-                  <td style={{padding:"9px",fontSize:12,color:"#2ECC71",textAlign:"right",borderTop:"1px solid rgba(255,107,53,.3)",fontFamily:"'DM Mono',monospace"}}>11.25%</td>
-                  <td style={{padding:"9px",fontSize:12,color:"#2ECC71",textAlign:"right",borderTop:"1px solid rgba(255,107,53,.3)",fontFamily:"'DM Mono',monospace"}}>11.25%</td>
+                  <td style={{padding:"9px",fontSize:12,color:"#2ECC71",textAlign:"right",borderTop:"1px solid rgba(255,107,53,.3)",fontFamily:"'DM Mono',monospace"}}>11.5%</td>
+                  <td style={{padding:"9px",fontSize:12,color:"#2ECC71",textAlign:"right",borderTop:"1px solid rgba(255,107,53,.3)",fontFamily:"'DM Mono',monospace"}}>11.5%</td>
                   <td style={{padding:"9px",fontSize:10,textAlign:"center",borderTop:"1px solid rgba(255,107,53,.3)"}}><span style={{background:"rgba(255,107,53,.22)",color:"#FF6B35",borderRadius:3,padding:"2px 7px",fontFamily:"'DM Mono',monospace"}}>Digital Credit</span></td>
                   <td style={{padding:"9px",fontSize:12,color:"#2ECC71",textAlign:"right",borderTop:"1px solid rgba(255,107,53,.3)",fontFamily:"'DM Mono',monospace"}}>$89.82M</td>
                   <td style={{padding:"9px",fontSize:12,color:"#2ECC71",textAlign:"right",borderTop:"1px solid rgba(255,107,53,.3)",fontFamily:"'DM Mono',monospace"}}>$122.58M</td>
@@ -551,7 +1051,7 @@ function PageDigitalMoney(){
       {/* Digital Bank Structure */}
       <div style={{fontSize:10,color:"#F5A623",fontFamily:"'DM Mono',monospace",letterSpacing:2,textTransform:"uppercase",marginBottom:14}}>How the Digital Bank Structure Works</div>
       <div style={{display:"flex",alignItems:"stretch",gap:0,margin:"28px 0",overflowX:"auto"}}>
-        {[["🏦","Step 1","Banking Partner","Structures and licenses the Digital Bank, leads regulatory compliance, manages treasury operations, and operates the full distribution infrastructure — from resident onboarding to settlement."],["📊","Step 2","Digital Bank Buys STRC","The partner deploys capital into STRC on NYSE at up to 11.25% yield — the collateral that backs every SATS issued."],["🪙","Step 3","SATS Issued","Residents deposit USD; the Digital Bank mints SATS 1:1. The bulk of capital in the system is the holders' own savings — not the partner's balance sheet."],["🏙️","Step 4","City Banking","Residents and businesses hold SATS as their city account — spending, saving, receiving salaries. Tipolis provides the city platform; the Digital Bank runs the financial rails."],["💰","Step 5","Yield to Holders","10% p.a. to ICT residents / 8% to all global users. Yield flows from STRC dividends back to depositors — it is their own capital compounding for them."]].map(([ic,l,n,d],i)=>(
+        {[["🏦","Step 1","Banking Partner","Structures and licenses the Digital Bank, leads regulatory compliance, manages treasury operations, and operates the full distribution infrastructure — from resident onboarding to settlement."],["📊","Step 2","Digital Bank Buys STRC","The partner deploys capital into STRC on NYSE at up to 11.5% yield — the collateral that backs every SATS issued."],["🪙","Step 3","SATS Issued","Residents deposit USD; the Digital Bank mints SATS 1:1. The bulk of capital in the system is the holders' own savings — not the partner's balance sheet."],["🏙️","Step 4","City Banking","Residents and businesses hold SATS as their city account — spending, saving, receiving salaries. Tipolis provides the city platform; the Digital Bank runs the financial rails."],["💰","Step 5","Yield to Holders","10% p.a. to ICT residents / 8% to all global users. Yield flows from STRC dividends back to depositors — it is their own capital compounding for them."]].map(([ic,l,n,d],i)=>(
           <React.Fragment key={n}>
             {i>0&&<div style={{display:"flex",alignItems:"center",padding:"0 5px",color:"#7A8A9E",fontSize:16,flexShrink:0}}>→</div>}
             <div style={{flex:1,minWidth:110,background:"#003050",border:"1px solid rgba(255,255,255,.07)",borderTop:"2px solid #F5A623",borderRadius:2,padding:"14px 11px",textAlign:"center"}}>
@@ -762,7 +1262,7 @@ function PageDigitalMoney(){
       {/* Risk Assessment */}
       <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"26px 0"}}/>
       <div style={{fontSize:10,color:"#7A8A9E",fontFamily:"'DM Mono',monospace",textTransform:"uppercase",letterSpacing:2,marginBottom:14}}>Risk Assessment — Digital Money</div>
-      {[["low","#2ECC71","BTC Price Crash","VERY LOW FOR TIPOLIS","SATS is backed by STRC, not BTC directly. Even a 70% BTC crash would not breach STRC's $100 par given 4.5× overcollateralization. The banking partner — not Tipolis — bears this tail risk."],["low","#2ECC71","De-peg / Bank Run","LOW","Unlike algorithmic stablecoins (Terra/Luna), SATS is 100% backed by real STRC assets. The Digital Bank maintains full STRC coverage at all times. STRC's $150M+ daily volume enables rapid exit."],["med","#F5A623","Regulatory Risk","LOW–MED","Digital money regulation is evolving (MiCA in EU, US stablecoin bill). International Cities can adopt favorable frameworks. The Digital Bank structures as a licensed e-money institution or regulated digital bank."],["low","#2ECC71","Tipolis Capital Risk","NEAR ZERO","Tipolis invests no capital. Worst case: Digital Bank winds down and Tipolis loses its income stream. No balance sheet impairment. Core real estate and city operations are fully insulated."]].map(p=><Risk key={p[2]} level={p[0]} color={p[1]} title={p[2]} badge={p[3]} body={p[4]}/>)}
+      {[["low","#2ECC71","BTC Price Crash","VERY LOW FOR Tipolis","SATS is backed by STRC, not BTC directly. Even a 70% BTC crash would not breach STRC's $100 par given 4.5× overcollateralization. The banking partner — not Tipolis — bears this tail risk."],["low","#2ECC71","De-peg / Bank Run","LOW","Unlike algorithmic stablecoins (Terra/Luna), SATS is 100% backed by real STRC assets. The Digital Bank maintains full STRC coverage at all times. STRC's $150M+ daily volume enables rapid exit."],["med","#F5A623","Regulatory Risk","LOW–MED","Digital money regulation is evolving (MiCA in EU, US stablecoin bill). International Cities can adopt favorable frameworks. The Digital Bank structures as a licensed e-money institution or regulated digital bank."],["low","#2ECC71","Tipolis Capital Risk","NEAR ZERO","Tipolis invests no capital. Worst case: Digital Bank winds down and Tipolis loses its income stream. No balance sheet impairment. Core real estate and city operations are fully insulated."]].map(p=><Risk key={p[2]} level={p[0]} color={p[1]} title={p[2]} badge={p[3]} body={p[4]}/>)}
 
       {/* Market Sizing — TAM/SAM/SOM for Digital Money */}
       <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
@@ -1007,7 +1507,7 @@ function PageCityBonds(){
         <div style={{borderRadius:6,overflow:"hidden",boxShadow:"0 4px 24px rgba(0,0,0,0.4)",opacity:1,filter:"none"}}>
           <div style={{background:"linear-gradient(135deg,rgba(245,166,35,.25),rgba(255,107,53,.15))",padding:"22px 20px 18px",minHeight:100,display:"flex",flexDirection:"column",justifyContent:"flex-end"}}>
             <div style={{display:"inline-flex",gap:6,marginBottom:10,flexWrap:"wrap"}}>
-              <div style={{display:"inline-block",background:"rgba(245,166,35,.35)",borderRadius:3,padding:"2px 9px",fontSize:9,fontFamily:"'DM Mono',monospace",letterSpacing:1,color:"#F5A623",textTransform:"uppercase",border:"1px solid rgba(245,166,35,.5)"}}>Phase 1</div>
+              <div style={{display:"inline-block",background:"rgba(255,255,255,.12)",borderRadius:3,padding:"2px 9px",fontSize:9,fontFamily:"'DM Mono',monospace",letterSpacing:1,color:"rgba(255,255,255,.85)",textTransform:"uppercase"}}>Phase 1</div>
               <div style={{display:"inline-block",background:"rgba(255,255,255,.12)",borderRadius:3,padding:"2px 9px",fontSize:9,fontFamily:"'DM Mono',monospace",letterSpacing:1,color:"rgba(255,255,255,.85)",textTransform:"uppercase"}}>{"Savings & Income Account"}</div>
             </div>
             <div style={{fontSize:18,fontWeight:700,color:"#FFF",lineHeight:1.2}}>Digital Money</div>
@@ -1674,64 +2174,563 @@ function PageWhyNow(){
   return(
     <div style={{padding:"60px 0"}}>
 
-      {/* ── ANSOFF MATRIX ────────────────────────────────────────── */}
+      {/* ══ STRATEGIC FRAMEWORK 04 — MARKET OPPORTUNITY NAVIGATOR ═ */}
       <div style={{marginBottom:40}}>
         <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#A78BFA"}}>Strategic Framework 01</div>
         <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>Ansoff Matrix — Where Do the Three Initiatives Fit?</h2>
-        <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>The Ansoff Matrix is a classic strategic planning tool that maps growth strategies across two axes: products (existing vs. new) and markets (existing vs. new). Each quadrant carries a different risk profile and resource requirement. As a Business Development framework, it reveals how Tipolis is executing a deliberate, sequenced expansion — starting low-risk and progressively entering higher-growth, higher-impact territory.</p>
-        <div style={{display:"grid",gridTemplateColumns:"60px 1fr 1fr",gridTemplateRows:"auto 1fr 1fr",gap:3,marginBottom:16,maxWidth:720}}>
-          {/* Axes labels */}
+        <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>The Ansoff Matrix maps growth strategies across two axes: products (existing vs. new) and markets (existing vs. new). Each quadrant carries a different risk profile. For Tipolis, the three initiatives are not parallel bets — they are a deliberate risk ladder, sequenced from low-risk internal optimization to high-impact market expansion.</p>
+        <div style={{display:"grid",gridTemplateColumns:"52px 1fr 1fr",gridTemplateRows:"auto 1fr 1fr",gap:4,marginBottom:16}}>
+          {/* Column headers */}
           <div style={{gridRow:"1",gridColumn:"1"}}/>
-          <div style={{gridRow:"1",gridColumn:"2",textAlign:"center",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E",paddingBottom:6}}>Existing Products</div>
-          <div style={{gridRow:"1",gridColumn:"3",textAlign:"center",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E",paddingBottom:6}}>New Products</div>
-          {/* Row label: Existing Markets */}
+          <div style={{gridRow:"1",gridColumn:"2",textAlign:"center",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E",paddingBottom:8}}>Existing Products</div>
+          <div style={{gridRow:"1",gridColumn:"3",textAlign:"center",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E",paddingBottom:8}}>New Products</div>
+
+          {/* Row label: New Markets (top row — matches reference image) */}
           <div style={{gridRow:"2",gridColumn:"1",display:"flex",alignItems:"center",justifyContent:"flex-end",paddingRight:8}}>
-            <span style={{writingMode:"vertical-rl",transform:"rotate(180deg)",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E"}}>Existing Markets</span>
-          </div>
-          {/* Cell 1: Market Penetration — STRC */}
-          <div style={{gridRow:"2",gridColumn:"2",background:"rgba(46,204,113,.12)",border:"2px solid #2ECC71",borderRadius:2,padding:"16px 18px"}}>
-            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#2ECC71",textTransform:"uppercase",marginBottom:6}}>Market Penetration</div>
-            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",marginBottom:6}}>STRC Treasury</div>
-            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>Same market (Tipolis's own balance sheet), same need (treasury yield) — but a radically better instrument. No new customers, no new channels. The lowest-risk quadrant: proven product, proven customer, immediate implementation. STRC replaces T-Bills on an existing line item and delivers 3× the yield. This is where the journey starts — minimal execution risk, maximum financial impact on Day 1.</div>
-          </div>
-          {/* Cell 2: Product Development — Digital Money */}
-          <div style={{gridRow:"2",gridColumn:"3",background:"rgba(245,166,35,.10)",border:"2px solid #F5A623",borderRadius:2,padding:"16px 18px"}}>
-            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#F5A623",textTransform:"uppercase",marginBottom:6}}>Product Development</div>
-            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",marginBottom:6}}>Digital Money (SATS)</div>
-            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>New product (a yield-bearing stablecoin and Digital Bank) delivered to an existing and captive market — the residents and businesses already inside the ICT. The infrastructure, trust relationship, and distribution channel already exist. Tipolis is not acquiring new customers; it is deepening value for the ones it already has. This is where financial lock-in is built and where AUM compounds over time.</div>
-          </div>
-          {/* Row label: New Markets */}
-          <div style={{gridRow:"3",gridColumn:"1",display:"flex",alignItems:"center",justifyContent:"flex-end",paddingRight:8}}>
             <span style={{writingMode:"vertical-rl",transform:"rotate(180deg)",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E"}}>New Markets</span>
           </div>
-          {/* Cell 3: Market Development — empty */}
-          <div style={{gridRow:"3",gridColumn:"2",background:"rgba(255,255,255,.03)",border:"1px dashed rgba(255,255,255,.1)",borderRadius:2,padding:"16px 18px",display:"flex",alignItems:"center",justifyContent:"center"}}>
-            <div style={{fontSize:11,color:"#3A4A5A",fontStyle:"italic",textAlign:"center",lineHeight:1.6}}>Market Development<br/><span style={{fontSize:10,color:"#3A4A5A"}}>Not pursued — Tipolis's existing infrastructure would be offered to new geographies without new products. City expansion serves this function organically.</span></div>
+
+          {/* TOP-LEFT: Market Development — STRC Treasury */}
+          <div style={{gridRow:"2",gridColumn:"2",background:"rgba(255,107,53,.10)",border:"2px solid #FF6B35",borderRadius:2,padding:"18px 20px"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#FF6B35",textTransform:"uppercase",marginBottom:6}}>Market Development</div>
+            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#FF6B35",marginBottom:8}}>STRC Treasury</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>Existing product (STRC, already listed on NYSE) brought into a new market — Tipolis's own treasury. No new channel, no new build. Tipolis enters a new use-case for an instrument it did not previously use, replacing T-Bills with a 3× higher-yielding alternative. Market Development carries low execution risk: the product works, the logic is proven, the decision is purely internal.</div>
           </div>
-          {/* Cell 4: Diversification — City Bonds */}
-          <div style={{gridRow:"3",gridColumn:"3",background:"rgba(59,130,246,.12)",border:"2px solid #3B82F6",borderRadius:2,padding:"16px 18px"}}>
-            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#3B82F6",textTransform:"uppercase",marginBottom:6}}>Diversification</div>
-            <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,color:"#fff",marginBottom:6}}>City Bonds</div>
-            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>New product (tokenized municipal debt instruments) for a new market (qualified institutional and individual investors in global capital markets). The highest-risk quadrant — but critically, Tipolis arrives here already armed: SATS AUM creates the distribution channel and pre-qualified investor pool, making this a de-risked diversification, not a cold-start one. The risk is sequenced away by building Phases 1 and 2 first.</div>
+
+          {/* TOP-RIGHT: Diversification — empty */}
+          <div style={{gridRow:"2",gridColumn:"3",background:"rgba(120,20,40,.18)",border:"1px solid rgba(160,30,55,.35)",borderRadius:2,padding:"18px 20px",display:"flex",alignItems:"center",justifyContent:"center"}}>
+            <div style={{fontSize:11,color:"#C87C8A",fontStyle:"italic",textAlign:"center",lineHeight:1.6}}>Diversification<br/><span style={{fontSize:10,color:"#9A5060"}}>Not the path taken. Tipolis avoids launching new products into entirely unknown markets — risk is managed by always leveraging the existing resident base or proven instruments.</span></div>
+          </div>
+
+          {/* Row label: Existing Markets (bottom row) */}
+          <div style={{gridRow:"3",gridColumn:"1",display:"flex",alignItems:"center",justifyContent:"flex-end",paddingRight:8}}>
+            <span style={{writingMode:"vertical-rl",transform:"rotate(180deg)",fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,textTransform:"uppercase",color:"#7A8A9E"}}>Existing Markets</span>
+          </div>
+
+          {/* BOTTOM-LEFT: Market Penetration — empty */}
+          <div style={{gridRow:"3",gridColumn:"2",background:"rgba(120,20,40,.18)",border:"1px solid rgba(160,30,55,.35)",borderRadius:2,padding:"18px 20px",display:"flex",alignItems:"center",justifyContent:"center"}}>
+            <div style={{fontSize:11,color:"#C87C8A",fontStyle:"italic",textAlign:"center",lineHeight:1.6}}>Market Penetration<br/><span style={{fontSize:10,color:"#9A5060"}}>Pushing existing products harder into existing markets. Not the strategic priority — Tipolis focuses on deepening value with new financial products, not on volume of existing ones.</span></div>
+          </div>
+
+          {/* BOTTOM-RIGHT: Product Development — SATS + City Bonds (shared quadrant) */}
+          <div style={{gridRow:"3",gridColumn:"3",background:"rgba(46,204,113,.07)",border:"2px solid #2ECC71",borderRadius:2,padding:"18px 20px"}}>
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,letterSpacing:2,color:"#2ECC71",textTransform:"uppercase",marginBottom:10}}>Product Development</div>
+            {/* SATS sub-card */}
+            <div style={{background:"rgba(245,166,35,.10)",border:"1px solid rgba(245,166,35,.35)",borderLeft:"3px solid #F5A623",borderRadius:2,padding:"12px 14px",marginBottom:8}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#F5A623",marginBottom:4}}>Digital Money · SATS</div>
+              <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>New product (yield-bearing stablecoin + Digital Bank) for an existing and captive market — ICT residents and businesses already inside Tipolis's ecosystem. Distribution cost is near-zero; trust is already established. SATS deepens financial integration and builds the AUM base that powers everything that follows.</div>
+            </div>
+            {/* City Bonds sub-card */}
+            <div style={{background:"rgba(59,130,246,.10)",border:"1px solid rgba(59,130,246,.35)",borderLeft:"3px solid #3B82F6",borderRadius:2,padding:"12px 14px"}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:"#3B82F6",marginBottom:4}}>City Bonds</div>
+              <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65}}>New product (tokenized city infrastructure bonds) for the same existing market — SATS holders and ICT residents become the first buyer pool. Built on Phase 1: no external distribution cost, no cold-start. The quadrant is the same as SATS, but City Bonds represent the deeper, longer-term financial product layer.</div>
+            </div>
           </div>
         </div>
         <div style={{background:"rgba(167,139,250,.06)",border:"1px solid rgba(167,139,250,.2)",borderRadius:2,padding:"12px 16px",fontSize:12,color:"#C8D4E0",lineHeight:1.75}}>
-          <strong style={{color:"#A78BFA"}}>Strategic insight:</strong> The three initiatives are not independent bets — they are a sequenced risk ladder. STRC (Market Penetration) proves the thesis internally. SATS (Product Development) builds the distribution moat. City Bonds (Diversification) monetizes it at scale. Each step reduces the risk of the next. This is intentional design, not coincidence.
+          <strong style={{color:"#A78BFA"}}>Strategic insight:</strong> STRC (Market Development) proves the instrument internally at zero execution risk. SATS and City Bonds (Product Development) then deliver new value to the same captive audience, compounding depth over time. The risk ladder is deliberate: each initiative de-risks the next.
         </div>
       </div>
 
+      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
+
+      {/* ── ANSOFF MATRIX ────────────────────────────────────────── */}
+      <div style={{marginBottom:40}}>
+        <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#A78BFA"}}>Strategic Framework 02</div>
+        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>Market Opportunity Navigator</h2>
+        <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>Developed by Marc Gruber & Sharon Tal (<em>Where to Play</em>, 2017), the Market Opportunity Navigator structures market selection into three steps: <strong>Identify</strong> potential opportunities, <strong>Evaluate</strong> their attractiveness, and <strong>Prioritize</strong> action. For Tipolis, this framework clarifies which segments deserve immediate execution, which should be kept as strategic options, and which are long-term moonshots — across both SATS and City Bonds.</p>
+
+        {/* STEP 1 */}
+        <div style={{marginBottom:24}}>
+          <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:16}}>
+            <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#F5A623",background:"rgba(245,166,35,.12)",border:"1px solid rgba(245,166,35,.3)",borderRadius:2,padding:"2px 12px"}}>STEP 1</span>
+            <div>
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:"#F5A623",letterSpacing:2,textTransform:"uppercase"}}>Identify</div>
+              <div style={{fontSize:13,fontWeight:700,color:"#fff"}}>Market Opportunity Set</div>
+            </div>
+          </div>
+
+          {/* SATS */}
+          <div style={{background:"rgba(245,166,35,.05)",border:"2px solid rgba(245,166,35,.3)",borderRadius:3,padding:"16px 18px",marginBottom:14}}>
+            <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:4}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#F5A623"}}>Digital Money · SATS</div>
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#F5A623",letterSpacing:2,textTransform:"uppercase"}}>10% p.a. ICT residents & companies · 8% p.a. global</div>
+            </div>
+            <p style={{fontSize:12,color:"#9AAABB",lineHeight:1.65,marginBottom:14}}>A USD-pegged, yield-bearing stablecoin backed by STRC — the native financial layer of every ICT. City bank account, payment rails, and savings product in one. Distributed via the Digital Bank with near-zero CAC. SATS holders accumulate cross-product benefits: early City Bond access, real estate discounts, incorporation advantages, and ICT credit history built from transaction data.</p>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+              <div style={{background:"rgba(245,166,35,.08)",border:"1px solid rgba(245,166,35,.2)",borderRadius:2,padding:"12px 14px"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#F5A623",letterSpacing:2,textTransform:"uppercase",marginBottom:10}}>👤 People</div>
+                {[
+                  {l:"Stablecoin & Crypto Holders",t:"8% yield upgrade",d:"$200B+ in zero-yield stablecoins. SATS offers identical $1 parity with 8% p.a. passthrough. No behavioral change — just a structurally better instrument."},
+                  {l:"Digital Nomads",t:"8% yield · global USD",d:"35M+ globally. USD savings yield, frictionless payments, no traditional banking required. Optional ICT membership pathway adds long-term upside."},
+                  {l:"ICT Residents (Future)",t:"10% yield · full benefit stack",d:"When ICTs are operational: 10% p.a., City Bond priority, real estate discounts, SATS credit history. Pre-operationally: early SATS commitment creates priority queue for residency access and benefits."},
+                ].map(function(s){return(
+                  <div key={s.l} style={{borderBottom:"1px solid rgba(245,166,35,.1)",paddingBottom:8,marginBottom:8}}>
+                    <div style={{display:"flex",alignItems:"baseline",gap:8,marginBottom:3,flexWrap:"wrap"}}>
+                      <div style={{fontSize:11,fontWeight:700,color:"#fff"}}>{s.l}</div>
+                      <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#F5A623",opacity:.85}}>{s.t}</div>
+                    </div>
+                    <div style={{fontSize:11,color:"#9AAABB",lineHeight:1.55}}>{s.d}</div>
+                  </div>
+                );})}
+              </div>
+              <div style={{background:"rgba(245,166,35,.08)",border:"1px solid rgba(245,166,35,.2)",borderRadius:2,padding:"12px 14px"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#F5A623",letterSpacing:2,textTransform:"uppercase",marginBottom:10}}>🏢 Companies & Funds</div>
+                {[
+                  {l:"Funds, Assets, Family Offices, MMFs",t:"Private Credit alternative",d:"Conservative allocators: SOFR+ yield, $1 par, daily liquidity. Competes directly with T-Bill money market funds. Key differentiator vs. direct STRC: cross-product benefits — preferred City Bond tranches, co-investment in ICT projects, and Digital Bank relationship."},
+                  {l:"Companies in SEZs, SARs & Autonomous Zones",t:"8% yield · corporate treasury",d:"$400–600B in corporate cash held by 500K+ companies in SEZs and EPZs globally. SATS replaces money market funds with above-SOFR yield, daily liquidity, and native USD payment rails."},
+
+                ].map(function(s){return(
+                  <div key={s.l} style={{borderBottom:"1px solid rgba(245,166,35,.1)",paddingBottom:8,marginBottom:8}}>
+                    <div style={{display:"flex",alignItems:"baseline",gap:8,marginBottom:3,flexWrap:"wrap"}}>
+                      <div style={{fontSize:11,fontWeight:700,color:"#fff"}}>{s.l}</div>
+                      <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#F5A623",opacity:.85}}>{s.t}</div>
+                    </div>
+                    <div style={{fontSize:11,color:"#9AAABB",lineHeight:1.55}}>{s.d}</div>
+                  </div>
+                );})}
+              </div>
+            </div>
+          </div>
+
+          {/* City Bonds */}
+          <div style={{background:"rgba(59,130,246,.05)",border:"2px solid rgba(59,130,246,.3)",borderRadius:3,padding:"16px 18px"}}>
+            <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:4}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#3B82F6"}}>City Bonds</div>
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#3B82F6",letterSpacing:2,textTransform:"uppercase"}}>Fixed USD coupon + 50% BTC upside · Tokenized · Senior / Mezz / Junior</div>
+            </div>
+            <p style={{fontSize:12,color:"#9AAABB",lineHeight:1.65,marginBottom:14}}>Fixed-term debt instruments (10 or 20 years) structured by the Digital Bank. Capital allocated to ICT real estate, urban infrastructure, and strategic BTC reserve. Tokenized on Bitcoin (Botanix + Liquid Network) enabling secondary market trading. Fee structure: 1% structuring + 0.5% distribution for ICT/host country issuances; 2% + 1% for third-party projects. Digital Bank retains 50% of BTC upside in all cases.</p>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+              {/* LEFT: Who invests */}
+              <div style={{background:"rgba(59,130,246,.08)",border:"1px solid rgba(59,130,246,.2)",borderRadius:2,padding:"12px 14px"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#3B82F6",letterSpacing:2,textTransform:"uppercase",marginBottom:10}}>💰 Who Invests (Capital In)</div>
+                {[
+                  {l:"ICT Residents & Businesses",t:"$1K min · junior tranche priority",d:"When ICTs are operational: City Bonds from $1,000 minimum. Priority access to junior tranche (highest BTC upside). Bond ownership creates literal co-ownership of the city they live in. Businesses with treasury balances in SATS are natural first buyers."},
+                  {l:"Qualified & Institutional Investors",t:"All tranches · $25K+",d:"Accredited investors access all tranches via the Digital Bank. Fixed USD coupon + 50% BTC appreciation at maturity — a combination unavailable in any other bond instrument globally."},
+                  {l:"Funds, Assets, Family Offices",t:"Senior / Mezzanine",d:"Institutional allocators target senior and mezz tranches: predictable USD coupon, real asset backing, BTC reserve as additional collateral, and tokenized secondary market liquidity via Liquid Network."},
+                ].map(function(s){return(
+                  <div key={s.l} style={{borderBottom:"1px solid rgba(59,130,246,.1)",paddingBottom:8,marginBottom:8}}>
+                    <div style={{display:"flex",alignItems:"baseline",gap:8,marginBottom:3,flexWrap:"wrap"}}>
+                      <div style={{fontSize:11,fontWeight:700,color:"#fff"}}>{s.l}</div>
+                      <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#3B82F6",opacity:.85}}>{s.t}</div>
+                    </div>
+                    <div style={{fontSize:11,color:"#9AAABB",lineHeight:1.55}}>{s.d}</div>
+                  </div>
+                );})}
+              </div>
+              {/* RIGHT: Who borrows */}
+              <div style={{background:"rgba(59,130,246,.08)",border:"1px solid rgba(59,130,246,.2)",borderRadius:2,padding:"12px 14px"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#3B82F6",letterSpacing:2,textTransform:"uppercase",marginBottom:10}}>🏗️ Who Borrows (Capital Out)</div>
+                {[
+                  {l:"International Cities (ICTs)",t:"Primary use case",d:"City Bonds are the primary long-term capital instrument for Tipolis ICTs — financing real estate, energy, water, roads, and urban services. Issuances are timed strategically to fund specific infrastructure phases without sovereign debt exposure."},
+                  {l:"Private City & Autonomous Community Operators",t:"Platform expansion",d:"Operators of private cities (Prospera, Morazan, Autris) and autonomous communities can use the Digital Bank's investment banking platform to structure and distribute their own bonds — expanding the model beyond Tipolis ICTs."},
+                  {l:"Host Country Government",t:"Senior tranche · sovereign debt alternative",d:"Host governments can invest sovereign reserves in the senior tranche of their ICT's bonds — and can also access City Bond structures to finance infrastructure off-balance-sheet. Political alignment converted into direct financial return with senior claim on real assets."},
+                ].map(function(s){return(
+                  <div key={s.l} style={{borderBottom:"1px solid rgba(59,130,246,.1)",paddingBottom:8,marginBottom:8}}>
+                    <div style={{display:"flex",alignItems:"baseline",gap:8,marginBottom:3,flexWrap:"wrap"}}>
+                      <div style={{fontSize:11,fontWeight:700,color:"#fff"}}>{s.l}</div>
+                      <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,color:"#3B82F6",opacity:.85}}>{s.t}</div>
+                    </div>
+                    <div style={{fontSize:11,color:"#9AAABB",lineHeight:1.55}}>{s.d}</div>
+                  </div>
+                );})}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* STEP 2 */}
+        <div style={{marginBottom:24}}>
+          <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:12}}>
+            <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#2ECC71",background:"rgba(46,204,113,.12)",border:"1px solid rgba(46,204,113,.3)",borderRadius:2,padding:"2px 12px"}}>STEP 2</span>
+            <div>
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:"#2ECC71",letterSpacing:2,textTransform:"uppercase"}}>Evaluate</div>
+              <div style={{fontSize:13,fontWeight:700,color:"#fff"}}>Attractiveness Map</div>
+            </div>
+          </div>
+          <p style={{fontSize:12,color:"#9AAABB",marginBottom:14,lineHeight:1.7}}>Each product × audience is plotted on two axes (0–100): <strong>Market Potential (Y)</strong> vs <strong>Competitive Strength / Tipolis advantage (X)</strong>. Midpoint at 50 divides four quadrants. Bubble size reflects relative revenue potential. Click any bubble for detail.</p>
+          {(function(){
+            var opps=[
+              {id:"sats_ict_res", label:"SATS · ICT Residents",       color:"#F5A623", x:20, y:40, r:12, note:"Future ICT residents earn 10% p.a. + full benefit stack. High Tipolis advantage (captive, zero CAC). Moderate market potential until ICTs open. Pre-operational positioning starts now."},
+              {id:"sats_ict_co",  label:"SATS · ICT Companies",        color:"#FF6B35", x:30, y:60, r:12, note:"Companies inside future ICTs: 10% p.a. yield on operating cash + native payment rails + payroll. Captive distribution. Higher market potential than residents due to larger treasury balances."},
+              {id:"sats_crypto",  label:"SATS · Crypto Holders",       color:"#F5A623", x:55, y:35, r:12, note:"$200B+ in zero-yield stablecoins. Same $1 parity + 8% p.a. No behavioral change. Large market, moderate Tipolis advantage — requires product marketing outside ICT ecosystem."},
+              {id:"sats_nomad",   label:"SATS · Digital Nomads",       color:"#F5A623", x:35, y:45, r:12, note:"35M+ globally. USD yield + frictionless payments + city membership option. Primary pre-residency funnel. Pursue Now segment."},
+              {id:"sats_sez",     label:"SATS · SEZs Companies",       color:"#F5A623", x:15, y:55, r:12, note:"Companies in SEZs/SARs. B2B white-label play targeting corporate treasury allocation with above-SOFR yield + daily liquidity. Significant market potential ($400–600B corporate cash). Pursue Now segment."},
+              {id:"sats_funds",   label:"SATS · Funds / Assets / FOs", color:"#2ECC71", x:95, y:75, r:12, note:"$5T+ money market AUM. SATS as Private Credit alternative — SOFR+, $1 par, daily liquidity. Highest competitive strength of all non-ICT segments."},
+              {id:"cb_ict_res",   label:"CB · ICT Residents & Biz",    color:"#3B82F6", x:80, y:20, r:12, note:"Future ICT residents and businesses access City Bonds from $1,000 minimum with junior tranche priority. High Tipolis advantage (captive + zero distribution cost via SATS AUM)."},
+              {id:"cb_inst",      label:"CB · Qualified Investors",     color:"#60A5FA", x:65, y:55, r:12, note:"Qualified and institutional investors access all tranches. Fixed USD coupon + 50% BTC upside unavailable in any other bond instrument. Strong Tipolis advantage via tokenized liquidity."},
+              {id:"cb_funds",     label:"CB · Funds / Assets / FOs",   color:"#3B82F6", x:70, y:90, r:12, note:"Largest CB revenue opportunity. Institutional senior/mezz tranches. High market potential ($180T+ addressable), strong Tipolis advantage via tokenized liquidity + BTC upside."},
+              {id:"cb_priv_city", label:"CB · Private City Ops",       color:"#93C5FD", x:50, y:65, r:12, note:"Private city operators and autonomous community operators can access the Digital Bank's investment banking platform to structure and distribute their own City Bonds — expanding the model beyond Tipolis ICTs."},
+              {id:"cb_host",      label:"CB · Host Country Gov.",       color:"#93C5FD", x:55, y:75, r:12, note:"Host governments invest sovereign reserves in senior tranche and can access CB structures for off-balance-sheet infrastructure financing. Replaces expensive sovereign debt. Strategic relationship multiplier."},
+            ];
+            var W2=560, H2=380, PL=50, PB=54, PT=24, PR=20;
+            var cW=W2-PL-PR, cH=H2-PT-PB;
+            function px(v){return PL+v/100*cW;}
+            function py(v){return PT+(1-v/100)*cH;}
+            var [sel,setSel]=React.useState(null);
+            return(
+              <div style={{background:"rgba(6,20,40,.6)",border:"1px solid rgba(255,255,255,.1)",borderRadius:3,padding:"16px",overflowX:"auto"}}>
+                <svg width="100%" viewBox={"0 0 "+W2+" "+(H2+8)} preserveAspectRatio="xMidYMid meet" style={{display:"block",overflow:"visible"}}>
+                  {/* Quadrant fills — vivid */}
+                  <rect x={PL} y={PT} width={cW/2} height={cH/2} fill="rgba(245,166,35,.2)"/>
+                  <rect x={PL+cW/2} y={PT} width={cW/2} height={cH/2} fill="rgba(46,204,113,.22)"/>
+                  <rect x={PL} y={PT+cH/2} width={cW/2} height={cH/2} fill="rgba(59,130,246,.18)"/>
+                  <rect x={PL+cW/2} y={PT+cH/2} width={cW/2} height={cH/2} fill="rgba(239,68,68,.16)"/>
+                  {/* Dividers */}
+                  <line x1={PL} y1={PT+cH/2} x2={PL+cW} y2={PT+cH/2} stroke="rgba(255,255,255,.25)" strokeWidth={1.5}/>
+                  <line x1={PL+cW/2} y1={PT} x2={PL+cW/2} y2={PT+cH} stroke="rgba(255,255,255,.25)" strokeWidth={1.5}/>
+                  {/* Quadrant labels */}
+                  <text x={PL+cW/4} y={PT+16} textAnchor="middle" fill="rgba(255,200,50,.95)" fontSize={10} fontFamily="monospace" fontWeight="bold">GOLD MINE</text>
+                  <text x={PL+cW*3/4} y={PT+16} textAnchor="middle" fill="rgba(46,220,113,.95)" fontSize={10} fontFamily="monospace" fontWeight="bold">MOON SHOT</text>
+                  <text x={PL+cW/4} y={PT+cH/2+16} textAnchor="middle" fill="rgba(100,170,255,.95)" fontSize={10} fontFamily="monospace" fontWeight="bold">QUICK WIN</text>
+                  <text x={PL+cW*3/4} y={PT+cH/2+16} textAnchor="middle" fill="rgba(255,90,90,.95)" fontSize={10} fontFamily="monospace" fontWeight="bold">QUESTIONABLE</text>
+                  {/* Axes */}
+                  <line x1={PL} y1={PT} x2={PL} y2={PT+cH} stroke="rgba(255,255,255,.3)" strokeWidth={1.5}/>
+                  <line x1={PL} y1={PT+cH} x2={PL+cW} y2={PT+cH} stroke="rgba(255,255,255,.3)" strokeWidth={1.5}/>
+                  {/* Axis titles — no tick numbers */}
+                  <text x={PL+cW/2} y={PT+cH+16} textAnchor="middle" fill="#9AAABB" fontSize={10} fontFamily="monospace">Competitive Strength — Tipolis Advantage →</text>
+                  <text x={18} y={PT+cH/2} textAnchor="middle" fill="#9AAABB" fontSize={10} fontFamily="monospace" transform={"rotate(-90,18,"+(PT+cH/2)+")"}>Market Potential →</text>
+                  {/* Bubbles */}
+                  {opps.map(function(op){
+                    var cx2=px(op.x), cy2=py(op.y), isSel=sel===op.id;
+                    return(
+                      <g key={op.id} onClick={function(){setSel(sel===op.id?null:op.id);}} style={{cursor:"pointer"}}>
+                        <circle cx={cx2} cy={cy2} r={op.r+3} fill={op.color} opacity={.12}/>
+                        <circle cx={cx2} cy={cy2} r={op.r} fill={op.color+(isSel?"cc":"66")} stroke={op.color} strokeWidth={isSel?2.5:1.5}/>
+                        <text x={cx2} y={cy2+3} textAnchor="middle" fill={isSel?"#fff":op.color} fontSize={6} fontFamily="monospace" fontWeight="bold">{op.label.split("\xb7")[0].trim()}</text>
+                      </g>
+                    );
+                  })}
+                </svg>
+                <div style={{display:"flex",gap:8,flexWrap:"wrap",marginTop:8}}>
+                  {opps.map(function(op){return(
+                    <span key={op.id} onClick={function(){setSel(sel===op.id?null:op.id);}} style={{display:"flex",alignItems:"center",gap:4,fontSize:9.5,color:sel===op.id?op.color:"#7A8A9E",fontFamily:"'DM Mono',monospace",cursor:"pointer"}}>
+                      <span style={{width:7,height:7,borderRadius:"50%",background:op.color,display:"inline-block",flexShrink:0}}/>
+                      {op.label}
+                    </span>
+                  );})}
+                </div>
+                {sel&&(function(){
+                  var op=opps.find(function(o){return o.id===sel;});
+                  return op?(
+                    <div style={{marginTop:8,padding:"8px 12px",background:op.color+"15",border:"1px solid "+op.color+"40",borderRadius:2}}>
+                      <span style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:op.color,fontWeight:700,marginRight:8}}>{op.label}</span>
+                      <span style={{fontSize:11,color:"#C8D4E0"}}>{op.note}</span>
+                    </div>
+                  ):null;
+                })()}
+              </div>
+            );
+          })()}
+        </div>
+
+        {/* STEP 3 */}
+        <div>
+          <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:12}}>
+            <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#A78BFA",background:"rgba(167,139,250,.12)",border:"1px solid rgba(167,139,250,.3)",borderRadius:2,padding:"2px 12px"}}>STEP 3</span>
+            <div>
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,color:"#A78BFA",letterSpacing:2,textTransform:"uppercase"}}>Prioritize</div>
+              <div style={{fontSize:13,fontWeight:700,color:"#fff"}}>Agile Focus Dartboard</div>
+            </div>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+            {(function(){
+              var W3=380,H3=380,cx=190,cy=190;
+              return(
+                <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:3,padding:"16px",display:"flex",flexDirection:"column",alignItems:"center"}}>
+                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#A78BFA",letterSpacing:2,textTransform:"uppercase",marginBottom:10}}>Agile Focus Dartboard</div>
+                  <svg width={W3} height={H3} viewBox={"0 0 "+W3+" "+H3}>
+                    <circle cx={cx} cy={cy} r={178} fill="rgba(245,166,35,.09)" stroke="rgba(245,166,35,.35)" strokeWidth={1.5}/>
+                    <circle cx={cx} cy={cy} r={122} fill="rgba(59,130,246,.13)" stroke="rgba(59,130,246,.4)" strokeWidth={1.5}/>
+                    <circle cx={cx} cy={cy} r={68} fill="rgba(46,204,113,.2)" stroke="rgba(46,204,113,.55)" strokeWidth={2}/>
+                    <text x={cx} y={cy-138} textAnchor="middle" fill="rgba(245,166,35,.8)" fontSize={9} fontFamily="monospace">PLACE IN STORAGE</text>
+                    <text x={cx} y={cy-90} textAnchor="middle" fill="rgba(100,160,255,.9)" fontSize={9} fontFamily="monospace">KEEP OPEN</text>
+                    <text x={cx} y={cy-24} textAnchor="middle" fill="rgba(46,220,113,.95)" fontSize={9} fontFamily="monospace">PURSUE NOW</text>
+                    {[
+                      {label:"SATS SEZ",       color:"#F5A623", ring:0, angle:-20},
+                      {label:"SATS Nomads",    color:"#2ECC71", ring:0, angle:20},
+                      {label:"SATS Funds/FOs", color:"#2ECC71", ring:1, angle:-50},
+                      {label:"SATS Crypto",    color:"#F5A623", ring:1, angle:-10},
+                      {label:"SATS ICT Res.",  color:"#F5A623", ring:1, angle:50},
+                      {label:"SATS ICT Co.",   color:"#FF6B35", ring:1, angle:100},
+                      {label:"CB ICT Res.",    color:"#3B82F6", ring:1, angle:150},
+                      {label:"CB Inst.",       color:"#60A5FA", ring:1, angle:-150},
+                      {label:"CB Funds/FOs",   color:"#3B82F6", ring:1, angle:-100},
+                      {label:"CB Priv.City",   color:"#93C5FD", ring:1, angle:175},
+                      {label:"CB Host Gov.",   color:"#93C5FD", ring:1, angle:-175},
+                      {label:"Cross-City",     color:"#06B6D4", ring:2, angle:70},
+                      {label:"CB Indiv.",      color:"#93C5FD", ring:2, angle:-70},
+                    ].map(function(dot,i){
+                      var radii=[46,100,150];
+                      var r=radii[dot.ring];
+                      var a=(dot.angle-90)*Math.PI/180;
+                      var x=cx+r*Math.cos(a),y=cy+r*Math.sin(a);
+                      return(
+                        <g key={i}>
+                          <circle cx={x} cy={y} r={6} fill={dot.color} opacity={.92}/>
+                          <text x={x} y={y-9} textAnchor="middle" fill={dot.color} fontSize={6} fontFamily="monospace">{dot.label}</text>
+                        </g>
+                      );
+                    })}
+                  </svg>
+                </div>
+              );
+            })()}
+            <div style={{display:"flex",flexDirection:"column",gap:10}}>
+              {[
+                {zone:"PURSUE NOW",color:"#2ECC71",items:[
+                  "SATS — SEZ Companies (B2B, 8% yield on corporate treasury — no ICT required, execute immediately)",
+                  "SATS — Digital Nomads (8% yield + USD rails + city membership pathway — primary pre-residency funnel)",
+                ],rationale:"Two segments require zero ICT operational dependency and generate AUM immediately. SEZ companies are the highest-leverage B2B treasury channel. Digital Nomads are the natural pre-residency funnel: yield-seeking, mobile, and aligned with the ICT value proposition."},
+                {zone:"KEEP OPEN",color:"#3B82F6",items:[
+                  "SATS — Funds, Assets, Family Offices, MMFs (8% yield, Private Credit alternative — activate when regulatory structure is formalized)",
+                  "SATS — Crypto & Stablecoin Holders (8% yield upgrade — activate with product marketing once core AUM is established)",
+                  "SATS — ICT Residents & Companies (10% yield + full benefits — activated at ICT operational launch)",
+                  "City Bonds — ICT Residents & Businesses (junior tranche, $1K min — activated at ICT operational launch)",
+                  "City Bonds — Qualified & Institutional Investors (all tranches — needs first bond issuance track record)",
+                  "City Bonds — Funds, Assets, FOs (senior/mezz — needs ICT operational + governance track record)",
+                  "City Bonds — Private City & Autonomous Community Operators (platform expansion — needs operational Digital Bank + BD pipeline)",
+                  "City Bonds — Host Country Government (senior tranche — needs operational ICT + sovereign relationship formalized)",
+                ],rationale:"All Keep Open opportunities have a specific, trackable trigger. The ICT launch event alone converts three of these to Pursue Now simultaneously. Private City Operators become accessible once the Digital Bank has proven its investment banking platform on ICT issuances."},
+                {zone:"PLACE IN STORAGE",color:"#F5A623",items:[
+                  "Cross-City SATS Network (requires 3+ ICTs at simultaneous operating scale)",
+                  "City Bonds — Individual Qualified Investors outside ICT (needs rating-quality governance + 18 months operating history)",
+                ],rationale:"Genuinely premature. Multi-city network effects require multiple ICTs at scale. Individual CB distribution at scale requires regulatory maturity and track record. Revisit when second ICT reaches $200M+ SATS AUM."},
+              ].map(function(z){return(
+                <div key={z.zone} style={{background:z.color+"08",border:"1px solid "+z.color+"28",borderLeft:"3px solid "+z.color,borderRadius:2,padding:"12px 14px"}}>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:15,color:z.color,marginBottom:6}}>{z.zone}</div>
+                  <ul style={{listStyle:"none",padding:0,margin:"0 0 6px"}}>
+                    {z.items.map(function(it,i){return(
+                      <li key={i} style={{fontSize:11,color:"#C8D4E0",padding:"2px 0 2px 12px",position:"relative"}}>
+                        <span style={{position:"absolute",left:0,color:z.color,opacity:.8}}>▸</span>{it}
+                      </li>
+                    );})}
+                  </ul>
+                  <div style={{fontSize:11,color:"#7A8A9E",lineHeight:1.6,borderTop:"1px solid rgba(255,255,255,.05)",paddingTop:6}}>{z.rationale}</div>
+                </div>
+              );})}
+            </div>
+          </div>
+          <div style={{marginTop:12,background:"rgba(167,139,250,.06)",border:"1px solid rgba(167,139,250,.2)",borderRadius:2,padding:"10px 14px",fontSize:12,color:"#C8D4E0",lineHeight:1.7}}>
+            <strong style={{color:"#A78BFA"}}>MON verdict: </strong>Three "Pursue Now" opportunities require no ICT to be operational — SATS for Funds/FOs, SEZ companies, and crypto holders can build AUM immediately. ICT-dependent opportunities are "Keep Open" with the ICT launch as the single trigger event that converts most of them to Pursue Now simultaneously. The sequencing is deliberate: build AUM first, then deploy infrastructure capital.
+          </div>
+        </div>
+      </div>
+
+      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
+
+      {/* ══ STRATEGIC FRAMEWORK 03 — BLUE OCEAN STRATEGY ══════════ */}
+      <div style={{marginBottom:40}}>
+        <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#06B6D4"}}>Strategic Framework 03</div>
+        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>Blue Ocean Strategy — Creating Uncontested Market Space</h2>
+        <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>Developed by Kim & Mauborgne (2005), Blue Ocean Strategy proposes escaping saturated "red oceans" — markets defined by head-to-head competition over shrinking margins — by creating "blue oceans": new, uncontested spaces where value innovation makes competition irrelevant. The Strategic Canvas maps competing factors to reveal where a new value curve diverges from the industry. The Four Actions Framework (Eliminate · Reduce · Raise · Create) defines how to build that curve. Both SATS and City Bonds create blue oceans in their respective markets — not by outcompeting incumbents, but by redefining what the product category even is.</p>
+
+        {/* ── TAB SELECTOR ── */}
+        {(function(){
+          var [tab, setTab] = React.useState("dm");
+          var [hovered, setHovered] = React.useState(null);
+
+          var DM_FACTORS = [
+            {label:"Yield / Return",sats:10,fiat:0,stablecoins:1,strc:9,desc:"SATS ICT residents earn 10% p.a.; global users earn 8% p.a. — yield passed directly to holders. Standard stablecoins retain 100% of yield internally. Fiat earns near-zero real yield. STRC earns 9–12% but requires brokerage account access."},
+            {label:"Volatility",sats:10,fiat:5,stablecoins:9,strc:8,desc:"SATS is $1-pegged. Fiat carries structural inflation risk in many host countries. STRC has par value of $100 and behaves like preferred equity — second most stable here. Standard stablecoins stable but exposed to de-peg events."},
+            {label:"Access Threshold",sats:10,fiat:7,stablecoins:9,strc:3,desc:"SATS starts at $100, fully accessible. Standard stablecoins accessible on-chain but yield-free. Fiat accessible via traditional banking. STRC requires brokerage account, NYSE access, and institutional minimums."},
+            {label:"Daily Liquidity",sats:9,fiat:10,stablecoins:8,strc:7,desc:"Fiat is the benchmark. SATS redeemable daily at $1 par. Stablecoins liquid on-chain with protocol/bridge risk. STRC liquid on NYSE market hours only — not 24/7."},
+            {label:"City Integration",sats:10,fiat:2,stablecoins:1,strc:0,desc:"SATS is the native financial layer of the ICT: payments, savings, City Bond access, credit scoring, cross-product benefits in one account. No other instrument integrates with city governance or residency benefits."},
+            {label:"BTC Appreciation",sats:7,fiat:0,stablecoins:0,strc:8,desc:"STRC offers direct BTC upside, slightly above SATS. SATS benefits indirectly via STRC collateral strength. Both well ahead of fiat and stablecoins which offer zero hard-money exposure."},
+            {label:"Cross-Product Benefits",sats:10,fiat:0,stablecoins:0,strc:2,desc:"SATS holders accumulate cross-product benefits: early City Bond access, real estate discounts, incorporation advantages, ICT credit history. STRC offers none. Fiat and stablecoins offer none."},
+            {label:"Leverage",sats:8,fiat:0,stablecoins:2,strc:10,desc:"STRC on the balance sheet enables the highest leverage potential — used as institutional collateral for credit lines. SATS provides leverage access via Digital Bank credit products. Standard stablecoins have limited collateral use. Fiat offers zero leverage utility."},
+          ];
+
+          var CB_FACTORS = [
+            {label:"Total Return (IRR)",cb:9,sovereign:3,muni:4,realestate:6,deb:5,desc:"City Bonds target 4.5–6% fixed coupon + 50% BTC upside. Under Base Case (29% BTC CAGR), IRR reaches 9.7–21.8% — structurally above all comparable instruments. The BTC participation component makes the total return comparison non-linear."},
+            {label:"BTC Upside",cb:10,sovereign:0,muni:0,realestate:2,deb:0,desc:"City Bonds uniquely offer 50% of Bitcoin appreciation. No sovereign bond, municipal bond, or private credit instrument offers any BTC participation. Real estate provides indirect inflation hedge only."},
+            {label:"Investor–City Alignment",cb:10,sovereign:3,muni:5,realestate:6,deb:2,desc:"City Bond investors often reside in the very city they are financing. Financial return and quality of life are directly coupled — a structural alignment no external bond market can replicate."},
+            {label:"Distribution Cost",cb:9,sovereign:6,muni:3,realestate:2,deb:3,desc:"City Bonds distributed via SATS platform to pre-qualified holders — near-zero cost. Sovereign bonds have established dealer networks, scoring second (6). Municipal bonds and private credit require full underwriting. Fees: 1% structuring + 0.5% distribution for ICT/host country; 2% + 1% third-party."},
+            {label:"Minimum Investment",cb:5,sovereign:8,muni:6,realestate:1,deb:7,desc:"Sovereign bonds most accessible via ETFs and liquid markets (8). Private credit accessible at $10K+ (7). Municipal bonds at $5K+ (6). City Bonds at $1,000 for ICT residents (5) — dramatically lower than project finance ($250K+), though still gated for institutional markets."},
+            {label:"Risk",cb:7,sovereign:9,muni:3,realestate:6,deb:5,desc:"Sovereign bonds carry the highest credit quality (9). City Bonds backed by real assets and STRC reserve, off sovereign balance sheet (7). Real estate has asset backing (6). Private credit carries corporate credit risk (5). Municipal bonds carry local government fiscal risk (3)."},
+            {label:"Secondary Market Liquidity",cb:8,sovereign:10,muni:6,realestate:1,deb:5,desc:"Sovereign bonds: maximum global liquidity (10). City Bonds tokenized on Liquid Network — tradeable before maturity (8). Municipal bonds vary (6). Private credit limited secondary market (5). Real estate project finance structurally illiquid (1)."},
+            {label:"Capital Architecture",cb:9,sovereign:5,muni:4,realestate:7,deb:6,desc:"City Bonds in senior / mezzanine / junior tranches for capital stack optimization. Senior targets sovereign wealth funds. Mezzanine targets credit funds. Junior targets residents. This architecture lowers WACC while accessing a broader investor universe."},
+            {label:"Leverage",cb:6,sovereign:9.5,realestate:10,muni:4,deb:5,desc:"Real estate most leverage-intensive (LTV 60–80%, score 10). Sovereign bonds used as repo collateral by central banks — near-unlimited leverage (9.5). City Bonds provide moderate leverage via senior tranche collateral (6). Municipal bonds and private credit offer lower leverage utility."},
+          ];
+
+          var factors = tab==="dm" ? DM_FACTORS : CB_FACTORS;
+          var lines = tab==="dm"
+            ? [{key:"sats",label:"SATS (Digital Money)",color:"#F5A623",primary:true},{key:"fiat",label:"Fiat / Cash",color:"#7A8A9E",primary:false},{key:"stablecoins",label:"Standard Stablecoins",color:"#EF4444",primary:false},{key:"strc",label:"STRC",color:"#2ECC71",primary:false}]
+            : [{key:"cb",label:"City Bonds",color:"#3B82F6",primary:true},{key:"sovereign",label:"Sovereign Bonds",color:"#7A8A9E",primary:false},{key:"muni",label:"Municipal Bonds",color:"#EF4444",primary:false},{key:"realestate",label:"Real Estate Finance",color:"#F59E0B",primary:false},{key:"deb",label:"Private Credit",color:"#A78BFA",primary:false}];
+
+          var W=680, H=240, PAD_L=80, PAD_B=44, PAD_T=20, PAD_R=10;
+          var fW=(W-PAD_L-PAD_R)/factors.length;
+          function toY(v){ return PAD_T + (H-PAD_T-PAD_B)*(1-v/10); }
+          function toX(i){ return PAD_L + i*fW + fW*0.5; }
+
+          return (
+            <div>
+              <div style={{display:"flex",gap:8,marginBottom:20}}>
+                <button onClick={function(){setTab("dm");setHovered(null);}} style={{padding:"6px 16px",borderRadius:2,border:"1px solid "+(tab==="dm"?"#F5A623":"rgba(255,255,255,.12)"),background:tab==="dm"?"rgba(245,166,35,.12)":"transparent",color:tab==="dm"?"#F5A623":"#7A8A9E",fontFamily:"'DM Mono',monospace",fontSize:10,cursor:"pointer",letterSpacing:1}}>DIGITAL MONEY · SATS</button>
+                <button onClick={function(){setTab("cb");setHovered(null);}} style={{padding:"6px 16px",borderRadius:2,border:"1px solid "+(tab==="cb"?"#3B82F6":"rgba(255,255,255,.12)"),background:tab==="cb"?"rgba(59,130,246,.12)":"transparent",color:tab==="cb"?"#3B82F6":"#7A8A9E",fontFamily:"'DM Mono',monospace",fontSize:10,cursor:"pointer",letterSpacing:1}}>CITY BONDS</button>
+              </div>
+
+              <div style={{background:"rgba(6,182,212,.04)",border:"1px solid rgba(6,182,212,.2)",borderRadius:3,padding:"16px",marginBottom:16,overflowX:"auto"}}>
+                <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#06B6D4",letterSpacing:2,textTransform:"uppercase",marginBottom:8}}>Strategic Canvas — Value Curve (click any factor for detail)</div>
+                <svg width="100%" viewBox={"0 0 "+W+" "+(H+16)} preserveAspectRatio="xMidYMid meet" style={{display:"block",overflow:"visible"}}>
+                  {[0,2.5,5,7.5,10].map(function(v){
+                    var y=toY(v);
+                    return(
+                      <g key={v}>
+                        <line x1={PAD_L} y1={y} x2={W-PAD_R} y2={y} stroke="rgba(255,255,255,.06)" strokeDasharray="3,3"/>
+                        <text x={PAD_L-6} y={y+4} textAnchor="end" fill="#5A6A7A" fontSize={8} fontFamily="monospace">{v}</text>
+                      </g>
+                    );
+                  })}
+                  {factors.map(function(f,i){
+                    var x=toX(i);
+                    var words=f.label.split(" ");
+                    return(
+                      <g key={i} onClick={function(){setHovered(hovered===i?null:i);}} style={{cursor:"pointer"}}>
+                        <line x1={x} y1={PAD_T} x2={x} y2={H-PAD_B} stroke={hovered===i?"rgba(255,255,255,.12)":"rgba(255,255,255,.04)"}/>
+                        {words.map(function(w,wi){
+                          return <text key={wi} x={x} y={H-PAD_B+13+wi*10} textAnchor="middle" fill={hovered===i?"#fff":"#7A8A9E"} fontSize={7.5} fontFamily="monospace">{w}</text>;
+                        })}
+                      </g>
+                    );
+                  })}
+                  <line x1={PAD_L} y1={PAD_T} x2={PAD_L} y2={H-PAD_B} stroke="rgba(255,255,255,.2)" strokeWidth={1}/>
+                  <line x1={PAD_L} y1={H-PAD_B} x2={W-PAD_R} y2={H-PAD_B} stroke="rgba(255,255,255,.2)" strokeWidth={1}/>
+                  {lines.map(function(line){
+                    return(
+                      <g key={line.key}>
+                        <polyline points={factors.map(function(f,i){return toX(i)+","+toY(f[line.key]);}).join(" ")} fill="none" stroke={line.color} strokeWidth={line.primary?2.5:1.5} strokeDasharray={line.primary?"none":"5,3"} opacity={line.primary?1:.65}/>
+                        {factors.map(function(f,i){
+                          return <circle key={i} cx={toX(i)} cy={toY(f[line.key])} r={line.primary?4:2.5} fill={line.color} stroke="#001829" strokeWidth={1} opacity={line.primary?1:.8}/>;
+                        })}
+                      </g>
+                    );
+                  })}
+                  <text x={14} y={PAD_T+(H-PAD_T-PAD_B)/2} textAnchor="middle" fill="#5A6A7A" fontSize={8} fontFamily="monospace" transform={"rotate(-90,14,"+(PAD_T+(H-PAD_T-PAD_B)/2)+")"}>Score (0–10)</text>
+                </svg>
+                <div style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:8}}>
+                  {lines.map(function(l){
+                    return(
+                      <span key={l.key} style={{display:"flex",alignItems:"center",gap:5,fontSize:10,color:l.color,fontFamily:"'DM Mono',monospace",fontWeight:l.primary?700:400}}>
+                        <svg width={22} height={8}><line x1={0} y1={4} x2={22} y2={4} stroke={l.color} strokeWidth={l.primary?2.5:1.5} strokeDasharray={l.primary?"none":"5,3"}/></svg>
+                        {l.label}
+                      </span>
+                    );
+                  })}
+                </div>
+                {hovered!==null&&(
+                  <div style={{marginTop:10,padding:"10px 14px",background:"rgba(6,182,212,.08)",border:"1px solid rgba(6,182,212,.25)",borderRadius:2}}>
+                    <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:"#06B6D4",marginBottom:4,letterSpacing:1}}>{factors[hovered].label}</div>
+                    <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.65,marginBottom:6}}>{factors[hovered].desc}</div>
+                    <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+                      {lines.map(function(l){return(
+                        <span key={l.key} style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:l.color}}>{l.label.split("(")[0].split("·")[0].trim()}: <strong>{factors[hovered][l.key]}/10</strong></span>
+                      );})}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Four Actions */}
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#06B6D4",letterSpacing:2,textTransform:"uppercase",marginBottom:10}}>Four Actions Framework — {tab==="dm"?"Digital Money · SATS":"City Bonds"}</div>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:12}}>
+                {(tab==="dm" ? [
+                  {action:"ELIMINATE",color:"#EF4444",icon:"✕",items:["Yield retention by the issuer — 100% passed to holders","Custodial crypto wallets — no wallet required, standard account","Geographic and accreditation barriers to yield products","Institutional minimum tickets — SATS starts at $100","Opaque yield mechanisms — STRC collateral fully disclosed"]},
+                  {action:"REDUCE",color:"#F59E0B",icon:"↓",items:["Counterparty risk vs. open stablecoins (city governance layer)","Settlement complexity (native city payment rails)","BTC price volatility exposure (STRC buffer at 4.5× coverage)","Onboarding friction (city residency = account opening)","Customer acquisition cost (structurally near zero)"]},
+                  {action:"RAISE",color:"#2ECC71",icon:"↑",items:["Annual yield to holders: 10% p.a. (ICT residents & companies), 8% p.a. (global users)","Trust via city governance contract and regulatory sandbox","Integration with city services (payments, rent, salaries)","Resident financial identity depth (credit history, city-native)","Regulatory compliance certainty (ICT sandbox structure)"]},
+                  {action:"CREATE",color:"#3B82F6",icon:"★",items:["Cross-product benefits: early City Bond access, real estate discounts, incorporation advantages","Pre-operational residency accumulation: hold SATS before the ICT opens and earn priority rights","Native credit scoring from SATS movement history — first ICT credit system","Programmable city incentives (discounts, milestones, governance signals via SATS balance)","Pre-qualified investor pool for City Bonds — SATS AUM is the distribution engine"]},
+                ] : [
+                  {action:"ELIMINATE",color:"#EF4444",icon:"✕",items:["External underwriters and bond broker-dealers","Rating agency dependency for market access","Geographic restriction to local or accredited investors only","Lock-in with no secondary market option — tokenized from day one","Opaque capital stack — senior/mezz/junior clearly disclosed"]},
+                  {action:"REDUCE",color:"#F59E0B",icon:"↓",items:["Minimum investment: $1,000 for ICT residents (vs. $250K+ in project finance)","Distribution cost: SATS holders are the first buyer pool — near zero","Sovereign risk: obligations are off the host government balance sheet","Settlement time: tokenized, near-instant on Liquid Network","Political dependency: no sovereign guarantee required"]},
+                  {action:"RAISE",color:"#2ECC71",icon:"↑",items:["Fixed USD coupon: 6% p.a. (10yr) or 4.5% p.a. (20yr) on total invested","Investor–city alignment: residents finance their own infrastructure","Transparency: on-chain covenants, automated coupon via Botanix smart contracts","Tranche architecture: senior / mezzanine / junior for capital stack optimization","Bitcoin reserve accumulation: each bond issuance builds the city's BTC position"]},
+                  {action:"CREATE",color:"#3B82F6",icon:"★",items:["50% Bitcoin appreciation participation — no existing bond offers this","Self-amortizing debt structure: BTC reserve appreciates, lowering effective cost of capital over time","Host country participation: governments invest in senior tranche of their own ICT bonds — sovereign debt replaced by structured private credit","Resident co-ownership: junior tranche holders own a stake in the physical city they live in","Digital Bank fee structure: 1% structuring + 0.5% distribution (ICT/host country); 2% + 1% (third-party projects) + 50% excess BTC retained by Digital Bank"]},
+                ]).map(function(q){
+                  return(
+                    <div key={q.action} style={{background:q.color+"10",border:"1px solid "+q.color+"30",borderTop:"2px solid "+q.color,borderRadius:2,padding:"14px 16px"}}>
+                      <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
+                        <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,color:q.color}}>{q.action}</span>
+                        <span style={{fontFamily:"'DM Mono',monospace",fontSize:13,color:q.color,opacity:.7}}>{q.icon}</span>
+                      </div>
+                      <ul style={{listStyle:"none",padding:0,margin:0}}>
+                        {q.items.map(function(item,i){return(
+                          <li key={i} style={{fontSize:11,color:"#C8D4E0",lineHeight:1.6,padding:"3px 0 3px 14px",borderBottom:"1px solid rgba(255,255,255,.04)",position:"relative"}}>
+                            <span style={{position:"absolute",left:0,color:q.color,opacity:.7}}>▸</span>{item}
+                          </li>
+                        );})}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{background:"rgba(6,182,212,.04)",border:"1px solid rgba(6,182,212,.15)",borderRadius:2,padding:"10px 14px",fontSize:12,color:"#C8D4E0",lineHeight:1.7}}>
+                <strong style={{color:"#06B6D4"}}>Blue Ocean verdict: </strong>
+                {tab==="dm"
+                  ? "SATS does not compete in the stablecoin red ocean — it creates a new market category. The value curve diverges sharply on yield passthrough (10% ICT residents / 8% global vs. zero for USDT/USDC), city integration (payments, credit scoring, City Bond access, cross-product benefits — an absolute moat), leverage utility (STRC collateral + Digital Bank credit products unavailable in fiat or stablecoins), and BTC appreciation exposure. New factors created: pre-operational resident accumulation, programmable city incentives, and a pre-qualified City Bond investor pool — redefining what a savings instrument can be."
+                  : "City Bonds do not compete with sovereign or corporate debt on the same terms. They create a structurally new asset class: resident-aligned infrastructure bonds with Bitcoin upside, tokenized secondary market liquidity, and capital stack architecture that allows host governments to participate as senior investors — replacing expensive sovereign debt with structured private credit at lower effective cost. The combination of fixed USD yield + 50% BTC participation + resident co-ownership + tranche flexibility is unreplicable by any existing bond instrument."
+                }
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+
+      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
+
+      {/* ── NPD PROCESS ─────────────────────────────────────────── */}
+            <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#A78BFA"}}>Strategic Framework 04</div>
+      {/* Business Model Navigator — moved from Digital Money */}
+            <IBadge label="Business Model Analysis" color="#A78BFA"/>
+            <div style={{fontSize:10,color:"#A78BFA",fontFamily:"'DM Mono',monospace",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Business Navigator Analysis</div>
+            <div style={{fontSize:22,fontFamily:"'Bebas Neue',sans-serif",marginBottom:10}}>Which Business Model Patterns Apply?</div>
+            <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:10}}>The <strong>St. Gallen Business Model Navigator</strong> — built from the analysis of over 6,000 corporate transformations — identifies 55 recurring patterns behind every major wave of business innovation. Its core insight is powerful: the most durable competitive advantages rarely originate from new technology alone. They emerge from the <strong>deliberate recombination of proven mechanisms in a new context</strong>. The Navigator does something more valuable than classify what a company already does — it reveals <em>what a company could become</em> by pointing to patterns that have already succeeded at scale elsewhere.</p>
+            <p style={{fontSize:13,color:"#7A8A9E",lineHeight:1.75,marginBottom:10}}>For Tipolis, the implications extend well beyond any single initiative. The ICT platform — captive resident base, exclusive jurisdiction, financial infrastructure, and trusted governance contract — is an extraordinarily rich surface for business model expansion. Research by the BCG Henderson Institute shows companies in the top quartile of business model innovation sustain <strong>2–3× higher revenue growth and margin expansion</strong> over 10-year horizons versus product-focused peers. Both Digital Money and City Bonds map onto multiple patterns simultaneously — a signal of structural robustness and the compounding potential of the city-as-platform thesis.</p>
+            <div style={{background:"rgba(167,139,250,.06)",border:"1px solid rgba(167,139,250,.2)",borderRadius:2,padding:"18px 22px",marginBottom:20}}>
+              <div style={{fontSize:12,fontWeight:700,color:"#A78BFA",marginBottom:10}}>The Growth Mandate: Business Model Innovation Is a Survival Strategy</div>
+              <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.75,marginBottom:10}}>The companies that dominate categories over the next decade will be the ones that most aggressively expand the scope of value they deliver to their core customer base. Amazon was a bookstore. Apple was a computer manufacturer. Visa was a bank consortium. Each transformed itself by identifying adjacencies — new products, new partners, new markets — served through the same core customer relationship. The mechanism in every case: a captive, financially-integrated user base that made distribution nearly free, and a platform architecture that let third-party services plug in without the platform owner building from scratch.</p>
+              <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.75,marginBottom:10}}><strong>Tipolis's ICT ecosystem mirrors this architecture exactly.</strong> The resident relationship is the captive base. The Digital Bank financial institution is the platform infrastructure. The regulatory sandbox is the moat. From this position, Digital Money (SATS) and City Bonds (CB) are the first two product layers built on top — and the natural growth trajectory is not to build more products internally but to attract best-in-class partners who want access to a financially-integrated, premium resident community.</p>
+              <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.75}}>Companies that consciously engineer their business model portfolio evolve from operators to platforms — and platforms command valuation multiples that operators never reach. <strong>Every pattern identified below describes both what Digital Money and City Bonds do today, and what the ICT platform can become.</strong></p>
+            </div>
+      
+            {/* Layer Player — Pattern 01, Primary */}
+            <div style={{borderRadius:3,padding:"24px 28px",marginBottom:12,border:"2px solid #FF6B35",background:"linear-gradient(135deg,rgba(255,107,53,.10),rgba(255,107,53,.03))"}}>
+              <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:3,textTransform:"uppercase",color:"#FF6B35",marginBottom:4}}>Pattern 01 · Primary Pattern · The Structural Foundation</div>
+              <div style={{fontSize:11,color:"#FF6B35",marginBottom:4,fontFamily:"'DM Mono',monospace",letterSpacing:1}}>★ Core Business Model</div>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"#FF6B35",lineHeight:1,marginBottom:12}}>Layer Player</div>
+              <div style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75}}>The Layer Player pattern describes a company that <strong>inserts itself into a value chain at the infrastructure layer</strong> — providing the platform or access mechanism through which other businesses operate — without owning or operating the service itself. <strong>Tipolis extracts rent from the layer, not from the product.</strong></div>
+              <ul style={{listStyle:"none",padding:0,margin:"12px 0 0"}}>
+                {["Tipolis owns the city layer — the resident base, the jurisdiction, the trust relationship. The banking partner owns the financial product layer. This applies to both Digital Money (SATS) and City Bonds (CB): Tipolis never touches the balance sheet of either financial service.","This is the same structural logic as operating systems (Microsoft charges for access to users), real estate landlords (they charge for access to location), and port authorities (they charge for access to the harbor). Tipolis charges for access to the city.","The layer becomes more valuable as more products are built on top of it. SATS and City Bonds are the first two. Each new financial product — credit, insurance, trade finance — increases the value of the layer without requiring additional capital investment from Tipolis.","Tipolis bears zero financial risk of either the SATS stablecoin operation or the City Bond issuance platform. If any Digital Bank product winds down, the layer remains. The city's core asset — its resident base and governance contract — is structurally insulated from any individual product's performance."].map((li,i)=>(
+                  <li key={i} style={{fontSize:12,color:"#C8D4E0",lineHeight:1.65,padding:"5px 0 5px 18px",position:"relative",borderBottom:"1px solid rgba(255,107,53,.1)"}}><span style={{position:"absolute",left:0,color:"#FF6B35",opacity:.8}}>▸</span>{li}</li>
+                ))}
+              </ul>
+            </div>
+      
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginTop:8}}>
+              {[["#0D9E8E","02","Two-Sided Market",[["The Digital Bank connects two distinct groups that would not efficiently transact without the city platform as intermediary: on one side, International Cities that need financial infrastructure and capital; on the other, the citizens and companies within those ICTs who need yield-bearing savings (SATS), investment products (City Bonds), and a trusted payment layer.","Tipolis captures value as the marketplace operator on both sides — earning 0.25% on Digital Money AUM and platform fees on City Bond issuance — because it controls distribution access to both sides simultaneously.","Value grows nonlinearly: more ICTs onboarded → higher SATS AUM and more CB issuances → better Digital Bank economics → more services for residents → more ICTs attracted → more SPV-side demand. Classic two-sided compounding."]]],["#A78BFA","03","White Label",[["The Digital Bank operates the entire back-end for both products — STRC-to-SATS custody, issuance, compliance, settlement for Digital Money; and bond structuring, issuance, and secondary market infrastructure for City Bonds. Tipolis licenses its city brand as the consumer-facing identity for both.","Brand + distribution at near-zero capex. For both SATS and CB, the back-end is the partner's capital and operational risk; the front-end is Tipolis's strategic asset. Residents trust Tipolis, not the underlying financial counterparty.","Allows Tipolis to launch both a fully-featured stablecoin product and a capital markets platform without ever building financial institutions from scratch."]]],["#F5A623","04","Robin Hood",[["Institutional-grade yield (11%+) has historically been exclusive to large fund managers, sovereign wealth funds, and family offices. SATS inverts this barrier: any ICT resident, regardless of wealth, earns Bitcoin-backed returns previously unavailable to them.","City Bonds extend this democratization further: infrastructure investment — historically restricted to qualified institutional investors with minimums of $1M+ — becomes accessible to any ICT resident with $25,000. Residents become co-owners of the city they live in.","This democratization narrative is a powerful acquisition engine for city marketing and resident attraction, and it creates a politically aligned resident base that actively advocates for the city's growth and success."]]],["#2ECC71","05","Subscription / Recurring Revenue",[["Citizens and businesses holding SATS generate a continuous, perpetual AUM base. Tipolis's 0.25% margin is a recurring stream tied to the stock of capital in the system — compounding with AUM growth and each new city launch.","City Bond platform fees create a second recurring revenue stream: each issuance generates structuring and distribution fees, and each subsequent tranche compounds on the credibility established by prior issuances.","The longer residents hold SATS and the more CB tranches they invest in, the deeper their financial integration — creating structural lock-in that reinforces retention and provides a floor on recurring revenue even through economic cycles."]]],["#EF4444","06","Lock-In",[["Once a resident builds credit history, SATS collateral, and city-integrated financial identity, switching to a different financial system carries enormous friction. For businesses, the lock-in is even deeper: payroll in SATS, supplier invoices on city rails, lending relationships with the Digital Bank bank.","City Bond ownership adds another layer: a resident who owns CB instruments backed by the city's own infrastructure has a literal ownership stake in the city's physical assets. Their financial and social identity are fused — switching cost approaches infinity.","This is benevolent lock-in — residents stay because both products are genuinely superior. The switching cost creates a durable AUM floor for SATS and a captive investor pool for future City Bond tranches."]]],["#06B6D4","07","Razor & Blade",[["The city residency is the razor — offered at a compelling value proposition. The ongoing financial services — SATS yield accounts and City Bond investment products — are the high-margin blades. The initial city membership cost is justified by the financial services value alone.","Every year of residency is a year of 10% SATS yield compounding in the resident's account. Every CB tranche issued compounds the resident's portfolio through the fixed coupon plus Bitcoin appreciation upside. Each blade sharpens the other.","As the Digital Bank expands, additional blades emerge: credit products, insurance, trade finance, wealth management, private placements. The razor (city residency) never loses its edge because each new blade makes the full suite more valuable than any competitor can match from a standing start."]]]].map(([c,n,name,items])=>(
+                <div key={n} style={{borderRadius:2,padding:"18px 20px",background:c+"11",border:`1px solid ${c}25`,borderTop:`2px solid ${c}`}}>
+                  <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:2,textTransform:"uppercase",marginBottom:6,color:c}}>Pattern {n}</div>
+                  <div style={{fontSize:15,fontWeight:700,marginBottom:10,color:c}}>{name}</div>
+                  <ul style={{listStyle:"none",padding:0,margin:0}}>
+                    {items[0].map((li,i)=><li key={i} style={{fontSize:12,color:"#C8D4E0",lineHeight:1.65,padding:"4px 0 4px 14px",borderBottom:`1px solid rgba(255,255,255,.04)`,position:"relative"}}><span style={{position:"absolute",left:0,opacity:.5}}>→</span>{li}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
+
+      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
+
       {/* ── NPD PROCESS ─────────────────────────────────────────── */}
       <div style={{marginBottom:40}}>
-        <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#F5A623"}}>Strategic Framework 02</div>
-        <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>New Product Development — Where Is Each Initiative Today?</h2>
+        <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:6,color:"#F5A623"}}>Strategic Framework 05</div>
+<h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,42px)",lineHeight:.95,marginBottom:10}}>New Product Development — Where Is Each Initiative Today?</h2>
         <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:20}}>The NPD (New Product Development) framework maps the journey from idea to launch across seven stages. Tracking each initiative on this axis removes ambiguity: it shows what has already been validated, what decisions remain, and what execution is required. Critically, it reveals that Tipolis is not at Stage 1 for any of these initiatives — significant validation work has already been done.</p>
         {/* Stage timeline */}
         {(function(){
           var stages=["Idea Generation","Idea Screening","Concept Dev. & Testing","Strategy & Business Analysis","Product Development","Test Marketing","Product Launch"];
           var initiatives=[
-            {label:"STRC Treasury",color:"#2ECC71",stage:6,note:"Ready to implement today. The product (STRC) already exists on NYSE, the business case is proven, risk is quantified, and zero new infrastructure is required. This is a treasury reallocation decision, not a product build."},
-            {label:"Digital Money · SATS",color:"#F5A623",stage:4,note:"Saturn Labs (usdat.xyz) provides a live proof of concept. The Digital Bank structure is defined, the revenue model is modeled, and regulatory pathways (MiCA, GENIUS Act) are mapped. Currently in Product Development — the banking partner selection and licensing process is the active workstream."},
-            {label:"City Bonds",color:"#3B82F6",stage:3,note:"Business analysis is complete. The BitBonds precedent (US Treasury proposal, 2025) provides market validation at sovereign scale. The model is financially modeled across scenarios. Moving to Product Development is contingent on Digital Money reaching sufficient AUM — a defined, trackable threshold."},
+            {label:"STRC Treasury",color:"#2ECC71",stage:3,note:"The business case is built, the risk is quantified, and the instrument (STRC, NYSE-listed) is fully validated. This is a treasury reallocation decision — no new infrastructure, no new build. Strategy & Business Analysis is complete. Execution requires only an internal board decision."},
+            {label:"Digital Money · SATS",color:"#F5A623",stage:1,note:"The concept has been identified and the initial screening confirms viability: Saturn Labs (usdat.xyz) provides a live proof of concept, regulatory pathways exist (MiCA, GENIUS Act), and the target market is already captive inside the ICT. Now entering concept development — banking partner identification and Digital Bank structure definition are the active next steps."},
+            {label:"City Bonds",color:"#3B82F6",stage:0,note:"The idea is validated at sovereign scale by the US BitBonds proposal (2025) and financially modeled across scenarios. City Bonds are at Idea Generation — the concept is clear and compelling, but execution is intentionally deferred until Digital Money builds sufficient AUM to serve as the natural distribution channel."},
           ];
           return(
             <div>
@@ -1771,70 +2770,9 @@ function PageWhyNow(){
           );
         })()}
         <div style={{background:"rgba(245,166,35,.06)",border:"1px solid rgba(245,166,35,.2)",borderRadius:2,padding:"12px 16px",fontSize:12,color:"#C8D4E0",lineHeight:1.75,marginTop:8}}>
-          <strong style={{color:"#F5A623"}}>Key takeaway:</strong> The NPD stage of each initiative is not a coincidence — it reflects a deliberate sequencing. STRC can be decided and executed this quarter. SATS is in active development. City Bonds have a clear trigger condition. The question is not whether to build — the question is how fast.
+          <strong style={{color:"#F5A623"}}>Key takeaway:</strong> The NPD stages are a deliberate sequence, not a coincidence. STRC has completed Strategy & Business Analysis — execution is a board decision away. SATS is at Idea Screening — concept proven, structure next. City Bonds are at Idea Generation — the idea is sound, execution waits for SATS to create the distribution infrastructure.
         </div>
       </div>
-      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"8px 0 36px"}}/>
-      {/* Business Model Navigator — moved from Digital Money */}
-      <IBadge label="Business Model Analysis" color="#A78BFA"/>
-      <div style={{fontSize:10,color:"#A78BFA",fontFamily:"'DM Mono',monospace",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Business Navigator Analysis</div>
-      <div style={{fontSize:22,fontFamily:"'Bebas Neue',sans-serif",marginBottom:10}}>Which Business Model Patterns Apply?</div>
-      <p style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75,marginBottom:10}}>The <strong>St. Gallen Business Model Navigator</strong> — built from the analysis of over 6,000 corporate transformations — identifies 55 recurring patterns behind every major wave of business innovation. Its core insight is powerful: the most durable competitive advantages rarely originate from new technology alone. They emerge from the <strong>deliberate recombination of proven mechanisms in a new context</strong>. The Navigator does something more valuable than classify what a company already does — it reveals <em>what a company could become</em> by pointing to patterns that have already succeeded at scale elsewhere.</p>
-      <p style={{fontSize:13,color:"#7A8A9E",lineHeight:1.75,marginBottom:10}}>For Tipolis, the implications extend well beyond any single initiative. The ICT platform — captive resident base, exclusive jurisdiction, financial infrastructure, and trusted governance contract — is an extraordinarily rich surface for business model expansion. Research by the BCG Henderson Institute shows companies in the top quartile of business model innovation sustain <strong>2–3× higher revenue growth and margin expansion</strong> over 10-year horizons versus product-focused peers. Both Digital Money and City Bonds map onto multiple patterns simultaneously — a signal of structural robustness and the compounding potential of the city-as-platform thesis.</p>
-      <div style={{background:"rgba(167,139,250,.06)",border:"1px solid rgba(167,139,250,.2)",borderRadius:2,padding:"18px 22px",marginBottom:20}}>
-        <div style={{fontSize:12,fontWeight:700,color:"#A78BFA",marginBottom:10}}>The Growth Mandate: Business Model Innovation Is a Survival Strategy</div>
-        <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.75,marginBottom:10}}>The companies that dominate categories over the next decade will be the ones that most aggressively expand the scope of value they deliver to their core customer base. Amazon was a bookstore. Apple was a computer manufacturer. Visa was a bank consortium. Each transformed itself by identifying adjacencies — new products, new partners, new markets — served through the same core customer relationship. The mechanism in every case: a captive, financially-integrated user base that made distribution nearly free, and a platform architecture that let third-party services plug in without the platform owner building from scratch.</p>
-        <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.75,marginBottom:10}}><strong>Tipolis's ICT ecosystem mirrors this architecture exactly.</strong> The resident relationship is the captive base. The Digital Bank financial institution is the platform infrastructure. The regulatory sandbox is the moat. From this position, Digital Money (SATS) and City Bonds (CB) are the first two product layers built on top — and the natural growth trajectory is not to build more products internally but to attract best-in-class partners who want access to a financially-integrated, premium resident community.</p>
-        <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.75}}>Companies that consciously engineer their business model portfolio evolve from operators to platforms — and platforms command valuation multiples that operators never reach. <strong>Every pattern identified below describes both what Digital Money and City Bonds do today, and what the ICT platform can become.</strong></p>
-      </div>
-
-      {/* Layer Player — Pattern 01, Primary */}
-      <div style={{borderRadius:3,padding:"24px 28px",marginBottom:12,border:"2px solid #FF6B35",background:"linear-gradient(135deg,rgba(255,107,53,.10),rgba(255,107,53,.03))"}}>
-        <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:3,textTransform:"uppercase",color:"#FF6B35",marginBottom:4}}>Pattern 01 · Primary Pattern · The Structural Foundation</div>
-        <div style={{fontSize:11,color:"#FF6B35",marginBottom:4,fontFamily:"'DM Mono',monospace",letterSpacing:1}}>★ Core Business Model</div>
-        <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"#FF6B35",lineHeight:1,marginBottom:12}}>Layer Player</div>
-        <div style={{fontSize:13,color:"#C8D4E0",lineHeight:1.75}}>The Layer Player pattern describes a company that <strong>inserts itself into a value chain at the infrastructure layer</strong> — providing the platform or access mechanism through which other businesses operate — without owning or operating the service itself. <strong>Tipolis extracts rent from the layer, not from the product.</strong></div>
-        <ul style={{listStyle:"none",padding:0,margin:"12px 0 0"}}>
-          {["Tipolis owns the city layer — the resident base, the jurisdiction, the trust relationship. The banking partner owns the financial product layer. This applies to both Digital Money (SATS) and City Bonds (CB): Tipolis never touches the balance sheet of either financial service.","This is the same structural logic as operating systems (Microsoft charges for access to users), real estate landlords (they charge for access to location), and port authorities (they charge for access to the harbor). Tipolis charges for access to the city.","The layer becomes more valuable as more products are built on top of it. SATS and City Bonds are the first two. Each new financial product — credit, insurance, trade finance — increases the value of the layer without requiring additional capital investment from Tipolis.","Tipolis bears zero financial risk of either the SATS stablecoin operation or the City Bond issuance platform. If any Digital Bank product winds down, the layer remains. The city's core asset — its resident base and governance contract — is structurally insulated from any individual product's performance."].map((li,i)=>(
-            <li key={i} style={{fontSize:12,color:"#C8D4E0",lineHeight:1.65,padding:"5px 0 5px 18px",position:"relative",borderBottom:"1px solid rgba(255,107,53,.1)"}}><span style={{position:"absolute",left:0,color:"#FF6B35",opacity:.8}}>▸</span>{li}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginTop:8}}>
-        {[["#0D9E8E","02","Two-Sided Market",[["The Digital Bank connects two distinct groups that would not efficiently transact without the city platform as intermediary: on one side, International Cities that need financial infrastructure and capital; on the other, the citizens and companies within those ICTs who need yield-bearing savings (SATS), investment products (City Bonds), and a trusted payment layer.","Tipolis captures value as the marketplace operator on both sides — earning 0.25% on Digital Money AUM and platform fees on City Bond issuance — because it controls distribution access to both sides simultaneously.","Value grows nonlinearly: more ICTs onboarded → higher SATS AUM and more CB issuances → better Digital Bank economics → more services for residents → more ICTs attracted → more SPV-side demand. Classic two-sided compounding."]]],["#A78BFA","03","White Label",[["The Digital Bank operates the entire back-end for both products — STRC-to-SATS custody, issuance, compliance, settlement for Digital Money; and bond structuring, issuance, and secondary market infrastructure for City Bonds. Tipolis licenses its city brand as the consumer-facing identity for both.","Brand + distribution at near-zero capex. For both SATS and CB, the back-end is the partner's capital and operational risk; the front-end is Tipolis's strategic asset. Residents trust Tipolis, not the underlying financial counterparty.","Allows Tipolis to launch both a fully-featured stablecoin product and a capital markets platform without ever building financial institutions from scratch."]]],["#F5A623","04","Robin Hood",[["Institutional-grade yield (11%+) has historically been exclusive to large fund managers, sovereign wealth funds, and family offices. SATS inverts this barrier: any ICT resident, regardless of wealth, earns Bitcoin-backed returns previously unavailable to them.","City Bonds extend this democratization further: infrastructure investment — historically restricted to qualified institutional investors with minimums of $1M+ — becomes accessible to any ICT resident with $25,000. Residents become co-owners of the city they live in.","This democratization narrative is a powerful acquisition engine for city marketing and resident attraction, and it creates a politically aligned resident base that actively advocates for the city's growth and success."]]],["#2ECC71","05","Subscription / Recurring Revenue",[["Citizens and businesses holding SATS generate a continuous, perpetual AUM base. Tipolis's 0.25% margin is a recurring stream tied to the stock of capital in the system — compounding with AUM growth and each new city launch.","City Bond platform fees create a second recurring revenue stream: each issuance generates structuring and distribution fees, and each subsequent tranche compounds on the credibility established by prior issuances.","The longer residents hold SATS and the more CB tranches they invest in, the deeper their financial integration — creating structural lock-in that reinforces retention and provides a floor on recurring revenue even through economic cycles."]]],["#EF4444","06","Lock-In",[["Once a resident builds credit history, SATS collateral, and city-integrated financial identity, switching to a different financial system carries enormous friction. For businesses, the lock-in is even deeper: payroll in SATS, supplier invoices on city rails, lending relationships with the Digital Bank bank.","City Bond ownership adds another layer: a resident who owns CB instruments backed by the city's own infrastructure has a literal ownership stake in the city's physical assets. Their financial and social identity are fused — switching cost approaches infinity.","This is benevolent lock-in — residents stay because both products are genuinely superior. The switching cost creates a durable AUM floor for SATS and a captive investor pool for future City Bond tranches."]]],["#06B6D4","07","Razor & Blade",[["The city residency is the razor — offered at a compelling value proposition. The ongoing financial services — SATS yield accounts and City Bond investment products — are the high-margin blades. The initial city membership cost is justified by the financial services value alone.","Every year of residency is a year of 10% SATS yield compounding in the resident's account. Every CB tranche issued compounds the resident's portfolio through the fixed coupon plus Bitcoin appreciation upside. Each blade sharpens the other.","As the Digital Bank expands, additional blades emerge: credit products, insurance, trade finance, wealth management, private placements. The razor (city residency) never loses its edge because each new blade makes the full suite more valuable than any competitor can match from a standing start."]]]].map(([c,n,name,items])=>(
-          <div key={n} style={{borderRadius:2,padding:"18px 20px",background:c+"11",border:`1px solid ${c}25`,borderTop:`2px solid ${c}`}}>
-            <div style={{fontFamily:"'DM Mono',monospace",fontSize:8,letterSpacing:2,textTransform:"uppercase",marginBottom:6,color:c}}>Pattern {n}</div>
-            <div style={{fontSize:15,fontWeight:700,marginBottom:10,color:c}}>{name}</div>
-            <ul style={{listStyle:"none",padding:0,margin:0}}>
-              {items[0].map((li,i)=><li key={i} style={{fontSize:12,color:"#C8D4E0",lineHeight:1.65,padding:"4px 0 4px 14px",borderBottom:`1px solid rgba(255,255,255,.04)`,position:"relative"}}><span style={{position:"absolute",left:0,opacity:.5}}>→</span>{li}</li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
-      <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:10,color:"#2ECC71"}}>Historical Proof</div>
-      <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(34px,5vw,54px)",lineHeight:.95,marginBottom:14}}>Past Cities &<br/>One Proven<br/>Pattern.</h2>
-      <p style={{fontSize:14,color:"#C8D4E0",lineHeight:1.8,marginBottom:36}}>The combination of strong jurisdiction, real estate and urban infrastructure, and capital markets is not a theory — it is the common pattern behind every great city-state in history. Venice, Genoa, Amsterdam, Hong Kong, Singapore: each grew not because of geography or resources, but because it built financial infrastructure that made living and operating inside its walls materially better than anywhere else. The physical city followed the financial city — always, not the other way around.</p>
-      {cases.map(c=>(
-        <div key={c.city} style={{background:"#002040",border:"1px solid rgba(255,255,255,.07)",borderLeft:`3px solid ${c.color}`,borderRadius:2,padding:"22px 24px",marginBottom:14}}>
-          <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:12,flexWrap:"wrap"}}>
-            <span style={{fontSize:24}}>{c.flag}</span>
-            <div>
-              <div style={{fontSize:16,fontWeight:700,color:"#FFF"}}>{c.city}</div>
-              <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:c.color,letterSpacing:2,textTransform:"uppercase"}}>{c.period}</div>
-            </div>
-            <div style={{marginLeft:"auto",fontSize:13,fontWeight:600,color:c.color,maxWidth:320,textAlign:"right",lineHeight:1.3}}>{c.headline}</div>
-          </div>
-          <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.8,marginBottom:10}}>{c.body}</p>
-          <div style={{background:`rgba(${c.color==='#FF6B35'?'255,107,53':c.color==='#F5A623'?'245,166,35':c.color==='#A78BFA'?'167,139,250':'13,158,142'},.08)`,border:`1px solid ${c.color}30`,borderRadius:2,padding:"10px 14px"}}>
-            <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:c.color,letterSpacing:1.5,textTransform:"uppercase",marginBottom:4}}>Tipolis Parallel</div>
-            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.7}}>{c.parallel}</div>
-          </div>
-        </div>
-      ))}
-
-      {/* Flywheel */}
       <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
       <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:10,color:"#7A8A9E"}}>Strategic Compounding</div>
       <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(34px,5vw,54px)",lineHeight:.95,marginBottom:14}}>The Flywheel Effect</h2>
@@ -1871,7 +2809,30 @@ function PageWhyNow(){
         </div>
       </div>
 
-      {/* Why Now */}
+      {/* Why Now */}      <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
+      <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:10,color:"#2ECC71"}}>Historical Proof</div>
+      <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(34px,5vw,54px)",lineHeight:.95,marginBottom:14}}>Past Cities &<br/>One Proven<br/>Pattern.</h2>
+      <p style={{fontSize:14,color:"#C8D4E0",lineHeight:1.8,marginBottom:36}}>The combination of strong jurisdiction, real estate and urban infrastructure, and capital markets is not a theory — it is the common pattern behind every great city-state in history. Venice, Genoa, Amsterdam, Hong Kong, Singapore: each grew not because of geography or resources, but because it built financial infrastructure that made living and operating inside its walls materially better than anywhere else. The physical city followed the financial city — always, not the other way around.</p>
+      {cases.map(c=>(
+        <div key={c.city} style={{background:"#002040",border:"1px solid rgba(255,255,255,.07)",borderLeft:`3px solid ${c.color}`,borderRadius:2,padding:"22px 24px",marginBottom:14}}>
+          <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:12,flexWrap:"wrap"}}>
+            <span style={{fontSize:24}}>{c.flag}</span>
+            <div>
+              <div style={{fontSize:16,fontWeight:700,color:"#FFF"}}>{c.city}</div>
+              <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:c.color,letterSpacing:2,textTransform:"uppercase"}}>{c.period}</div>
+            </div>
+            <div style={{marginLeft:"auto",fontSize:13,fontWeight:600,color:c.color,maxWidth:320,textAlign:"right",lineHeight:1.3}}>{c.headline}</div>
+          </div>
+          <p style={{fontSize:12,color:"#C8D4E0",lineHeight:1.8,marginBottom:10}}>{c.body}</p>
+          <div style={{background:`rgba(${c.color==='#FF6B35'?'255,107,53':c.color==='#F5A623'?'245,166,35':c.color==='#A78BFA'?'167,139,250':'13,158,142'},.08)`,border:`1px solid ${c.color}30`,borderRadius:2,padding:"10px 14px"}}>
+            <div style={{fontSize:10,fontFamily:"'DM Mono',monospace",color:c.color,letterSpacing:1.5,textTransform:"uppercase",marginBottom:4}}>Tipolis Parallel</div>
+            <div style={{fontSize:11,color:"#C8D4E0",lineHeight:1.7}}>{c.parallel}</div>
+          </div>
+        </div>
+      ))}
+
+      {/* Flywheel */}
+
       <div style={{height:1,background:"rgba(255,255,255,.05)",margin:"36px 0"}}/>
       <div style={{fontFamily:"'DM Mono',monospace",fontSize:10,letterSpacing:3,textTransform:"uppercase",marginBottom:10,color:"#FF6B35"}}>Strategic Decision Framework</div>
       <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(34px,5vw,54px)",lineHeight:.95,marginBottom:14}}>A Strategic<br/><span style={{color:"#FF6B35"}}>Decision Framework</span></h2>
@@ -1910,159 +2871,8 @@ const PAGES=[
   {id:"digital",label:"Digital Money",color:"#F5A623"},
   {id:"bonds",label:"City Bonds",color:"#3B82F6"},
   {id:"why",label:"Strategic Decision",color:"#2ECC71"},
-  {id:"questions",label:"💬 Questions",color:"#A855F7"},
 ];
 
-
-/* ══════════════════════════════════════════════════
-   PAGE: QUESTIONS — AI Chat powered by OpenAI
-   ══════════════════════════════════════════════════ */
-function PageQuestions(){
-  var KEY="tipolis_oai_key";
-  var [apiKey,setApiKey]=React.useState(function(){try{return localStorage.getItem(KEY)||"";}catch(e){return "";}});
-  var [messages,setMessages]=React.useState([]);
-  var [input,setInput]=React.useState("");
-  var [loading,setLoading]=React.useState(false);
-  var [error,setError]=React.useState("");
-  var [adminOpen,setAdminOpen]=React.useState(false);
-  var [adminKey,setAdminKey]=React.useState("");
-  var [logoClicks,setLogoClicks]=React.useState(0);
-  var bottomRef=React.useRef(null);
-
-  React.useEffect(function(){
-    if(bottomRef.current) bottomRef.current.scrollIntoView({behavior:"smooth"});
-  },[messages,loading]);
-
-  function handleLogoClick(){
-    var n=logoClicks+1;
-    setLogoClicks(n);
-    if(n>=5){setAdminOpen(true);setAdminKey(apiKey);setLogoClicks(0);}
-  }
-  function saveKey(){
-    try{localStorage.setItem(KEY,adminKey);}catch(e){}
-    setApiKey(adminKey);
-    setAdminOpen(false);
-  }
-
-  async function send(){
-    if(!input.trim()||loading) return;
-    if(!apiKey){setError("No API key configured. Contact the administrator.");return;}
-    var userText=input.trim();
-    var nextMsgs=[...messages,{role:"user",content:userText}];
-    setMessages(nextMsgs);
-    setInput("");setLoading(true);setError("");
-    try{
-      var res=await fetch("https://api.openai.com/v1/chat/completions",{
-        method:"POST",
-        headers:{"Content-Type":"application/json","Authorization":"Bearer "+apiKey},
-        body:JSON.stringify({
-          model:"gpt-4o",
-          messages:nextMsgs,
-          temperature:0.65,
-          max_tokens:1200
-        })
-      });
-      if(!res.ok){var e=await res.json().catch(function(){return{};});throw new Error((e.error&&e.error.message)||"API error ("+res.status+")");}
-      var d=await res.json();
-      var reply=(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content)||"(no response)";
-      setMessages([...nextMsgs,{role:"assistant",content:reply}]);
-    }catch(ex){setError("Error: "+ex.message);}
-    finally{setLoading(false);}
-  }
-
-  return(
-    <div style={{maxWidth:760,margin:"0 auto",padding:"40px 0 60px"}}>
-      {/* Admin modal */}
-      {adminOpen&&(
-        <div style={{position:"fixed",inset:0,background:"rgba(0,0,0,.75)",zIndex:999,display:"flex",alignItems:"center",justifyContent:"center"}}>
-          <div style={{background:"#001829",border:"1px solid rgba(168,85,247,.4)",borderRadius:4,padding:"28px 32px",width:"100%",maxWidth:400}}>
-            <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:14}}>Admin — API Key</div>
-            <input type="password" placeholder="sk-..." value={adminKey} onChange={function(e){setAdminKey(e.target.value);}}
-              onKeyDown={function(e){if(e.key==="Enter")saveKey();}}
-              style={{width:"100%",background:"#001020",border:"1px solid rgba(255,255,255,.15)",borderRadius:3,padding:"9px 12px",color:"#fff",fontFamily:"'DM Mono',monospace",fontSize:12,outline:"none",marginBottom:6}}/>
-            <div style={{fontSize:10,color:"#3A4A5A",marginBottom:16}}>Stored in browser localStorage. Never sent anywhere except OpenAI.</div>
-            <div style={{display:"flex",gap:8}}>
-              <button onClick={function(){setAdminOpen(false);}} style={{flex:1,background:"rgba(255,255,255,.05)",border:"1px solid rgba(255,255,255,.1)",borderRadius:3,padding:"8px",color:"#7A8A9E",fontSize:10,cursor:"pointer",fontFamily:"'DM Mono',monospace"}}>CANCEL</button>
-              <button onClick={saveKey} style={{flex:1,background:"#A855F7",border:"none",borderRadius:3,padding:"8px",color:"#fff",fontSize:10,cursor:"pointer",fontFamily:"'DM Mono',monospace",fontWeight:700}}>SAVE</button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Header */}
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:28}}>
-        <div>
-          <div style={{fontFamily:"'DM Mono',monospace",fontSize:9,color:"#A855F7",letterSpacing:3,textTransform:"uppercase",marginBottom:4}}>AI Assistant</div>
-          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"#fff",lineHeight:1,cursor:"default",userSelect:"none"}} onClick={handleLogoClick}>Questions</div>
-        </div>
-        {messages.length>0&&(
-          <button onClick={function(){setMessages([]);setError("");}} style={{background:"rgba(255,255,255,.05)",border:"1px solid rgba(255,255,255,.1)",borderRadius:3,padding:"6px 14px",color:"#7A8A9E",fontSize:10,cursor:"pointer",fontFamily:"'DM Mono',monospace"}}>CLEAR</button>
-        )}
-      </div>
-
-      {/* Empty state */}
-      {messages.length===0&&(
-        <div style={{textAlign:"center",padding:"40px 0 32px"}}>
-          <div style={{fontSize:13,color:"#7A8A9E",lineHeight:1.8,maxWidth:420,margin:"0 auto"}}>Ask anything about the Tipolis project — STRC, Digital Money, City Bonds, financial model, strategy, risks, or returns.</div>
-        </div>
-      )}
-
-      {/* Messages */}
-      <div style={{display:"flex",flexDirection:"column",gap:14,minHeight:messages.length>0?200:0,maxHeight:500,overflowY:"auto",marginBottom:16,scrollBehavior:"smooth"}}>
-        {messages.map(function(m,i){
-          var isUser=m.role==="user";
-          return(
-            <div key={i} style={{display:"flex",justifyContent:isUser?"flex-end":"flex-start"}}>
-              <div style={{
-                maxWidth:"82%",
-                padding:"12px 16px",
-                fontSize:13,
-                lineHeight:1.75,
-                whiteSpace:"pre-wrap",
-                borderRadius:isUser?"12px 12px 2px 12px":"12px 12px 12px 2px",
-                background:isUser?"rgba(168,85,247,.14)":"rgba(59,130,246,.07)",
-                border:isUser?"1px solid rgba(168,85,247,.3)":"1px solid rgba(59,130,246,.15)",
-                color:isUser?"#E9D5FF":"#C8D4E0"
-              }}>
-                {!isUser&&<div style={{fontSize:8,fontFamily:"'DM Mono',monospace",color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:5}}>TIPOLIS AI</div>}
-                {m.content}
-              </div>
-            </div>
-          );
-        })}
-        {loading&&(
-          <div style={{display:"flex",justifyContent:"flex-start"}}>
-            <div style={{padding:"12px 16px",borderRadius:"12px 12px 12px 2px",background:"rgba(59,130,246,.07)",border:"1px solid rgba(59,130,246,.15)"}}>
-              <div style={{fontSize:8,fontFamily:"'DM Mono',monospace",color:"#A855F7",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>TIPOLIS AI</div>
-              <div style={{display:"flex",gap:5}}>
-                {[0,1,2].map(function(d){return(<span key={d} style={{width:7,height:7,borderRadius:"50%",background:"#A855F7",display:"inline-block",animation:"pulse 1.2s ease-in-out "+(d*0.2)+"s infinite"}}/>);})}
-              </div>
-            </div>
-          </div>
-        )}
-        {error&&<div style={{fontSize:12,color:"#EF4444",padding:"8px 12px",background:"rgba(239,68,68,.07)",border:"1px solid rgba(239,68,68,.2)",borderRadius:3}}>{error}</div>}
-        <div ref={bottomRef}/>
-      </div>
-
-      {/* Input */}
-      <div style={{display:"flex",gap:10,alignItems:"flex-end",background:"rgba(0,24,41,.6)",border:"1px solid rgba(168,85,247,.25)",borderRadius:4,padding:"10px 14px"}}>
-        <textarea
-          value={input}
-          onChange={function(e){setInput(e.target.value);}}
-          onKeyDown={function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send();}}}
-          placeholder="Ask a question about the Tipolis project..."
-          rows={2}
-          style={{flex:1,background:"transparent",border:"none",outline:"none",color:"#fff",fontSize:13,resize:"none",lineHeight:1.6,fontFamily:"'DM Sans',sans-serif"}}
-        />
-        <button onClick={send} disabled={loading||!input.trim()}
-          style={{background:loading||!input.trim()?"rgba(168,85,247,.2)":"#A855F7",border:"none",borderRadius:3,padding:"10px 18px",color:loading||!input.trim()?"rgba(255,255,255,.3)":"#fff",fontFamily:"'DM Mono',monospace",fontSize:10,fontWeight:700,cursor:loading||!input.trim()?"default":"pointer",letterSpacing:1,whiteSpace:"nowrap"}}>
-          {loading?"...":"SEND"}
-        </button>
-      </div>
-      <div style={{fontSize:9,color:"#3A4A5A",marginTop:5,textAlign:"right",fontFamily:"'DM Mono',monospace"}}>Enter to send · Shift+Enter for new line</div>
-    </div>
-  );
-}
 
 function App(){
   const [page,setPage]=useState("overview");
@@ -2094,7 +2904,6 @@ function App(){
         {page==="digital" && <PageDigitalMoney/>}
         {page==="bonds"   && <PageCityBonds/>}
         {page==="why"     && <PageWhyNow/>}
-        {page==="questions" && <PageQuestions/>}
       </div>
     </>
   );
