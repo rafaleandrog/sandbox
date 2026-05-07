@@ -1159,7 +1159,7 @@ html {
 - **Icons:** `assets/icons/` — SVG files only, always outlined stroke style.
 - **Fonts:** Loaded via Google Fonts CDN (see Section 3). No local font files needed.
 - **Images:** `assets/images/` — processed to meet the imagery treatment rules in Section 11.
-- **Spec file:** `TIPOLIS_UI_SPEC.md` — this document, at repository root.
+- **Spec file:** `docs/ui/TIPOLIS_UI_SPEC.md` — canonical UI spec document.
 
 ---
 
@@ -1167,7 +1167,7 @@ html {
 
 When building any page in this repository:
 
-1. **Read `TIPOLIS_UI_SPEC.md` first.**
+1. **Read `docs/ui/TIPOLIS_UI_SPEC.md` first.**
 2. Include the font link tags (Section 3).
 3. Include the CSS bootstrap block (Section 16) as the first style block.
 4. Use dark (`--color-bg-dark`) for hero/header sections, light (`--color-bg-page`) for content.
