@@ -3,124 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>City Bonds | Institutional Product Page</title>
+  <title>City Bonds | Strategic Capital Markets Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/tipolis-design-system.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    .cb-page {background:#081a2f;color:#e8f0ff;padding-bottom:80px}
-    .cb-hero h1{font-size:70px;line-height:0.95;margin:0}.cb-hero h1 span{color:#3c8dff}
-    .cb-wrap{max-width:1220px;margin:0 auto;padding:40px 24px}
-    .cb-card{background:#0d2746;border:1px solid #2b4f7a;padding:28px;margin-top:20px}
-    .cb-label{font:500 11px 'JetBrains Mono',monospace;letter-spacing:4px;text-transform:uppercase;color:#69a8ff}
-    .cb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cb-stat{padding:20px;background:#12345b;border:1px solid #2f5f96}
-    .cb-stat strong{font-size:54px;color:#3c8dff;display:block;line-height:1}
-    .cb-accent{color:#2be57c;font-weight:600}.cb-orange{color:#ffb347;font-weight:600}
-    table{width:100%;border-collapse:collapse;font-size:14px} th,td{padding:10px;border-bottom:1px solid #2b4f7a} th{font:500 11px 'JetBrains Mono',monospace;letter-spacing:2px;color:#88b7e8;text-align:left}
-    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.flow .step{background:#13365e;border:1px solid #3f6da0;padding:14px;text-align:center}
-    .qbox input,.qbox textarea{width:100%;padding:12px;background:#0a2038;border:1px solid #3c5f85;color:#fff}.qbox textarea{min-height:120px}
-    .btn{background:#1b66d1;color:#fff;border:0;padding:12px 20px;cursor:pointer;font-weight:600}
-    .success{display:none;margin-top:10px;color:#2be57c}
-    @media (max-width:980px){.cb-grid,.flow{grid-template-columns:1fr}}
+    body{background:#071a30;color:#e8f1ff}
+    .page{max-width:1240px;margin:0 auto;padding:32px 22px 80px}
+    .hero h1{font-size:68px;line-height:.95;margin:6px 0}.hero h1 span{color:#428fff}
+    .label{font:500 11px 'JetBrains Mono',monospace;letter-spacing:4px;text-transform:uppercase;color:#79b2ff}
+    .card{background:#0e2746;border:1px solid #2c4f79;padding:24px;margin-top:18px}
+    .markdown h1,.markdown h2,.markdown h3{color:#fff}.markdown h1{font-size:46px}.markdown h2{margin-top:28px;font-size:28px}.markdown h3{margin-top:20px;font-size:22px}
+    .markdown p,.markdown li{line-height:1.8;color:#d6e6fb}.markdown strong{color:#fff}.markdown em{color:#8cd0ff}
+    .markdown table{width:100%;border-collapse:collapse;margin:16px 0;background:#102f52}
+    .markdown th,.markdown td{padding:10px;border-bottom:1px solid #2c4f79}
+    .markdown th{font:500 11px 'JetBrains Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:#8fc0ef;text-align:left}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+    .panel{background:#11365f;border:1px solid #356396;padding:14px}
+    .row{display:flex;justify-content:space-between;gap:8px;margin:7px 0}
+    .bar{height:12px;background:#18385c;border:1px solid #355d86;position:relative}.bar>span{display:block;height:100%}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{background:#12345b;border:1px solid #3f6da0;padding:12px;text-align:center}
+    .feedback input,.feedback textarea{width:100%;padding:12px;background:#0a2038;border:1px solid #3c5f85;color:#fff;margin-top:6px}
+    .feedback textarea{min-height:130px}
+    .btn{margin-top:12px;background:#1f6fe2;border:0;color:#fff;padding:12px 20px;cursor:pointer;font-weight:600}
+    .ok{display:none;color:#2ee588;margin-top:10px}
+    @media(max-width:1000px){.grid,.flow{grid-template-columns:1fr}.hero h1{font-size:48px}}
   </style>
 </head>
-<body class="cb-page">
-  <main class="cb-wrap">
-    <section class="cb-hero">
-      <div class="cb-label">Tipolis Strategic Program — City Bonds</div>
-      <h1>From Institutional Capital to <span>City Bonds</span></h1>
+<body>
+  <main class="page">
+    <section class="hero card">
+      <div class="label">Tipolis City Bonds Program</div>
+      <h1>Strategic Capital Markets <span>Document</span></h1>
+      <p>This page reproduces the full uploaded spec content in sequence and adds the requested interactive investor-flow and STRC coverage ratio visual modules.</p>
     </section>
 
-    <section class="cb-card">
-      <div class="cb-label">1. Context and Strategic Framing</div>
-      <p>Tipolis structures International Cities through SAR frameworks and project-level SPVs with host governments, isolating project debt from sovereign and Tipolis parent balance sheets. City Bonds are built as private capital instruments to fund real estate, infrastructure, and urban systems at scale, with a dual-return profile: operating yield plus structured Bitcoin-linked optionality.</p>
+    <section class="card">
+      <div class="label">Interactive Investor Flow by Instrument</div>
+      <div class="flow" id="investorFlow"></div>
     </section>
 
-    <section class="cb-card">
-      <div class="cb-label">2. Revenue Bond Analogy</div>
-      <p>City Bonds are designed as municipal-style <span class="cb-orange">revenue bonds</span>: repayment capacity is tied to asset-generated cash flows (rent, concession, service fees), not sovereign guarantee. Two innovations are layered in: a <span class="cb-accent">10% BTC reserve allocation</span> and a recurring programmatic issuance architecture.</p>
-    </section>
-
-    <section class="cb-card">
-      <div class="cb-label">3. Capital Flow Structure</div>
-      <div class="flow">
-        <div class="step"><strong>Step 1</strong><p>Investor subscribes in USD.</p></div>
-        <div class="step"><strong>Step 2</strong><p>Issuance by Tipolis / SPV / Hybrid model under analysis.</p></div>
-        <div class="step"><strong>Step 3</strong><p>90% deployed to city assets (9% cap-rate assumption).</p></div>
-        <div class="step"><strong>Step 4</strong><p>10% BTC reserve allocated at issuance date.</p></div>
-        <div class="step"><strong>Step 5</strong><p>Monthly distributions + maturity settlement by instrument terms.</p></div>
+    <section class="card">
+      <div class="label">Interactive STRC Coverage Ratio Visualizer</div>
+      <div class="grid">
+        <div class="panel">
+          <div class="row"><span>Portfolio Size (USD)</span><strong id="pfVal">1,000,000</strong></div>
+          <input id="portfolio" type="range" min="100000" max="10000000" step="100000" value="1000000" style="width:100%"/>
+          <div class="row"><span>STRC Share (%)</span><strong id="strcPct">35%</strong></div>
+          <input id="strc" type="range" min="0" max="100" step="1" value="35" style="width:100%"/>
+          <div class="row"><span>CB6 Share (%)</span><strong id="cb6Pct">35%</strong></div>
+          <input id="cb6" type="range" min="0" max="100" step="1" value="35" style="width:100%"/>
+          <div class="row"><span>CB10 Share (%)</span><strong id="cb10Pct">20%</strong></div>
+          <input id="cb10" type="range" min="0" max="100" step="1" value="20" style="width:100%"/>
+          <div class="row"><span>CIP Share (%)</span><strong id="cipPct">10%</strong></div>
+          <input id="cip" type="range" min="0" max="100" step="1" value="10" style="width:100%"/>
+          <p style="font-size:12px;color:#b8cce4">Coverage ratio = STRC value ÷ total City Bonds exposure (CB6+CB10+CIP). This module is for visual business analysis and allocation discussions.</p>
+        </div>
+        <div class="panel">
+          <div class="row"><span>Total Allocation Check</span><strong id="totalPct">100%</strong></div>
+          <div class="bar"><span id="strcBar" style="width:35%;background:#29db7e"></span></div>
+          <div class="bar" style="margin-top:8px"><span id="cb6Bar" style="width:35%;background:#4c9dff"></span></div>
+          <div class="bar" style="margin-top:8px"><span id="cb10Bar" style="width:20%;background:#ffb347"></span></div>
+          <div class="bar" style="margin-top:8px"><span id="cipBar" style="width:10%;background:#e08bff"></span></div>
+          <hr style="border-color:#2c4f79;margin:16px 0">
+          <div class="row"><span>STRC Value</span><strong id="strcVal"></strong></div>
+          <div class="row"><span>City Bonds Exposure</span><strong id="cbExp"></strong></div>
+          <div class="row"><span>STRC Coverage Ratio</span><strong id="coverage"></strong></div>
+          <div class="row"><span>Status</span><strong id="status"></strong></div>
+        </div>
       </div>
     </section>
 
-    <section class="cb-card">
-      <div class="cb-label">4. Product Suite</div>
-      <div class="cb-grid">
-        <article class="cb-stat"><strong>CB6</strong><p>20-year, senior secured, 6% coupon, monthly payments, principal at maturity + 50% BTC appreciation on 10% notional.</p></article>
-        <article class="cb-stat"><strong>CB10</strong><p>10-year, subordinated, 10% coupon, monthly payments, principal at maturity + 50% BTC appreciation on 10% notional.</p></article>
-        <article class="cb-stat"><strong>CIP</strong><p>Perpetual preferred equity hybrid, 4% floor (monthly) + project equity participation. No BTC sharing commitment to investor.</p></article>
-      </div>
+    <section class="card markdown" id="specContent">
+      <div class="label">Full Spec Content (In Original Order)</div>
+      <p>Loading document...</p>
     </section>
 
-    <section class="cb-card">
-      <div class="cb-label">5. Core Constants Across Issuances</div>
-      <ul>
-        <li>Operational allocation: <strong>90%</strong> into city assets.</li>
-        <li>Bitcoin reserve: <strong>10%</strong> allocated at issuance.</li>
-        <li>Ramp period: <strong>Years 1–3</strong> with no operating income; monthly obligations start from month 1.</li>
-        <li>Payment cadence: <strong>Monthly</strong> for all instruments.</li>
-      </ul>
-    </section>
-
-    <section class="cb-card">
-      <div class="cb-label">6. Scenario Matrix (per $1,000,000 invested)</div>
-      <table>
-        <thead><tr><th>Instrument</th><th>Bear Case</th><th>Conservative</th><th>Base Case</th><th>Bull Case</th></tr></thead>
-        <tbody>
-          <tr><td>CB6-20y IRR</td><td>6.0%</td><td>~7.1% (12% BTC CAGR)</td><td>~14.5% (29% BTC CAGR)</td><td>~22% (40% BTC CAGR)</td></tr>
-          <tr><td>CB10-10y IRR</td><td>10.0%</td><td>~10.5% (12% BTC CAGR)</td><td>~13.2% (29% BTC CAGR)</td><td>~16.2% (40% BTC CAGR)</td></tr>
-          <tr><td>CIP Annual Range</td><td>4.0%</td><td>9.0% (base)</td><td>16.0% (optimistic)</td><td>Open upside (project-dependent)</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="cb-card">
-      <div class="cb-label">7. Issuance Entity Analysis (Open Decision)</div>
-      <p><strong>Option A (Tipolis parent):</strong> consolidated track record and wider investor access; higher balance-sheet and regulatory consolidation risk.</p>
-      <p><strong>Option B (SPV-level):</strong> ring-fenced project risk and recognized revenue-bond treatment; higher cold-start credit friction per SPV.</p>
-      <p><strong>Option C (Hybrid):</strong> SPV issuance for CB products + parent-level CIP issuance under evaluation; final legal structure pending.</p>
-    </section>
-
-    <section class="cb-card">
-      <div class="cb-label">8. Investor Fit</div>
-      <p>CB6 targets SWFs, pension funds, insurers, and investment-grade infrastructure mandates. CB10 targets high-yield funds, private credit, and BTC-conviction allocators needing income + asymmetry. CIP targets long-horizon investors seeking perpetual income floor + real estate equity-linked upside.</p>
-    </section>
-
-    <section class="cb-card qbox">
-      <div class="cb-label">Business Analysis Feedback Box</div>
-      <h3 style="margin-top:8px">Share your key question or suggestion</h3>
-      <p style="margin-top:0;color:#b9cbe0">Write a short title and a more detailed description. Your contribution will support internal strategic discussion and prioritization.</p>
+    <section class="card feedback">
+      <div class="label">Business Analysis Contribution Box</div>
+      <h3>Submit your question or suggestion</h3>
+      <p>Please register your main doubt or business suggestion so the Tipolis team can review and address it in follow-up analysis rounds.</p>
       <label>Title</label>
-      <input id="feedbackTitle" type="text" placeholder="e.g., Concern about CB10 carry profile" />
-      <label style="margin-top:12px;display:block">Description</label>
-      <textarea id="feedbackDescription" placeholder="Describe your question, concern, or strategic suggestion in detail."></textarea>
-      <button class="btn" id="sendBtn" type="button">Submit contribution</button>
-      <div id="successMsg" class="success">Your contribution has been received successfully. Your question/suggestion will be addressed soon.</div>
+      <input id="title" placeholder="Short title for your question/suggestion" />
+      <label style="display:block;margin-top:10px">Description</label>
+      <textarea id="desc" placeholder="Describe your question/suggestion in detail."></textarea>
+      <button id="submit" class="btn" type="button">Send contribution</button>
+      <div id="ok" class="ok">Your contribution was received successfully. Your question/suggestion will be addressed soon.</div>
     </section>
   </main>
 
   <script>
-    document.getElementById('sendBtn').addEventListener('click', function () {
-      const title = document.getElementById('feedbackTitle').value.trim();
-      const description = document.getElementById('feedbackDescription').value.trim();
-      if (!title || !description) {
-        alert('Please fill in both fields before submitting.');
-        return;
-      }
-      document.getElementById('successMsg').style.display = 'block';
-      document.getElementById('feedbackTitle').value = '';
-      document.getElementById('feedbackDescription').value = '';
+    const instrumentSteps = [
+      ['Investor Subscription','Qualified investor allocates USD capital to a selected instrument (CB6, CB10, or CIP).'],
+      ['Issuance Layer','Issuance is structured via Tipolis / SPV / Hybrid legal framework under formal structuring analysis.'],
+      ['Capital Split','90% is deployed to city operations; 10% is reserved as BTC-linked strategic allocation structure.'],
+      ['Distribution Engine','All instruments distribute monthly under their specific coupon/floor structure and risk profile.'],
+      ['Maturity / Exit','CB6 and CB10 return principal + BTC-linked cash settlement; CIP follows perpetual preferred exit logic under final legal terms.']
+    ];
+    document.getElementById('investorFlow').innerHTML = instrumentSteps.map((s,i)=>`<div class="step"><strong>Step ${i+1}</strong><p>${s[0]}</p><small>${s[1]}</small></div>`).join('');
+
+    function fmt(n){return n.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
+    function update(){
+      const pf=+portfolio.value, s=+strc.value, c6=+cb6.value, c10=+cb10.value, cp=+cip.value;
+      pfVal.textContent = pf.toLocaleString('en-US');
+      strcPct.textContent=s+'%'; cb6Pct.textContent=c6+'%'; cb10Pct.textContent=c10+'%'; cipPct.textContent=cp+'%';
+      totalPct.textContent=(s+c6+c10+cp)+'%';
+      strcBar.style.width=s+'%'; cb6Bar.style.width=c6+'%'; cb10Bar.style.width=c10+'%'; cipBar.style.width=cp+'%';
+      const strcValue=pf*(s/100), cbExposure=pf*((c6+c10+cp)/100), ratio = cbExposure===0 ? Infinity : strcValue/cbExposure;
+      strcVal.textContent=fmt(strcValue); cbExp.textContent=fmt(cbExposure);
+      coverage.textContent = ratio===Infinity ? '∞' : ratio.toFixed(2)+'x';
+      status.textContent = ratio>=1.0 ? 'Strong Coverage' : ratio>=0.5 ? 'Moderate Coverage' : 'Low Coverage';
+      status.style.color = ratio>=1.0 ? '#2ee588' : ratio>=0.5 ? '#ffb347' : '#ff6b6b';
+      totalPct.style.color = (s+c6+c10+cp===100) ? '#2ee588' : '#ff6b6b';
+    }
+    ['portfolio','strc','cb6','cb10','cip'].forEach(id=>document.getElementById(id).addEventListener('input',update));
+    update();
+
+    fetch('./research/tipolis_city_bonds_strategic_document.md')
+      .then(r=>r.text())
+      .then(md=>{
+        const html = marked.parse(md);
+        document.getElementById('specContent').innerHTML = '<div class="label">Full Spec Content (In Original Order)</div>' + html;
+      })
+      .catch(()=>{
+        document.getElementById('specContent').innerHTML = '<p>Unable to load the spec file.</p>';
+      });
+
+    submit.addEventListener('click',()=>{
+      if(!title.value.trim()||!desc.value.trim()){alert('Please fill in both fields before submitting.');return;}
+      ok.style.display='block'; title.value=''; desc.value='';
     });
   </script>
 </body>
