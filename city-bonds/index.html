@@ -38,7 +38,6 @@
     <section class="hero card">
       <div class="label">Tipolis City Bonds Program</div>
       <h1>Strategic Capital Markets <span>Document</span></h1>
-      <p>This page reproduces the full uploaded spec content in sequence and adds the requested interactive investor-flow and STRC coverage ratio visual modules.</p>
     </section>
 
     <section class="card">
@@ -97,13 +96,13 @@
 
   <script>
     const instrumentSteps = [
-      ['Investor Subscription','Qualified investor allocates USD capital to a selected instrument (CB6, CB10, or CIP).'],
-      ['Issuance Layer','Issuance is structured via Tipolis / SPV / Hybrid legal framework under formal structuring analysis.'],
-      ['Capital Split','90% is deployed to city operations; 10% is reserved as BTC-linked strategic allocation structure.'],
-      ['Distribution Engine','All instruments distribute monthly under their specific coupon/floor structure and risk profile.'],
-      ['Maturity / Exit','CB6 and CB10 return principal + BTC-linked cash settlement; CIP follows perpetual preferred exit logic under final legal terms.']
+      ['Step 1','Investor Subscribes'],
+      ['Step 2','Digital Bank Issues CB'],
+      ['Step 3','Operations Funding'],
+      ['Step 4','Hold BTC'],
+      ['Step 5','Maturity Payout']
     ];
-    document.getElementById('investorFlow').innerHTML = instrumentSteps.map((s,i)=>`<div class="step"><strong>Step ${i+1}</strong><p>${s[0]}</p><small>${s[1]}</small></div>`).join('');
+    document.getElementById('investorFlow').innerHTML = instrumentSteps.map((s)=>`<div class="step"><strong>${s[0]}</strong><p>${s[1]}</p></div>`).join('');
 
     function fmt(n){return n.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
     function update(){
