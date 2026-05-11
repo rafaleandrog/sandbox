@@ -382,50 +382,47 @@ The analysis below models two scenarios: a base case at 11% annual STRC yield an
 
 ---
 
-### 11.2 Per-$1,000,000 Bond STRC Coverage — Annual and Monthly Obligations
+### 11.2 Per-$1M STRC: Maximum Bond Issuance Covered
 
-The core metric is: for a given amount of STRC held by Tipolis as a corporate liquidity buffer, how much of each instrument's annual and monthly distribution obligation does the resulting STRC income cover?
+The core metric, framed from Tipolis's capital perspective: for each $1,000,000 allocated to STRC as a corporate liquidity buffer, what is the maximum face value of each instrument whose annual coupon obligation can be entirely funded by the resulting STRC income?
 
-**Monthly distribution obligations per $1,000,000 bond:**
+**STRC annual income per $1M position:**
 
-| Instrument | Annual obligation | Monthly obligation |
+| STRC yield scenario | Annual income | Monthly income |
 |---|---|---|
-| CB-20 (6% coupon) | $60,000 | $5,000 |
-| CB-10 (10% coupon) | $100,000 | $8,333 |
-| CIP floor (4% distribution) | $40,000 | $3,333 |
+| Base case (11%) | $110,000 | $9,167 |
+| Pessimistic case (8%) | $80,000 | $6,667 |
 
-**STRC balance required for full annual obligation coverage — base case (11% yield):**
+**Maximum bond issuance fully covered by $1M STRC — base case (11% yield):**
 
-To fully cover each instrument's annual obligation from STRC monthly income alone, Tipolis must hold the following amount of STRC per $1,000,000 bond outstanding:
+| Instrument | Coupon | Max bond issuance covered | Coverage vs $1M base |
+|---|---|---|---|
+| CB-20 | 6% | $1,833,333 | 1.83× |
+| CB-10 | 10% | $1,100,000 | 1.10× |
+| CIP floor | 4% | $2,750,000 | 2.75× |
 
-| Instrument | Annual obligation | Monthly obligation | STRC required at 11% | Monthly STRC income |
-|---|---|---|---|---|
-| CB-20 | $60,000 | $5,000 | $545,455 | $5,000 |
-| CB-10 | $100,000 | $8,333 | $909,091 | $8,333 |
-| CIP floor | $40,000 | $3,333 | $363,636 | $3,333 |
+The interpretation is direct: $1M deployed into STRC at 11% generates $110,000 per year, which is sufficient to fully service the monthly coupon obligations of $1.83M of CB-20 face, $1.10M of CB-10 face, or $2.75M of CIP floor — measured strictly on annual coupon coverage. Because STRC distributes monthly and City Bonds distribute monthly, this matching is exact and automatic.
 
-The alignment here is structurally elegant: STRC pays monthly, City Bonds pay monthly. A Tipolis STRC position sized to 54.5% of CB-20 face value ($545,455 per $1M bond) generates exactly $5,000 per month in STRC distributions — matching the CB-20 monthly coupon obligation dollar for dollar, allowing Tipolis to service investor payments entirely from STRC income during the ramp period without touching any other cash reserves.
+**Maximum bond issuance fully covered by $1M STRC — pessimistic case (8% yield):**
 
-**STRC balance required for full annual obligation coverage — pessimistic case (8% yield):**
+| Instrument | Coupon | Max bond issuance covered | Coverage vs $1M base |
+|---|---|---|---|
+| CB-20 | 6% | $1,333,333 | 1.33× |
+| CB-10 | 10% | $800,000 | 0.80× |
+| CIP floor | 4% | $2,000,000 | 2.00× |
 
-| Instrument | Annual obligation | Monthly obligation | STRC required at 8% | Monthly STRC income |
-|---|---|---|---|---|
-| CB-20 | $60,000 | $5,000 | $750,000 | $5,000 |
-| CB-10 | $100,000 | $8,333 | $1,250,000 | $8,333 |
-| CIP floor | $40,000 | $3,333 | $500,000 | $3,333 |
-
-**Key observation — pessimistic case:** At 8% STRC yield, covering the CB-10 monthly obligation entirely from STRC income would require $1,250,000 in STRC — 25% more than the bond's face value. This confirms that CB-10's monthly distribution service during the ramp period must rely on a combination of STRC income and other corporate cash sources. For CB-20 and CIP, the pessimistic STRC coverage is feasible at STRC positions of 75% and 50% of face value respectively — well within a reasonable liquidity buffer range for an institution managing an ongoing capital raise program.
+**Key observation — pessimistic case:** at 8% STRC yield, $1M of STRC still supports $1.33M of CB-20 face and $2.00M of CIP face — meaningful capacity in both directions. CB-10 is the only instrument where $1M STRC at 8% does not fully cover $1M of face value: it supports up to $800K of CB-10 face, confirming that CB-10 service during the ramp must be supplemented by additional corporate cash sources or by carry from CB-20 and CIP positions in the same portfolio.
 
 ---
 
-### 11.3 Investor-Facing Interpretation
+### 11.3 Tipolis-Facing Interpretation — Issuance Capacity per $1M STRC
 
-From the perspective of a CB-20 investor — the most conservative and senior instrument in the suite — a Tipolis STRC allocation of $545,455 per $1,000,000 bond outstanding is sufficient to generate exactly $5,000 per month in STRC distributions, matching the CB-20 monthly coupon obligation precisely at the base 11% STRC yield. This means that during the 3 years in which the city is being built and no operational revenue has yet arrived, every monthly payment owed to the investor can be funded exclusively from Tipolis's STRC distributions — without touching any operational cash, without asset sales, and without leverage.
+Read from Tipolis's perspective as the issuer, the inverted framing reveals the leverage embedded in the STRC liquidity buffer. Every $1M allocated to STRC at the base 11% yield generates $110,000 per year in monthly USD distributions. That income alone is sufficient to fully service $1,833,333 of CB-20 face value, $1,100,000 of CB-10 face value, or $2,750,000 of CIP floor obligations. In other words, $1 deployed into STRC supports between $1.10 and $2.75 of bond face during the construction ramp — depending on the chosen instrument — entirely from STRC income, without operational cash, asset sales, or leverage.
 
-Even in the stress scenario where STRC distributes only 8%, a STRC position equal to 75% of CB-20 face value ($750,000 per $1M bond) would still cover 100% of the monthly coupon obligation. The senior tranche's monthly obligations are effectively insulated from ramp-period cash flow risk under all realistic scenarios.
+CB-20 is the natural anchor of this dynamic. Its 6% coupon means that even modest STRC positions cover meaningful tranches of senior face value: $1M of STRC at 11% supports $1.83M of CB-20 face — a 1.83× capacity multiple. Even in the stress scenario where STRC distributes only 8%, the same $1M of STRC still supports $1.33M of CB-20 face. The senior tranche's monthly obligations are effectively insulated from ramp-period cash flow risk under all realistic STRC yield scenarios.
 
-For CB-10, the higher monthly coupon ($8,333 per $1M bond) means that full coverage from STRC requires a position approaching or exceeding the bond's face value in adverse yield scenarios. This confirms the design intent: CB-10's negative carry is managed at the enterprise portfolio level — supplemented by CB-20 positive carry and general corporate reserves — rather than fully hedged by STRC alone.
+CB-10 is the only instrument where the capacity multiple falls below 1.0× in the stress case: $1M of STRC at 8% supports $0.80M of CB-10 face. This confirms the design intent. CB-10's negative carry is managed at the enterprise portfolio level — supplemented by CB-20 positive carry and general corporate reserves — rather than fully hedged by STRC alone.
 
-For CIP, the low floor monthly distribution of $3,333 per $1M bond makes STRC coverage highly capital-efficient. A STRC position of $363,636 (36.4% of face value) at 11% yield exactly matches the CIP floor obligation monthly. Even at 8% yield, a STRC position of $500,000 (50% of face) fully covers the CIP floor — making CIP the most resilient instrument from a ramp-period liquidity perspective.
+CIP is the most resilient instrument from a ramp-period liquidity perspective. Its 4% floor means $1M of STRC at 11% supports $2.75M of CIP face; even at 8% it supports $2.0M. The capacity multiple is the highest of the suite by a wide margin.
 
-The key strategic insight is this: STRC on Tipolis's corporate balance sheet is not a speculative position or a yield-enhancement trade. It is a structural monthly liquidity mechanism funded by Tipolis's own capital — entirely separate from bond proceeds — that directly addresses the most predictable and consequential risk in the City Bond program: the gap between the moment capital is raised and the moment operational revenue begins. Because STRC pays monthly and City Bonds pay monthly, the cash flow matching is exact and automatic. The instrument is liquid enough to be sold at any point if conditions require, and stable enough — backed by 4.5× Bitcoin overcollateralization — to serve as institutional collateral for credit facilities. For Tipolis, STRC is the liquidity infrastructure that makes City Bond monthly distribution obligations credible to institutional investors from day one.
+The key strategic insight is this: STRC on Tipolis's corporate balance sheet is not a speculative position or a yield-enhancement trade. It is a structural monthly liquidity mechanism funded by Tipolis's own capital — entirely separate from bond proceeds — that converts a corporate treasury allocation into multiplied issuance capacity. Because STRC pays monthly and City Bonds pay monthly, the cash flow matching is exact and automatic. The instrument is liquid enough to be sold at any point if conditions require, and stable enough — backed by 4.5× Bitcoin overcollateralization — to serve as institutional collateral for credit facilities. For Tipolis, STRC is the liquidity infrastructure that makes City Bond monthly distribution obligations credible to institutional investors from day one.
