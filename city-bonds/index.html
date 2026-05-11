@@ -573,6 +573,36 @@
 
     /* §5 emoji project markers */
     .cb-emoji { font-size: 14px; margin-right: 4px; }
+
+    /* §5 — colored column stripes for the Comparative Product Matrix */
+    .cb-matrix thead th:nth-child(2) {
+      border-top: 3px solid var(--accent-strategic);
+      color: var(--accent-strategic);
+    }
+    .cb-matrix thead th:nth-child(3) {
+      border-top: 3px solid var(--accent-digital);
+      color: var(--accent-digital);
+    }
+    .cb-matrix thead th:nth-child(4) {
+      border-top: 3px solid var(--accent-peer);
+      color: var(--accent-peer);
+    }
+    .cb-matrix tbody td:nth-child(2) {
+      background: color-mix(in srgb, var(--accent-strategic) 5%, transparent);
+      border-left: 1px solid color-mix(in srgb, var(--accent-strategic) 18%, transparent);
+    }
+    .cb-matrix tbody td:nth-child(3) {
+      background: color-mix(in srgb, var(--accent-digital) 5%, transparent);
+      border-left: 1px solid color-mix(in srgb, var(--accent-digital) 18%, transparent);
+    }
+    .cb-matrix tbody td:nth-child(4) {
+      background: color-mix(in srgb, var(--accent-peer) 5%, transparent);
+      border-left: 1px solid color-mix(in srgb, var(--accent-peer) 18%, transparent);
+      border-right: 1px solid color-mix(in srgb, var(--accent-peer) 18%, transparent);
+    }
+    .cb-matrix tbody tr:last-child td:nth-child(2) { border-bottom: 2px solid var(--accent-strategic); }
+    .cb-matrix tbody tr:last-child td:nth-child(3) { border-bottom: 2px solid var(--accent-digital); }
+    .cb-matrix tbody tr:last-child td:nth-child(4) { border-bottom: 2px solid var(--accent-peer); }
   </style>
 </head>
 <body class="page--city-bonds">
@@ -813,12 +843,12 @@
         <span class="t-feature__pre">STRF Equivalent</span>
       </div>
       <h3>CB-20 <span>— Senior Secured · 20-Year</span></h3>
-      <p class="cb-instrument__note">Modeled with a <strong>6% illustrative coupon</strong>, a <strong>9% illustrative cap rate</strong>, and a <strong>3-year illustrative ramp</strong>. None of these are structural commitments — the interactive calculator below lets you re-test the instrument with coupons between 4–10%, cap rates between 4–16%, and ramps between 2–6 years.</p>
+      <p class="cb-instrument__note">Modeled with a <strong>6% coupon</strong>, a <strong>9% cap rate</strong>, and a <strong>3-year ramp</strong>. None of these are structural commitments — the interactive calculator below lets you re-test the instrument with coupons between 4–10%, cap rates between 4–16%, and ramps between 2–6 years.</p>
 
       <!-- Investor-side and Tipolis-side metrics split -->
       <div class="cb-metrics-split">
         <div class="cb-metrics cb-metrics--investor">
-          <span class="cb-metrics__pre">▌ For the Investor — at illustrative 6%</span>
+          <span class="cb-metrics__pre">▌ For the Investor — at 6%</span>
           <div class="cb-metrics__grid">
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Coupon</span><span class="cb-metrics__value">6.0%</span><span class="cb-metrics__sub">Fixed, monthly</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Duration</span><span class="cb-metrics__value">20y</span><span class="cb-metrics__sub">Macaulay ~12.2y</span></div>
@@ -827,7 +857,7 @@
           </div>
         </div>
         <div class="cb-metrics cb-metrics--tipolis">
-          <span class="cb-metrics__pre">▌ For Tipolis — at illustrative 9% cap, 3y ramp</span>
+          <span class="cb-metrics__pre">▌ For Tipolis — at 9% cap, 3y ramp</span>
           <div class="cb-metrics__grid">
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Op. Rev. (Stab.)</span><span class="cb-metrics__value">$6.75K/mo</span><span class="cb-metrics__sub">$81K/year per $1M</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">DSCR</span><span class="cb-metrics__value">1.35×</span><span class="cb-metrics__sub">Rev / Coupon</span></div>
@@ -840,7 +870,7 @@
       <div class="cb-instrument__body">
         <div class="cb-mechanics">
           <p><strong>Structure.</strong> 20-year fixed-rate senior secured bond paying a selected coupon — proposed at 6% — distributed monthly. At year 20, the investor receives: (i) the final monthly coupon, (ii) full return of principal, and (iii) a USD cash payment equal to <strong>50% of Bitcoin appreciation</strong> over the 20-year period, applied to a notional 10% allocation of bond face value.</p>
-          <p><strong>Mechanics per $1M invested (illustrative).</strong> $900K allocated to operational city assets; $100K deployed into Bitcoin on day one as Tipolis property. Investor receives the selected monthly coupon × 240 months + $1M principal + BTC appreciation cash settlement.</p>
+          <p><strong>Mechanics per $1M invested.</strong> $900K allocated to operational city assets; $100K deployed into Bitcoin on day one as Tipolis property. Investor receives the selected monthly coupon × 240 months + $1M principal + BTC appreciation cash settlement.</p>
           <p><strong>Capital deployment.</strong> All ICT projects. The 20-year duration aligns particularly well with long-lived <strong>hard infrastructure</strong> concessions (energy, water, ports, railways).</p>
         </div>
 
@@ -878,7 +908,7 @@
         <div class="cb-calc__inputs cb-calc__inputs--3">
           <div>
             <label class="t-input-label">Investment ($)</label>
-            <input class="t-input" type="number" data-field="amount" value="1000000" min="100000" step="100000">
+            <input class="t-input cb-amount" type="text" inputmode="numeric" data-field="amount" value="1,000,000">
           </div>
           <div>
             <div class="t-range__row">
@@ -935,7 +965,7 @@
         </div>
       </div>
 
-      <div class="cb-pitch">You purchase a senior secured instrument backed by city-scale real assets. The illustrative <strong>6% coupon</strong> is fixed at issuance and paid monthly for 20 years; full principal returns at maturity. Additionally, the USD equivalent of <strong>50% of Bitcoin's 20-year appreciation</strong> is delivered at maturity at no additional cost — with no Bitcoin custody responsibility. Even if Bitcoin does not appreciate at all, you hold a senior bond paying the selected coupon with real-asset backing.</div>
+      <div class="cb-pitch">You purchase a senior secured instrument backed by city-scale real assets. The <strong>6% coupon</strong> is fixed at issuance and paid monthly for 20 years; full principal returns at maturity. Additionally, the USD equivalent of <strong>50% of Bitcoin's 20-year appreciation</strong> is delivered at maturity at no additional cost — with no Bitcoin custody responsibility. Even if Bitcoin does not appreciate at all, you hold a senior bond paying the selected coupon with real-asset backing.</div>
     </section>
 
     <!-- ───────── §4.2 CB-10 ───────── -->
@@ -948,11 +978,11 @@
         <span class="t-feature__pre">STRD Equivalent</span>
       </div>
       <h3>CB-10 <span>— Subordinated · 10-Year</span></h3>
-      <p class="cb-instrument__note">Modeled with a <strong>10% illustrative coupon</strong>, a <strong>9% illustrative cap rate</strong>, and a <strong>3-year illustrative ramp</strong>. The calculator below lets you re-test the instrument with coupons between 6–12%, cap rates between 4–16%, and ramps between 2–6 years.</p>
+      <p class="cb-instrument__note">Modeled with a <strong>10% coupon</strong>, a <strong>9% cap rate</strong>, and a <strong>3-year ramp</strong>. The calculator below lets you re-test the instrument with coupons between 6–12%, cap rates between 4–16%, and ramps between 2–6 years.</p>
 
       <div class="cb-metrics-split">
         <div class="cb-metrics cb-metrics--investor">
-          <span class="cb-metrics__pre">▌ For the Investor — at illustrative 10%</span>
+          <span class="cb-metrics__pre">▌ For the Investor — at 10%</span>
           <div class="cb-metrics__grid">
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Coupon</span><span class="cb-metrics__value">10.0%</span><span class="cb-metrics__sub">Fixed, monthly</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Duration</span><span class="cb-metrics__value">10y</span><span class="cb-metrics__sub">Macaulay ~7.0y</span></div>
@@ -961,7 +991,7 @@
           </div>
         </div>
         <div class="cb-metrics cb-metrics--tipolis">
-          <span class="cb-metrics__pre">▌ For Tipolis — at illustrative 9% cap, 3y ramp</span>
+          <span class="cb-metrics__pre">▌ For Tipolis — at 9% cap, 3y ramp</span>
           <div class="cb-metrics__grid">
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Op. Rev. (Stab.)</span><span class="cb-metrics__value">$6.75K/mo</span><span class="cb-metrics__sub">$81K/year per $1M</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">DSCR</span><span class="cb-metrics__value">0.81×</span><span class="cb-metrics__sub">By design — sub</span></div>
@@ -974,7 +1004,7 @@
       <div class="cb-instrument__body">
         <div class="cb-mechanics">
           <p><strong>Structure.</strong> 10-year subordinated bond paying a selected coupon — proposed at 10% — distributed monthly. At year 10: final coupon + full principal + USD cash payment equal to 50% of BTC appreciation over the 10-year period on the 10% notional.</p>
-          <p><strong>Mechanics per $1M invested (illustrative).</strong> $900K to operational assets; $100K to Bitcoin on day one (Tipolis property). Investor receives the selected monthly coupon × 120 + $1M principal + BTC settlement.</p>
+          <p><strong>Mechanics per $1M invested.</strong> $900K to operational assets; $100K to Bitcoin on day one (Tipolis property). Investor receives the selected monthly coupon × 120 + $1M principal + BTC settlement.</p>
           <p><strong>Negative carry is a design choice.</strong> Stabilized revenue ($81K/year at 9% cap) sits below the $100K coupon obligation. The deficit is managed at the enterprise level — by Tipolis-retained BTC at maturity, by CB-20 positive carry in the same portfolio, and by other operational revenues. <strong>The negative carry is the cost of high-yield capital access.</strong></p>
           <p><strong>Capital deployment.</strong> All ICT projects. The 10-year term suits <strong>real estate, urban infrastructure, and hard infrastructure</strong> with faster revenue maturation.</p>
         </div>
@@ -1010,7 +1040,7 @@
         <div class="cb-calc__inputs cb-calc__inputs--3">
           <div>
             <label class="t-input-label">Investment ($)</label>
-            <input class="t-input" type="number" data-field="amount" value="1000000" min="100000" step="100000">
+            <input class="t-input cb-amount" type="text" inputmode="numeric" data-field="amount" value="1,000,000">
           </div>
           <div>
             <div class="t-range__row">
@@ -1080,20 +1110,20 @@
         <span class="t-feature__pre">STRK Equivalent</span>
       </div>
       <h3>CIP <span>— City Equity Participation</span></h3>
-      <p class="cb-instrument__note">Modeled with a <strong>4% illustrative floor</strong>, a <strong>9% illustrative cap rate</strong>, and a <strong>3-year illustrative ramp</strong>. The calculator below lets you re-test the instrument with floors between 3–5%, cap rates between 4–16%, and ramps between 2–6 years. Equity participation above the floor is uncapped and project-specific.</p>
+      <p class="cb-instrument__note">Modeled with a <strong>4% floor</strong>, a <strong>9% cap rate</strong>, and a <strong>3-year ramp</strong>. The calculator below lets you re-test the instrument with floors between 3–5%, cap rates between 4–16%, and ramps between 2–6 years. Equity participation above the floor is uncapped and project-specific.</p>
 
       <div class="cb-metrics-split">
         <div class="cb-metrics cb-metrics--investor">
-          <span class="cb-metrics__pre">▌ For the Investor — at illustrative 4% floor</span>
+          <span class="cb-metrics__pre">▌ For the Investor — at 4% floor</span>
           <div class="cb-metrics__grid">
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Floor</span><span class="cb-metrics__value">4.0%</span><span class="cb-metrics__sub">Contractual minimum</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Maturity</span><span class="cb-metrics__value">∞</span><span class="cb-metrics__sub">Perpetual preferred</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Floor Monthly per $1M</span><span class="cb-metrics__value">$3.3K</span><span class="cb-metrics__sub">+ uncapped equity upside</span></div>
-            <div class="cb-metrics__tile"><span class="cb-metrics__label">BTC Upside</span><span class="cb-metrics__value">None</span><span class="cb-metrics__sub">100% retained by Tipolis</span></div>
+            <div class="cb-metrics__tile"><span class="cb-metrics__label">BTC Upside</span><span class="cb-metrics__value">None</span><span class="cb-metrics__sub">100% retained — strategic risk buffer for Tipolis</span></div>
           </div>
         </div>
         <div class="cb-metrics cb-metrics--tipolis">
-          <span class="cb-metrics__pre">▌ For Tipolis — at illustrative 9% cap, 3y ramp</span>
+          <span class="cb-metrics__pre">▌ For Tipolis — at 9% cap, 3y ramp</span>
           <div class="cb-metrics__grid">
             <div class="cb-metrics__tile"><span class="cb-metrics__label">Op. Rev. (Stab.)</span><span class="cb-metrics__value">$6.75K/mo</span><span class="cb-metrics__sub">$81K/year per $1M</span></div>
             <div class="cb-metrics__tile"><span class="cb-metrics__label">DSCR at Floor</span><span class="cb-metrics__value">2.03×</span><span class="cb-metrics__sub">Rev / Floor</span></div>
@@ -1107,7 +1137,7 @@
         <div class="cb-mechanics">
           <p><strong>Structure.</strong> Perpetual preferred equity instrument with a guaranteed minimum distribution — proposed as a 4% per annum floor — plus direct participation in the equity results of the real estate project the instrument finances. Distributions paid monthly. <strong>No fixed maturity</strong>, no scheduled return of principal. There is <strong>no BTC upside commitment</strong> to CIP investors — Bitcoin acquired with the 10% allocation is permanently retained by Tipolis.</p>
           <p><strong>Return structure.</strong> Total monthly distribution = (i) contractual floor + (ii) variable distribution representing direct participation in the project's equity results. The variable component has <strong>no ceiling</strong>.</p>
-          <p><strong>Mechanics per $1M invested (illustrative).</strong> $900K to real estate operations; $100K to Bitcoin on day one, permanently retained by Tipolis with no obligation to CIP investors. Investor receives the floor regardless of project performance; distributions rise above the floor with operational results.</p>
+          <p><strong>Mechanics per $1M invested.</strong> $900K to real estate operations; $100K to Bitcoin on day one, permanently retained by Tipolis with no obligation to CIP investors. Investor receives the floor regardless of project performance; distributions rise above the floor with operational results.</p>
           <p><strong>Capital deployment — real estate only.</strong> Residential and commercial incorporation projects, plus the directly associated <strong>urban infrastructure</strong> required to make those developments operational. Hard infrastructure (ports, energy, roads, water) is <strong>not</strong> financed through CIP — real estate generates the most direct, measurable performance-linked revenue streams.</p>
         </div>
 
@@ -1132,8 +1162,10 @@
       </div>
 
       <div class="t-tinted" style="margin-top: 14px">
-        <span class="t-tinted__eyebrow">Tipolis BTC Accumulation (per $1M CIP issued)</span>
-        <p class="t-body">The $100K deployed into Bitcoin on day one is <strong>permanently retained on Tipolis's balance sheet</strong> and never returned to CIP investors. At 29% CAGR: ~$1,275,700 after 10 years; ~$16,285,000 after 20 years. Every CIP issuance adds to Tipolis's permanent strategic Bitcoin reserve — this is the mechanism by which the equity hybrid instrument systematically builds Tipolis's balance sheet position.</p>
+        <span class="t-tinted__eyebrow">Why CIP Does Not Pass BTC Appreciation to the Investor</span>
+        <p class="t-body">The $100K deployed into Bitcoin on day one is <strong>permanently retained on Tipolis's balance sheet</strong> and is never returned to or shared with CIP investors under any scenario. <strong>This structure is intentional and serves a strategic risk-management purpose</strong>. CIP is the equity-like, perpetual instrument in the suite — the one with no maturity, no principal return, and the longest exposure to project-level execution risk. By retaining 100% of the BTC reserve from every CIP issuance, Tipolis builds a balance-sheet asset whose value is <strong>uncorrelated with project performance</strong> and that compounds independently of the city's operational results.</p>
+        <p class="t-body" style="margin-top: 10px">That reserve becomes a strategic instrument the company can deploy over time to <strong>reduce the business risk of the program</strong>: it can be pledged as institutional collateral to access credit facilities without selling assets, used as a liquidity buffer during stress periods, sold tactically to fund operational acceleration, or held as a long-duration offset against any underperforming project tranche. The longer the program runs and the more CIPs are issued, the deeper this corporate-level safety net becomes — and the more resilient the entire City Bond architecture is to adverse scenarios.</p>
+        <p class="t-body" style="margin-top: 10px">At 29% CAGR: ~$1,275,700 after 10 years; ~$16,285,000 after 20 years, per $1M CIP issued. Every CIP issuance permanently expands this reserve. The CIP investor gains <strong>operational equity participation</strong> in the underlying real estate; Tipolis gains a <strong>strategic, programmatic BTC reserve</strong> that strengthens the long-term credit profile of every other instrument in the suite. The two upsides are structurally separated by design.</p>
       </div>
 
       <div class="cb-targets">
@@ -1151,7 +1183,7 @@
         <div class="cb-calc__inputs cb-calc__inputs--3">
           <div>
             <label class="t-input-label">Investment ($)</label>
-            <input class="t-input" type="number" data-field="amount" value="1000000" min="100000" step="100000">
+            <input class="t-input cb-amount" type="text" inputmode="numeric" data-field="amount" value="1,000,000">
           </div>
           <div>
             <div class="t-range__row">
@@ -1217,10 +1249,10 @@
     <section>
       <span class="t-eyebrow">Strategic Framework 05</span>
       <h2 class="t-h2">Comparative Product Matrix</h2>
-      <p class="t-lead">The three instruments occupy distinct positions in the capital stack, mirror three Strategy instruments, and address three distinct investor segments. <em>All values reflect the proposed illustrative coupons (6 / 10 / 4) — the calculators above let you re-test any of these.</em></p>
+      <p class="t-lead">The three instruments occupy distinct positions in the capital stack, mirror three Strategy instruments, and address three distinct investor segments. <em>All values reflect the proposed coupons (6 / 10 / 4) — the calculators above let you re-test any of these.</em></p>
 
       <div style="overflow-x: auto">
-      <table class="t-table">
+      <table class="t-table cb-matrix">
         <thead>
           <tr>
             <th>Attribute</th>
@@ -1230,7 +1262,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Coupon / floor (illustrative)</td><td>6.0% fixed</td><td>10.0% fixed</td><td>4.0% floor, no ceiling</td></tr>
+          <tr><td>Coupon / floor</td><td>6.0% fixed</td><td>10.0% fixed</td><td>4.0% floor, no ceiling</td></tr>
           <tr><td>Payment frequency</td><td>Monthly</td><td>Monthly</td><td>Monthly</td></tr>
           <tr><td>Investor IRR — base case</td><td>~14.5%</td><td>~13.2%</td><td>~9.0%</td></tr>
           <tr><td>BTC upside to investor</td><td>50% of appreciation, USD at maturity</td><td>50% of appreciation, USD at maturity</td><td>None — 100% to Tipolis</td></tr>
@@ -1239,7 +1271,7 @@
           <tr><td>Tipolis carry (stabilized, per $1M)</td><td>+$1,750/month</td><td>−$1,583/month</td><td>+$3,417/month (at floor)</td></tr>
           <tr><td>Tipolis BTC ownership</td><td>100% (pays 50% USD at maturity)</td><td>100% (pays 50% USD at maturity)</td><td>100% (no payment to investor)</td></tr>
           <tr><td>Capital stack priority</td><td>Senior secured</td><td>Subordinated</td><td>Equity / junior</td></tr>
-          <tr><td>DSCR (stabilized, illustrative)</td><td>1.35×</td><td>0.81×</td><td>2.03×</td></tr>
+          <tr><td>DSCR (stabilized)</td><td>1.35×</td><td>0.81×</td><td>2.03×</td></tr>
           <tr><td>Macaulay duration</td><td>12.2 years</td><td>7.0 years</td><td>Perpetual</td></tr>
           <tr>
             <td>Project deployment</td>
@@ -1397,9 +1429,9 @@
       <div class="t-pattern" style="margin-top: 18px">
         <span class="t-pattern__pre">Three Instruments · Three Investor Segments · One Engine</span>
         <h3 class="t-pattern__title">Three Calibrated Products. One Compounding Channel.</h3>
-        <p class="t-pattern__body"><strong>CB-20</strong> targets senior capital from sovereign funds, pensions, and insurers — illustrative 6% fixed monthly, 20-year duration, senior claim on city assets, BTC appreciation cash settlement at maturity.</p>
-        <p class="t-pattern__body" style="margin-top: 10px"><strong>CB-10</strong> targets yield-seeking capital from HY bond funds and private credit — illustrative 10% fixed monthly, 10-year duration, subordinated claim enhanced by BTC appreciation cash settlement at maturity.</p>
-        <p class="t-pattern__body" style="margin-top: 10px"><strong>CIP</strong> targets real estate equity capital from property funds, strategic co-investors, and local development partners — perpetual preferred, illustrative 4% floor monthly + uncapped equity participation, with 100% of BTC appreciation accumulating on Tipolis's balance sheet.</p>
+        <p class="t-pattern__body"><strong>CB-20</strong> targets senior capital from sovereign funds, pensions, and insurers — 6% fixed monthly, 20-year duration, senior claim on city assets, BTC appreciation cash settlement at maturity.</p>
+        <p class="t-pattern__body" style="margin-top: 10px"><strong>CB-10</strong> targets yield-seeking capital from HY bond funds and private credit — 10% fixed monthly, 10-year duration, subordinated claim enhanced by BTC appreciation cash settlement at maturity.</p>
+        <p class="t-pattern__body" style="margin-top: 10px"><strong>CIP</strong> targets real estate equity capital from property funds, strategic co-investors, and local development partners — perpetual preferred, 4% floor monthly + uncapped equity participation, with 100% of BTC appreciation accumulating on Tipolis's balance sheet.</p>
       </div>
 
       <p class="t-body" style="margin-top: 18px">All three are structurally <strong>revenue bonds</strong>: secured by city asset revenues, not by sovereign credit. All three incorporate a Bitcoin reserve component that builds Tipolis's strategic balance sheet. The CB instruments create asymmetric Bitcoin appreciation optionality for investors. All three are designed for programmatic issuance through Tipolis's proprietary capital markets infrastructure, reducing intermediary costs and building a compounding investor distribution channel.</p>
@@ -1422,169 +1454,154 @@
       <p class="t-body">STRC is a USD-denominated preferred equity instrument backed by Strategy's Bitcoin reserves — approximately <strong>$49B in BTC</strong> as of early 2026, providing 4.5× overcollateralization against ~$3.4B in outstanding STRC obligations. STRC trades around $100/share with average daily volume above $80M. It distributes 9–12% per annum in <strong>monthly USD cash payments</strong> — aligning precisely with Tipolis's monthly City Bond obligation structure.</p>
       <p class="t-body">For Tipolis, holding STRC serves three functions simultaneously: it generates high-yield monthly USD income directly applicable to bond distributions; it is a liquid asset that can be sold rapidly; and it can be pledged as institutional collateral for credit facilities, providing leverage access without forced liquidation.</p>
 
-      <h3 class="t-h3" style="margin-top: 22px; font-size: 17px;">11.2 — Per-$1M Bond STRC Coverage</h3>
-      <p class="t-body" style="margin-top: 8px">The core metric: for a given STRC position, how much of each instrument's annual and monthly obligation does the resulting STRC income cover? All figures per $1,000,000 of City Bond face value outstanding at the illustrative coupons.</p>
+      <h3 class="t-h3" style="margin-top: 22px; font-size: 17px;">11.2 — Per-$1M STRC: Maximum Bond Issuance Covered</h3>
+      <p class="t-body" style="margin-top: 8px">Framed from Tipolis's capital perspective: for each <strong>$1,000,000 allocated to STRC</strong>, what is the maximum face value of each instrument whose annual coupon obligation can be entirely funded by the resulting STRC income?</p>
+
+      <table class="t-table" style="margin-top: 14px">
+        <thead><tr><th>STRC yield scenario</th><th>Annual STRC income</th><th>Monthly STRC income</th></tr></thead>
+        <tbody>
+          <tr><td>Base case (11%)</td><td>$110,000</td><td>$9,167</td></tr>
+          <tr><td>Pessimistic case (8%)</td><td>$80,000</td><td>$6,667</td></tr>
+        </tbody>
+      </table>
+      <p class="t-footnote" style="margin-top: 6px">STRC annual income generated by $1M position at each scenario.</p>
 
       <div class="grid-2" style="margin-top: 14px">
         <div>
           <table class="t-table">
-            <thead><tr><th>Instrument</th><th>Annual Obl.</th><th>Monthly Obl.</th></tr></thead>
+            <thead><tr><th>Instrument</th><th>Coupon</th><th>Max issuance · 11%</th><th>Coverage</th></tr></thead>
             <tbody>
-              <tr><td>CB-20 (6%)</td><td>$60,000</td><td>$5,000</td></tr>
-              <tr><td>CB-10 (10%)</td><td>$100,000</td><td>$8,333</td></tr>
-              <tr><td>CIP floor (4%)</td><td>$40,000</td><td>$3,333</td></tr>
+              <tr><td>CB-20</td><td>6%</td><td>$1,833,333</td><td>1.83×</td></tr>
+              <tr><td>CB-10</td><td>10%</td><td>$1,100,000</td><td>1.10×</td></tr>
+              <tr><td>CIP floor</td><td>4%</td><td>$2,750,000</td><td>2.75×</td></tr>
             </tbody>
           </table>
-          <p class="t-footnote" style="margin-top: 6px">Obligations per $1M bond at the illustrative coupons.</p>
+          <p class="t-footnote" style="margin-top: 6px">Base case — $1M STRC at 11% supports up to this much bond face value while still fully covering the annual coupon obligation.</p>
         </div>
 
         <div>
           <table class="t-table">
-            <thead><tr><th>Instrument</th><th>STRC req. @ 11%</th><th>Monthly STRC Inc.</th></tr></thead>
+            <thead><tr><th>Instrument</th><th>Coupon</th><th>Max issuance · 8%</th><th>Coverage</th></tr></thead>
             <tbody>
-              <tr><td>CB-20</td><td>$545,455</td><td>$5,000</td></tr>
-              <tr><td>CB-10</td><td>$909,091</td><td>$8,333</td></tr>
-              <tr><td>CIP floor</td><td>$363,636</td><td>$3,333</td></tr>
+              <tr><td>CB-20</td><td>6%</td><td>$1,333,333</td><td>1.33×</td></tr>
+              <tr class="is-highlight"><td>CB-10</td><td>10%</td><td>$800,000</td><td>0.80×</td></tr>
+              <tr><td>CIP floor</td><td>4%</td><td>$2,000,000</td><td>2.00×</td></tr>
             </tbody>
           </table>
-          <p class="t-footnote" style="margin-top: 6px">Base case — 11% STRC yield. Position required for 100% monthly coverage.</p>
+          <p class="t-footnote" style="margin-top: 6px">Pessimistic case — same $1M STRC at the stress 8% yield.</p>
         </div>
       </div>
-
-      <table class="t-table" style="margin-top: 14px">
-        <thead><tr><th>Instrument</th><th>STRC req. @ 8% (stress)</th><th>Monthly STRC Income</th><th>% of Bond Face</th></tr></thead>
-        <tbody>
-          <tr><td>CB-20</td><td>$750,000</td><td>$5,000</td><td>75.0%</td></tr>
-          <tr class="is-highlight"><td>CB-10</td><td>$1,250,000</td><td>$8,333</td><td>125.0% — exceeds face</td></tr>
-          <tr><td>CIP floor</td><td>$500,000</td><td>$3,333</td><td>50.0%</td></tr>
-        </tbody>
-      </table>
 
       <div class="t-callout" style="margin-top: 14px">
-        <strong>Pessimistic case observation:</strong> at 8% STRC yield, full coverage of CB-10 from STRC alone would require 125% of face value — confirming that CB-10 service during the ramp must rely on a <strong>combination</strong> of STRC income and other corporate cash. CB-20 and CIP remain feasible at 75% and 50% of face — within reasonable buffer ranges.
+        <strong>Pessimistic case observation:</strong> at 8% STRC yield, $1M of STRC still supports <strong>$1.33M of CB-20 face and $2.00M of CIP face</strong>. CB-10 is the only instrument where the capacity multiple falls below 1.0× — $1M of STRC at 8% supports up to $800K of CB-10 face — confirming that CB-10 service must be supplemented by additional corporate cash or by carry from CB-20 and CIP positions in the same portfolio.
       </div>
 
-      <h3 class="t-h3" style="margin-top: 22px; font-size: 17px;">11.3 — Investor-Facing Interpretation</h3>
-      <p class="t-body" style="margin-top: 8px">From the perspective of a CB-20 investor — the most senior and conservative instrument — a Tipolis STRC allocation of <strong>$545,455 per $1M bond outstanding</strong> generates exactly $5,000/month in STRC distributions, matching the monthly coupon obligation precisely at base 11% yield. During the construction years, every monthly payment owed to the investor can be funded exclusively from Tipolis's STRC distributions — without operational cash, asset sales, or leverage.</p>
-      <p class="t-body">Even in the stress scenario of 8% STRC yield, a position equal to 75% of CB-20 face value still covers 100% of the monthly coupon. <strong>The senior tranche's monthly obligations are effectively insulated from ramp-period cash flow risk under all realistic scenarios.</strong></p>
-      <p class="t-body">For CB-10, the higher monthly coupon means full STRC coverage requires positions approaching or exceeding face value in adverse scenarios. CB-10's negative carry is managed at the enterprise portfolio level — supplemented by CB-20 positive carry and general corporate reserves — rather than fully hedged by STRC alone.</p>
-      <p class="t-body">For CIP, the low floor distribution makes STRC coverage highly capital-efficient: $363,636 (36.4% of face) at 11% exactly matches the CIP floor monthly. Even at 8%, $500,000 (50% of face) fully covers it. <strong>CIP is the most resilient instrument from a ramp-period liquidity perspective.</strong></p>
-      <p class="t-body">The strategic insight: STRC on Tipolis's corporate balance sheet is <strong>not a speculative position or a yield-enhancement trade</strong>. It is a structural monthly liquidity mechanism funded by Tipolis's own capital, entirely separate from bond proceeds, that directly addresses the most predictable risk in the program: the gap between capital raise and operational revenue. Because STRC pays monthly and City Bonds pay monthly, the cash-flow matching is exact and automatic.</p>
+      <h3 class="t-h3" style="margin-top: 22px; font-size: 17px;">11.3 — Tipolis-Facing Interpretation: Issuance Capacity per $1M STRC</h3>
+      <p class="t-body" style="margin-top: 8px">Read from Tipolis's perspective as the issuer, the inverted framing reveals the leverage embedded in the STRC liquidity buffer. Every <strong>$1M allocated to STRC at 11%</strong> generates $110,000 per year in monthly USD distributions — sufficient to fully service <strong>$1.83M of CB-20</strong>, <strong>$1.10M of CB-10</strong>, or <strong>$2.75M of CIP floor</strong>. In other words, $1 deployed into STRC supports between $1.10 and $2.75 of bond face during the construction ramp — depending on the chosen instrument — entirely from STRC income, without operational cash, asset sales, or leverage.</p>
+      <p class="t-body"><strong>CB-20</strong> is the natural anchor of this dynamic. Even modest STRC positions cover meaningful tranches of senior face value: $1M of STRC at 11% supports $1.83M of CB-20 face (1.83× capacity multiple). Even in the stress scenario of 8% yield, the same $1M of STRC supports $1.33M of CB-20 face. The senior tranche's monthly obligations are effectively insulated from ramp-period cash flow risk under all realistic STRC yield scenarios.</p>
+      <p class="t-body"><strong>CB-10</strong> is the only instrument where the capacity multiple falls below 1.0× in the stress case: $1M of STRC at 8% supports $0.80M of CB-10 face. This confirms the design intent — CB-10's negative carry is managed at the enterprise portfolio level, supplemented by CB-20 positive carry and general corporate reserves, rather than fully hedged by STRC alone.</p>
+      <p class="t-body"><strong>CIP</strong> is the most resilient instrument from a ramp-period liquidity perspective. Its 4% floor means $1M of STRC at 11% supports $2.75M of CIP face; even at 8% it supports $2.0M. The capacity multiple is the highest of the suite by a wide margin.</p>
+      <p class="t-body">The strategic insight: STRC on Tipolis's corporate balance sheet is <strong>not a speculative position or a yield-enhancement trade</strong>. It is a structural monthly liquidity mechanism funded by Tipolis's own capital, entirely separate from bond proceeds, that <strong>converts a corporate treasury allocation into multiplied issuance capacity</strong>. Because STRC pays monthly and City Bonds pay monthly, the cash-flow matching is exact and automatic.</p>
 
-      <!-- ───── Two interactive STRC tools side-by-side ───── -->
-      <div class="cb-strc-tools" style="margin-top: 22px">
+      <!-- ───── Portfolio Allocation Explorer ───── -->
+      <div class="cb-calc" data-calc="portfolio" style="--instrument-accent: var(--accent-bonds); margin-top: 22px">
+        <div class="cb-calc__title">Portfolio Allocation Explorer · STRC Income vs Debt Cost</div>
+        <p class="cb-calc__hint">For a fixed <strong>$1M STRC position</strong> at chosen yield, define a variable total bond issuance distributed across CB-20, CB-10, and CIP and compare the resulting <strong>annual debt cost</strong> against <strong>STRC annual income</strong>. Editable fields below are isolated — they do not affect any other calculator on this page.</p>
 
-        <!-- Tool 1: STRC Coverage Required — spec-aligned -->
-        <div class="cb-calc" data-calc="strc" style="--instrument-accent: var(--accent-bonds)">
-          <div class="cb-calc__title">STRC Coverage Required — per $1M of bond</div>
-          <p class="cb-calc__hint">Given a selected instrument and STRC yield, how large a STRC position must Tipolis hold per $1M of bond outstanding to fully cover the monthly coupon?</p>
-          <div class="cb-calc__inputs">
-            <div>
-              <label class="t-input-label">Instrument</label>
-              <select class="t-input" data-field="instrument">
-                <option value="cb20">CB-20 · 6% coupon</option>
-                <option value="cb10">CB-10 · 10% coupon</option>
-                <option value="cip">CIP · 4% floor</option>
-              </select>
-            </div>
-            <div>
-              <div class="t-range__row">
-                <span class="t-input-label" style="margin-bottom: 0">STRC yield (% / year)</span>
-                <span class="t-range__readout" data-readout="yield">11%</span>
-              </div>
-              <input class="t-range__input" type="range" data-field="yield" min="5" max="13" step="0.1" value="11">
-              <div class="t-range__bounds"><span>5%</span><span>← drag</span><span>13%</span></div>
-            </div>
+        <div class="cb-calc__section-title">▌ STRC Income — fixed $1M position</div>
+        <div class="cb-calc__inputs">
+          <div>
+            <label class="t-input-label">STRC position</label>
+            <input class="t-input" type="text" value="$1,000,000" disabled style="opacity: .7">
           </div>
-          <div class="cb-calc__output-grid">
-            <div class="cb-calc__output"><span class="cb-calc__output-label">Monthly Obl.</span><span class="cb-calc__output-value" data-out="monthlyObl">—</span><span class="cb-calc__output-sub">Per $1M bond</span></div>
-            <div class="cb-calc__output"><span class="cb-calc__output-label">STRC Required</span><span class="cb-calc__output-value" data-out="strcReq">—</span><span class="cb-calc__output-sub">Position size needed</span></div>
-            <div class="cb-calc__output"><span class="cb-calc__output-label">% of Bond Face</span><span class="cb-calc__output-value" data-out="pctFace">—</span><span class="cb-calc__output-sub">Capital efficiency</span></div>
-            <div class="cb-calc__output"><span class="cb-calc__output-label">Coverage Status</span><span class="cb-calc__output-value" data-out="status" style="font-size: 18px">—</span><span class="cb-calc__output-sub">Feasibility ranking</span></div>
-          </div>
-        </div>
-
-        <!-- Tool 2: Portfolio Allocation Explorer — NEW vertical bar chart -->
-        <div class="cb-calc" data-calc="portfolio" style="--instrument-accent: var(--accent-bonds)">
-          <div class="cb-calc__title">Portfolio Allocation Explorer · STRC Income vs Debt Cost</div>
-          <p class="cb-calc__hint">For a fixed <strong>$1M issuance</strong> distributed across CB-20, CB-10, and CIP at chosen coupons, compare the <strong>STRC income</strong> from a matching $1M STRC position at a chosen yield against the <strong>weighted annual debt cost</strong>. Editable fields below are isolated — they do not affect any other calculator on this page.</p>
-
-          <div class="cb-portfolio__alloc-grid">
-            <div>
-              <label class="t-input-label">CB-20 share (%)</label>
-              <input class="t-input" type="number" data-field="cb20Pct" value="100" min="0" max="100" step="1">
-              <div class="t-range__row" style="margin-top: 6px">
-                <span class="t-input-label" style="margin-bottom: 0">CB-20 coupon</span>
-                <span class="t-range__readout" data-readout="cb20Coupon">6.0%</span>
-              </div>
-              <input class="t-range__input" type="range" data-field="cb20Coupon" min="4" max="10" step="0.1" value="6">
-            </div>
-            <div>
-              <label class="t-input-label">CB-10 share (%)</label>
-              <input class="t-input" type="number" data-field="cb10Pct" value="0" min="0" max="100" step="1">
-              <div class="t-range__row" style="margin-top: 6px">
-                <span class="t-input-label" style="margin-bottom: 0">CB-10 coupon</span>
-                <span class="t-range__readout" data-readout="cb10Coupon">10.0%</span>
-              </div>
-              <input class="t-range__input" type="range" data-field="cb10Coupon" min="6" max="12" step="0.1" value="10">
-            </div>
-            <div>
-              <label class="t-input-label">CIP share (%)</label>
-              <input class="t-input" type="number" data-field="cipPct" value="0" min="0" max="100" step="1">
-              <div class="t-range__row" style="margin-top: 6px">
-                <span class="t-input-label" style="margin-bottom: 0">CIP floor</span>
-                <span class="t-range__readout" data-readout="cipCoupon">4.0%</span>
-              </div>
-              <input class="t-range__input" type="range" data-field="cipCoupon" min="3" max="5" step="0.1" value="4">
-            </div>
-          </div>
-
-          <div style="margin-top: 14px">
+          <div>
             <div class="t-range__row">
-              <span class="t-input-label" style="margin-bottom: 0">STRC yield (%)</span>
+              <span class="t-input-label" style="margin-bottom: 0">STRC yield (% / year)</span>
               <span class="t-range__readout" data-readout="strcYield">11.0%</span>
             </div>
             <input class="t-range__input" type="range" data-field="strcYield" min="5" max="13" step="0.1" value="11">
-            <p class="t-footnote" style="margin-top: 4px">$1M STRC position is assumed. Bond and STRC bases are both $1,000,000.</p>
+            <div class="t-range__bounds"><span>5%</span><span>← drag</span><span>13%</span></div>
           </div>
+        </div>
 
-          <p class="t-footnote" data-out="checkPct" style="margin-top: 8px"></p>
-
-          <!-- Vertical bar chart -->
-          <div class="cb-portfolio__chart">
-            <div class="cb-portfolio__col">
-              <span class="cb-portfolio__col-value" data-out="strcIncome">—</span>
-              <div class="cb-portfolio__bar" data-out="strcBar" style="height: 0%; background: var(--accent-strategic);">
-                <div class="cb-portfolio__bar-seg" style="background: var(--accent-strategic); height: 100%;"></div>
-              </div>
-              <span class="cb-portfolio__col-label">STRC Income</span>
-            </div>
-            <div class="cb-portfolio__col">
-              <span class="cb-portfolio__col-value" data-out="debtCost">—</span>
-              <div class="cb-portfolio__bar" data-out="debtBar" style="height: 0%">
-                <div class="cb-portfolio__bar-seg" data-out="cipSeg" style="background: var(--accent-peer); height: 0%"></div>
-                <div class="cb-portfolio__bar-seg" data-out="cb10Seg" style="background: var(--accent-digital); height: 0%"></div>
-                <div class="cb-portfolio__bar-seg" data-out="cb20Seg" style="background: var(--accent-strategic); height: 0%"></div>
-              </div>
-              <span class="cb-portfolio__col-label">Annual Debt Cost</span>
-            </div>
+        <div class="cb-calc__section-title">▌ Bond Issuance Portfolio</div>
+        <div class="cb-calc__inputs">
+          <div>
+            <label class="t-input-label">Total issuance ($)</label>
+            <input class="t-input cb-amount" type="text" inputmode="numeric" data-field="total" value="1,000,000">
           </div>
-
-          <div class="cb-portfolio__legend">
-            <span><i style="background: var(--accent-strategic);"></i>STRC / CB-20</span>
-            <span><i style="background: var(--accent-digital);"></i>CB-10</span>
-            <span><i style="background: var(--accent-peer);"></i>CIP</span>
+          <div style="display: flex; flex-direction: column; justify-content: center">
+            <p class="t-footnote" style="margin: 0">Increase or decrease the total to find the issuance volume where annual debt cost meets STRC income (ratio = 1.0×) — the maximum supported by the cushion.</p>
           </div>
+        </div>
 
-          <div class="cb-portfolio__ratio">
-            <div class="cb-portfolio__ratio-tile">
-              <span class="cb-portfolio__ratio-label">STRC Income / Debt Cost</span>
-              <span class="cb-portfolio__ratio-value" data-out="ratio">—</span>
+        <div class="cb-portfolio__alloc-grid">
+          <div>
+            <label class="t-input-label">CB-20 share (%)</label>
+            <input class="t-input" type="number" data-field="cb20Pct" value="100" min="0" max="100" step="1">
+            <div class="t-range__row" style="margin-top: 6px">
+              <span class="t-input-label" style="margin-bottom: 0">CB-20 coupon</span>
+              <span class="t-range__readout" data-readout="cb20Coupon">6.0%</span>
             </div>
-            <div class="cb-portfolio__ratio-tile">
-              <span class="cb-portfolio__ratio-label">Status</span>
-              <span class="cb-portfolio__ratio-value" data-out="status">—</span>
+            <input class="t-range__input" type="range" data-field="cb20Coupon" min="4" max="10" step="0.1" value="6">
+          </div>
+          <div>
+            <label class="t-input-label">CB-10 share (%)</label>
+            <input class="t-input" type="number" data-field="cb10Pct" value="0" min="0" max="100" step="1">
+            <div class="t-range__row" style="margin-top: 6px">
+              <span class="t-input-label" style="margin-bottom: 0">CB-10 coupon</span>
+              <span class="t-range__readout" data-readout="cb10Coupon">10.0%</span>
             </div>
+            <input class="t-range__input" type="range" data-field="cb10Coupon" min="6" max="12" step="0.1" value="10">
+          </div>
+          <div>
+            <label class="t-input-label">CIP share (%)</label>
+            <input class="t-input" type="number" data-field="cipPct" value="0" min="0" max="100" step="1">
+            <div class="t-range__row" style="margin-top: 6px">
+              <span class="t-input-label" style="margin-bottom: 0">CIP floor</span>
+              <span class="t-range__readout" data-readout="cipCoupon">4.0%</span>
+            </div>
+            <input class="t-range__input" type="range" data-field="cipCoupon" min="3" max="5" step="0.1" value="4">
+          </div>
+        </div>
+
+        <p class="t-footnote" data-out="checkPct" style="margin-top: 8px"></p>
+
+        <!-- Vertical bar chart — STRC vs stacked debt -->
+        <div class="cb-portfolio__chart">
+          <div class="cb-portfolio__col">
+            <span class="cb-portfolio__col-value" data-out="strcIncome">—</span>
+            <div class="cb-portfolio__bar" data-out="strcBar" style="height: 0%; background: var(--accent-treasury);">
+              <div class="cb-portfolio__bar-seg" style="background: var(--accent-treasury); height: 100%;"></div>
+            </div>
+            <span class="cb-portfolio__col-label">STRC Income</span>
+          </div>
+          <div class="cb-portfolio__col">
+            <span class="cb-portfolio__col-value" data-out="debtCost">—</span>
+            <div class="cb-portfolio__bar" data-out="debtBar" style="height: 0%">
+              <div class="cb-portfolio__bar-seg" data-out="cipSeg" style="background: var(--accent-peer); height: 0%"></div>
+              <div class="cb-portfolio__bar-seg" data-out="cb10Seg" style="background: var(--accent-digital); height: 0%"></div>
+              <div class="cb-portfolio__bar-seg" data-out="cb20Seg" style="background: var(--accent-strategic); height: 0%"></div>
+            </div>
+            <span class="cb-portfolio__col-label">Annual Debt Cost</span>
+          </div>
+        </div>
+
+        <div class="cb-portfolio__legend">
+          <span><i style="background: var(--accent-treasury);"></i>STRC Income</span>
+          <span><i style="background: var(--accent-strategic);"></i>CB-20 debt cost</span>
+          <span><i style="background: var(--accent-digital);"></i>CB-10 debt cost</span>
+          <span><i style="background: var(--accent-peer);"></i>CIP debt cost</span>
+        </div>
+
+        <div class="cb-portfolio__ratio">
+          <div class="cb-portfolio__ratio-tile">
+            <span class="cb-portfolio__ratio-label">STRC Income / Debt Cost</span>
+            <span class="cb-portfolio__ratio-value" data-out="ratio">—</span>
+          </div>
+          <div class="cb-portfolio__ratio-tile">
+            <span class="cb-portfolio__ratio-label">Status</span>
+            <span class="cb-portfolio__ratio-value" data-out="status">—</span>
           </div>
         </div>
       </div>
@@ -1626,6 +1643,24 @@
     if (Math.abs(n) >= 1e3) return '$' + Math.round(n / 1e3).toLocaleString() + 'K';
     return '$' + Math.round(n).toLocaleString();
   };
+
+  // ── Thousand-separator helpers ──────────────────────────────
+  const parseAmount = (str) => parseFloat(String(str).replace(/,/g, '')) || 0;
+  const fmtThousands = (n) => Math.round(n).toLocaleString('en-US');
+  // Wire any input with the cb-amount class so it auto-formats on blur
+  // while allowing the user to type freely (including with commas).
+  function bindAmountInput(input, onChange) {
+    if (!input) return;
+    // Initial format
+    input.value = fmtThousands(parseAmount(input.value));
+    input.addEventListener('blur', () => {
+      input.value = fmtThousands(parseAmount(input.value));
+      if (onChange) onChange();
+    });
+    input.addEventListener('input', () => {
+      if (onChange) onChange();
+    });
+  }
 
   // Annualized IRR via Newton-Raphson on monthly cash flows.
   function irrMonthly(initial, monthlyCoupon, months, finalLumpSum, guess = 0.005) {
@@ -1675,7 +1710,7 @@
     };
 
     function update() {
-      const amount = +amountIn.value || 0;
+      const amount = parseAmount(amountIn.value);
       const coupon = (+couponIn.value || 0) / 100;
       const cagr   = (+cagrIn.value || 0) / 100;
       const cap    = (+capIn.value || 0) / 100;
@@ -1716,7 +1751,8 @@
       out.carry.style.color   = carryMo >= 0 ? 'var(--accent-strategic)' : 'var(--accent-warning)';
     }
 
-    [amountIn, couponIn, cagrIn, capIn, rampIn].forEach(el => el && el.addEventListener('input', update));
+    [couponIn, cagrIn, capIn, rampIn].forEach(el => el && el.addEventListener('input', update));
+    bindAmountInput(amountIn, update);
     update();
   }
 
@@ -1751,7 +1787,7 @@
     };
 
     function update() {
-      const amount = +amountIn.value || 0;
+      const amount = parseAmount(amountIn.value);
       const floor  = (+floorIn.value || 0) / 100;
       const part   = (+partIn.value || 0) / 100;
       const cap    = (+capIn.value || 0) / 100;
@@ -1791,59 +1827,25 @@
       out.carry.style.color   = carryMo >= 0 ? 'var(--accent-strategic)' : 'var(--accent-warning)';
     }
 
-    [amountIn, floorIn, partIn, capIn, rampIn].forEach(el => el && el.addEventListener('input', update));
+    [floorIn, partIn, capIn, rampIn].forEach(el => el && el.addEventListener('input', update));
+    bindAmountInput(amountIn, update);
     update();
   });
 
-  // ── STRC Coverage Required ─────────────────────────────
-  document.querySelectorAll('[data-calc="strc"]').forEach(node => {
-    const instrIn = node.querySelector('[data-field="instrument"]');
-    const yieldIn = node.querySelector('[data-field="yield"]');
-    const readoutYield = node.querySelector('[data-readout="yield"]');
-    const outMonthly = node.querySelector('[data-out="monthlyObl"]');
-    const outReq = node.querySelector('[data-out="strcReq"]');
-    const outPct = node.querySelector('[data-out="pctFace"]');
-    const outStatus = node.querySelector('[data-out="status"]');
-
-    const obligations = {
-      cb20: { annual: 60000, monthly: 5000 },
-      cb10: { annual: 100000, monthly: 8333 },
-      cip:  { annual: 40000, monthly: 3333 }
-    };
-
-    function update() {
-      const inst = obligations[instrIn.value];
-      const y = +yieldIn.value || 11;
-      readoutYield.textContent = y.toFixed(1) + '%';
-
-      const required = inst.annual / (y / 100);
-      const pctFace = required / 1000000 * 100;
-
-      outMonthly.textContent = fmt(inst.monthly);
-      outReq.textContent     = fmt(required);
-      outPct.textContent     = pctFace.toFixed(1) + '%';
-
-      let status, color;
-      if (pctFace <= 60)       { status = 'EFFICIENT';    color = 'var(--accent-strategic)'; }
-      else if (pctFace <= 100) { status = 'FEASIBLE';     color = 'var(--accent-digital)'; }
-      else                     { status = 'EXCEEDS FACE'; color = 'var(--accent-warning)'; }
-      outStatus.textContent = status;
-      outStatus.style.color = color;
-    }
-    [instrIn, yieldIn].forEach(el => el.addEventListener('input', update));
-    update();
-  });
-
-  // ── Portfolio Allocation Explorer (NEW vertical bar chart) ───
+  // ── Portfolio Allocation Explorer ────────────────────────────
+  // Inverted framing: STRC is fixed at $1M; total bond issuance is
+  // variable; the user sets shares % per product. We compare STRC
+  // income against weighted annual debt cost.
   document.querySelectorAll('[data-calc="portfolio"]').forEach(node => {
     const $ = (sel) => node.querySelector(sel);
-    const cb20Pct   = $('[data-field="cb20Pct"]');
-    const cb10Pct   = $('[data-field="cb10Pct"]');
-    const cipPct    = $('[data-field="cipPct"]');
-    const cb20Cp    = $('[data-field="cb20Coupon"]');
-    const cb10Cp    = $('[data-field="cb10Coupon"]');
-    const cipCp     = $('[data-field="cipCoupon"]');
-    const strcY     = $('[data-field="strcYield"]');
+    const totalIn  = $('[data-field="total"]');
+    const cb20Pct  = $('[data-field="cb20Pct"]');
+    const cb10Pct  = $('[data-field="cb10Pct"]');
+    const cipPct   = $('[data-field="cipPct"]');
+    const cb20Cp   = $('[data-field="cb20Coupon"]');
+    const cb10Cp   = $('[data-field="cb10Coupon"]');
+    const cipCp    = $('[data-field="cipCoupon"]');
+    const strcY    = $('[data-field="strcYield"]');
 
     const ro = {
       cb20Coupon: $('[data-readout="cb20Coupon"]'),
@@ -1866,9 +1868,8 @@
     };
 
     function update() {
-      const issuance = 1000000;
-      const strcPos  = 1000000;
-
+      const strcPos = 1000000;                         // fixed
+      const total   = parseAmount(totalIn.value);      // variable, from input
       const p20  = +cb20Pct.value || 0;
       const p10  = +cb10Pct.value || 0;
       const pcip = +cipPct.value || 0;
@@ -1892,10 +1893,10 @@
         out.checkPct.style.color = 'var(--accent-warning)';
       }
 
-      const cost20  = issuance * (p20  / 100) * c20;
-      const cost10  = issuance * (p10  / 100) * c10;
-      const costCip = issuance * (pcip / 100) * ccip;
-      const debtCost = cost20 + cost10 + costCip;
+      const cost20    = total * (p20  / 100) * c20;
+      const cost10    = total * (p10  / 100) * c10;
+      const costCip   = total * (pcip / 100) * ccip;
+      const debtCost  = cost20 + cost10 + costCip;
       const strcIncome = strcPos * sy;
 
       out.strcIncome.textContent = fmt(strcIncome);
@@ -1907,7 +1908,7 @@
       out.strcBar.style.height = strcH + '%';
       out.debtBar.style.height = debtH + '%';
 
-      // Stacked segments inside the debt bar (heights are % of the debt bar, not of the chart)
+      // Stacked segments inside the debt bar (% of the debt bar itself).
       if (debtCost > 0) {
         out.cb20Seg.style.height = (cost20  / debtCost * 100) + '%';
         out.cb10Seg.style.height = (cost10  / debtCost * 100) + '%';
@@ -1931,6 +1932,7 @@
     }
 
     [cb20Pct, cb10Pct, cipPct, cb20Cp, cb10Cp, cipCp, strcY].forEach(el => el && el.addEventListener('input', update));
+    bindAmountInput(totalIn, update);
     update();
   });
 
