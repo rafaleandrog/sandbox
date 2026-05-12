@@ -2053,20 +2053,46 @@
   });
 
   // ── Feedback box ─────────────────────────────
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzaW13ge8C6XohsAO_3c1ms9F2DT6nuT_uUiJrEHzyajr0DnmdeP1qCFVIsBytWLlV9/exec';
+
   const fbSubmit = document.getElementById('cb-fb-submit');
   const fbOk = document.getElementById('cb-fb-ok');
   const fbTitle = document.getElementById('cb-fb-title');
   const fbDesc = document.getElementById('cb-fb-desc');
+
   if (fbSubmit) {
-    fbSubmit.addEventListener('click', () => {
-      if (!fbTitle.value.trim() || !fbDesc.value.trim()) {
+    fbSubmit.addEventListener('click', async () => {
+      const title = fbTitle.value.trim();
+      const description = fbDesc.value.trim();
+
+      if (!title || !description) {
         alert('Please fill in both fields before submitting.');
         return;
       }
-      fbOk.classList.add('is-visible');
-      fbTitle.value = '';
-      fbDesc.value = '';
-      setTimeout(() => fbOk.classList.remove('is-visible'), 6000);
+
+      fbSubmit.disabled = true;
+      fbSubmit.textContent = 'Sending...';
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ title, description })
+        });
+
+        fbOk.classList.add('is-visible');
+        fbTitle.value = '';
+        fbDesc.value = '';
+
+        setTimeout(() => fbOk.classList.remove('is-visible'), 6000);
+      } catch (error) {
+        console.error('Feedback submission failed:', error);
+        alert('Unable to send your contribution. Please try again.');
+      } finally {
+        fbSubmit.disabled = false;
+        fbSubmit.textContent = 'Send contribution';
+      }
     });
   }
 })();
