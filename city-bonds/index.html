@@ -2084,10 +2084,16 @@
           throw new Error('HTTP ' + response.status + ' — ' + response.statusText);
         }
 
-        const data = await response.json();
+        const raw = await response.text();
+        let data;
+        try {
+          data = JSON.parse(raw);
+        } catch (parseError) {
+          throw new Error('Server returned a non-JSON response. The Apps Script may not be deployed or may be returning an error page.');
+        }
 
         if (!data || data.success !== true) {
-          throw new Error((data && data.message) || 'Server returned an unsuccessful response.');
+          throw new Error(data && data.message ? data.message : 'Server returned an unsuccessful response.');
         }
 
         fbOk.classList.add('is-visible');
