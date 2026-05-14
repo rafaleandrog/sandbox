@@ -221,6 +221,467 @@
     }
     .cb-instrument__note strong { color: var(--color-text-primary); }
 
+    /* ─── Strategy ↔ Tipolis architecture comparison ─── */
+    .cb-architecture-compare { margin: 22px 0 8px; }
+    .cb-architecture-compare__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 720px) {
+      .cb-architecture-compare__grid { grid-template-columns: 1fr; }
+    }
+    .cb-architecture-card {
+      background: var(--color-bg-card-mid);
+      border: 1px solid var(--color-border-card);
+      border-top: 3px solid var(--card-accent, var(--accent));
+      border-radius: var(--radius-2);
+      padding: 20px 22px 18px;
+      position: relative;
+    }
+    .cb-architecture-card--strategy { --card-accent: var(--accent-treasury); }
+    .cb-architecture-card--tipolis  { --card-accent: var(--accent-bonds); }
+    .cb-architecture-card__eyebrow {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--card-accent);
+      margin-bottom: 8px;
+    }
+    .cb-architecture-card__title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      line-height: 1;
+      color: var(--color-text-primary);
+      margin: 0 0 12px;
+    }
+    .cb-architecture-card__body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--color-text-body);
+      margin: 0;
+    }
+    .cb-architecture-card__body strong { color: var(--color-text-primary); }
+    .cb-architecture-card__body em {
+      font-style: italic;
+      color: var(--card-accent);
+    }
+    .cb-architecture-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cb-architecture-card__list li {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--color-text-on-dark-fainter);
+      letter-spacing: 0.5px;
+      padding-left: 14px;
+      position: relative;
+    }
+    .cb-architecture-card__list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--card-accent);
+    }
+    .cb-architecture-card__list li strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+    .cb-architecture-compare__synthesis {
+      margin-top: 16px;
+      padding: 16px 18px;
+      background: color-mix(in srgb, var(--accent-bonds) 8%, transparent);
+      border-left: 3px solid var(--accent-bonds);
+      border-radius: var(--radius-2);
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--color-text-body);
+    }
+    .cb-architecture-compare__synthesis strong { color: var(--color-text-primary); }
+
+    /* ─── Tipolis Investment Thesis Mind Map ─── */
+    .cb-mindmap {
+      display: grid;
+      grid-template-columns: 170px 1fr 320px;
+      gap: 28px;
+      margin-top: 28px;
+      align-items: start;
+    }
+    @media (max-width: 1024px) {
+      .cb-mindmap {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    /* Anchor circle */
+    .cb-mindmap__anchor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding-top: 24px;
+    }
+    @media (max-width: 1024px) { .cb-mindmap__anchor { padding-top: 0; } }
+    .cb-mindmap__anchor-badge {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(140deg, var(--color-navy-1000) 0%, var(--color-navy-900) 100%);
+      border: 2px solid var(--accent-bonds);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .cb-mindmap__anchor-name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--color-text-primary);
+      line-height: 1;
+      letter-spacing: 0.5px;
+    }
+    .cb-mindmap__anchor-symbol {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--accent-treasury);
+      line-height: 1;
+    }
+    .cb-mindmap__anchor-label {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-text-on-dark-fainter);
+      text-align: center;
+      max-width: 140px;
+      line-height: 1.4;
+    }
+
+    /* Topic tree */
+    .cb-mindmap__tree {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cb-mindmap__topic {
+      display: grid;
+      grid-template-columns: 165px 1fr;
+      gap: 14px;
+      align-items: start;
+      --topic-accent: var(--accent-bonds);
+    }
+    @media (max-width: 720px) {
+      .cb-mindmap__topic { grid-template-columns: 1fr; gap: 8px; }
+    }
+    .cb-mindmap__topic[data-topic="industry"]      { --topic-accent: var(--accent-bonds); }
+    .cb-mindmap__topic[data-topic="business"]      { --topic-accent: var(--accent-strategic); }
+    .cb-mindmap__topic[data-topic="moat"]          { --topic-accent: var(--accent-digital); }
+    .cb-mindmap__topic[data-topic="kpis"]          { --topic-accent: var(--accent-peer); }
+    .cb-mindmap__topic[data-topic="opportunities"] { --topic-accent: var(--accent-treasury); }
+    .cb-mindmap__topic[data-topic="risks"]         { --topic-accent: var(--accent-warning); }
+
+    .cb-mindmap__topic-label {
+      background: var(--topic-accent);
+      color: var(--color-navy-1000);
+      border: none;
+      border-radius: var(--radius-2);
+      padding: 11px 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-align: left;
+      line-height: 1.1;
+      align-self: start;
+    }
+
+    .cb-mindmap__items {
+      list-style: none;
+      padding: 6px 0 0 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .cb-mindmap__item {
+      background: transparent;
+      border: none;
+      color: var(--color-text-body);
+      font-family: var(--font-base);
+      font-size: 12.5px;
+      text-align: left;
+      padding: 4px 0 4px 18px;
+      cursor: pointer;
+      position: relative;
+      transition: color 150ms ease;
+      line-height: 1.4;
+      width: 100%;
+    }
+    .cb-mindmap__item::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: var(--topic-accent);
+      font-weight: 600;
+    }
+    .cb-mindmap__item:hover {
+      color: var(--color-text-primary);
+    }
+    .cb-mindmap__item.is-active {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+    .cb-mindmap__item.is-active::before {
+      content: '▶';
+    }
+
+    /* Detail panel */
+    .cb-mindmap__detail {
+      position: sticky;
+      top: 84px;
+    }
+    @media (max-width: 1024px) { .cb-mindmap__detail { position: static; } }
+    .cb-mindmap__detail-inner {
+      background: var(--color-bg-card-mid);
+      border: 1px solid var(--color-border-card);
+      border-top: 3px solid var(--detail-accent, var(--accent-bonds));
+      border-radius: var(--radius-2);
+      padding: 22px 24px 24px;
+      min-height: 280px;
+      transition: border-top-color 200ms ease;
+    }
+    .cb-mindmap__detail-eyebrow {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--detail-accent, var(--accent-bonds));
+      margin-bottom: 8px;
+    }
+    .cb-mindmap__detail-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      line-height: 1.1;
+      margin: 0 0 12px;
+      color: var(--color-text-primary);
+    }
+    .cb-mindmap__detail-body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--color-text-body);
+      margin: 0;
+    }
+    .cb-mindmap__detail-body strong { color: var(--color-text-primary); }
+
+    /* ─── Tipolis City Capital Refinery ─── */
+    .cb-refinery {
+      margin-top: 24px;
+      padding: 28px 24px 26px;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--accent-treasury) 6%, transparent) 0%, transparent 60%);
+      border: 1px solid var(--color-border-card);
+      border-radius: var(--radius-2);
+      position: relative;
+    }
+    .cb-refinery__title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 0 0 26px;
+      color: var(--color-text-primary);
+    }
+    .cb-refinery__flow {
+      display: grid;
+      grid-template-columns: minmax(170px, 1fr) 50px 180px 50px minmax(0, 2fr);
+      gap: 14px;
+      align-items: center;
+    }
+    @media (max-width: 1080px) {
+      .cb-refinery__flow {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .cb-refinery__col-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent-treasury);
+      margin-bottom: 2px;
+    }
+    .cb-refinery__col-sub {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      letter-spacing: 1.5px;
+      color: var(--color-text-on-dark-fainter);
+      margin-bottom: 12px;
+    }
+
+    .cb-refinery__input-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .cb-refinery__input {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 9px 11px;
+      background: color-mix(in srgb, var(--accent-treasury) 8%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent-treasury) 30%, transparent);
+      border-left: 3px solid var(--accent-treasury);
+      border-radius: var(--radius-2);
+    }
+    .cb-refinery__input-icon { font-size: 22px; flex-shrink: 0; line-height: 1; }
+    .cb-refinery__input-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--color-text-body);
+    }
+    .cb-refinery__input-text strong {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-text-primary);
+      margin-bottom: 2px;
+    }
+
+    /* Horizontal pipe with arrow tip */
+    .cb-refinery__pipe {
+      height: 5px;
+      background: var(--accent-treasury);
+      position: relative;
+    }
+    .cb-refinery__pipe::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      width: 0; height: 0;
+      border-left: 13px solid var(--accent-treasury);
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      transform: translateY(-50%);
+    }
+    @media (max-width: 1080px) {
+      .cb-refinery__pipe {
+        height: 22px;
+        width: 5px;
+        background: var(--accent-treasury);
+        margin: 0 auto;
+      }
+      .cb-refinery__pipe::after {
+        right: auto; left: 50%;
+        top: 100%;
+        border-top: 13px solid var(--accent-treasury);
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 0;
+        transform: translateX(-50%);
+      }
+    }
+
+    .cb-refinery__building {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .cb-refinery__building svg { width: 130px; height: auto; }
+    .cb-refinery__building-name {
+      font-family: var(--font-display);
+      font-size: 24px;
+      line-height: 1;
+      color: var(--color-text-primary);
+      margin-top: 2px;
+    }
+    .cb-refinery__building-sub {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      letter-spacing: 2px;
+      color: var(--accent-bonds);
+    }
+
+    .cb-refinery__output-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    @media (max-width: 900px) { .cb-refinery__output-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .cb-refinery__output-row { grid-template-columns: 1fr; } }
+
+    .cb-refinery__output {
+      background: var(--color-bg-card-mid);
+      border: 1px solid var(--color-border-card);
+      border-top: 3px solid var(--output-accent, var(--accent-bonds));
+      border-radius: var(--radius-2);
+      padding: 14px 12px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cb-refinery__output--strategic { --output-accent: var(--accent-strategic); }
+    .cb-refinery__output--digital   { --output-accent: var(--accent-digital); }
+    .cb-refinery__output--peer      { --output-accent: var(--accent-peer); }
+    .cb-refinery__output--treasury  { --output-accent: var(--accent-treasury); }
+
+    .cb-refinery__output-icon { font-size: 22px; line-height: 1; }
+    .cb-refinery__output-name {
+      font-family: var(--font-display);
+      font-size: 24px;
+      line-height: 1;
+      color: var(--output-accent);
+    }
+    .cb-refinery__output-desc {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      letter-spacing: 0.6px;
+      line-height: 1.6;
+      color: var(--color-text-on-dark-fainter);
+      text-transform: uppercase;
+    }
+    .cb-refinery__output-desc strong {
+      color: var(--output-accent);
+      font-weight: 700;
+    }
+
+    .cb-refinery__quote {
+      margin: 28px auto 0;
+      max-width: 720px;
+      padding: 14px 20px;
+      border-top: 1px solid color-mix(in srgb, var(--accent-treasury) 40%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--accent-treasury) 40%, transparent);
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-treasury);
+    }
+    .cb-refinery__quote p { margin: 0; line-height: 1.5; }
+    .cb-refinery__quote strong { color: var(--color-text-primary); font-weight: 700; }
+
     /* Body: two columns mechanics / scenarios */
     .cb-instrument__body { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; margin-top: 8px; }
     @media (max-width: 900px) { .cb-instrument__body { grid-template-columns: 1fr; } }
@@ -427,13 +888,16 @@
       margin: 28px auto 12px;
       color: var(--accent);
     }
-    .cb-flywheel__svg {
+    .cb-flywheel__svg,
+    .cb-flywheel__markers {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
     }
+    .cb-flywheel__svg { z-index: 1; }
+    .cb-flywheel__markers { z-index: 5; }
     .cb-flywheel__svg .ring {
       fill: none;
       stroke: currentColor;
@@ -445,8 +909,12 @@
       stroke-opacity: 0.8;
     }
     .cb-flywheel__svg .tip { fill: currentColor; }
-    .cb-flywheel__svg .marker-bg { fill: var(--color-navy-1000); stroke: currentColor; stroke-width: 2.5; }
-    .cb-flywheel__svg .marker-num {
+    .cb-flywheel__markers .marker-bg {
+      fill: var(--color-navy-1000);
+      stroke: currentColor;
+      stroke-width: 2.5;
+    }
+    .cb-flywheel__markers .marker-num {
       fill: currentColor;
       font-family: var(--font-mono);
       font-size: 13px;
@@ -462,6 +930,7 @@
       width: 230px;
       text-align: center;
       pointer-events: none;
+      z-index: 2;
     }
     .cb-flywheel__center-eyebrow {
       display: block;
@@ -497,6 +966,7 @@
       border-radius: var(--radius-2);
       padding: 12px 14px 11px;
       text-align: left;
+      z-index: 3;
     }
     .cb-flywheel__node-num {
       display: inline-block;
@@ -529,7 +999,9 @@
         aspect-ratio: auto;
         margin: 18px auto 12px;
       }
-      .cb-flywheel__svg, .cb-flywheel__center { display: none; }
+      .cb-flywheel__svg,
+      .cb-flywheel__markers,
+      .cb-flywheel__center { display: none; }
       .cb-flywheel__node {
         position: relative;
         width: 100%;
@@ -852,10 +1324,41 @@
     <!-- ───────── §4 PRODUCT SUITE ───────── -->
     <section>
       <span class="t-eyebrow">Strategic Framework 04</span>
-      <h2 class="t-h2">The Product Suite — Three Instruments</h2>
-      <p class="t-lead">The City Bond suite consists of three instruments — <strong>CB-20</strong>, <strong>CB-10</strong>, and <strong>CIP</strong> — each calibrated to a distinct position in the capital stack and a distinct investor risk-return profile. They are structurally analogous to Strategy's STRF (senior, high-grade), STRD (subordinated, high-yield), and STRK (equity-like, perpetual preferred).</p>
+      <h2 class="t-h2">The Architecture - Three Financial Products</h2>
+      <p class="t-lead">The City Bond suite consists of three structured instruments — <strong>CB-20</strong>, <strong>CB-10</strong>, and <strong>CIP</strong> — each calibrated to a distinct position in the capital stack and a distinct investor risk-return profile. They are structurally analogous to Strategy's STRF (senior, high-grade), STRD (subordinated, high-yield), and STRK (equity-like, perpetual preferred). Above these three, Tipolis common stock (<strong>TIP</strong>) sits as the residual equity owner of all city assets, the land portfolio, and the accumulated Bitcoin treasury — not detailed in this section, but mapped visually in the Investment Thesis Mind Map below.</p>
 
-      <div class="t-tinted" style="margin-top: 12px">
+      <!-- Strategy ↔ Tipolis architecture comparison -->
+      <div class="cb-architecture-compare">
+        <p class="t-body">The closest analogy to both businesses is a <strong>financial institution</strong> — a bank or an insurance company — that borrows at a known cost through structured instruments and deploys that capital into higher-returning assets, capturing <strong>the spread between the two</strong>.</p>
+
+        <div class="cb-architecture-compare__grid">
+          <article class="cb-architecture-card cb-architecture-card--strategy">
+            <span class="cb-architecture-card__eyebrow">$MSTR · Strategy</span>
+            <h4 class="cb-architecture-card__title">One Appreciating Asset</h4>
+            <p class="cb-architecture-card__body">Strategy raises capital by issuing preferred equity and debt — at yields of <strong>8% to 11.5%</strong>, or with equity optionality — and uses those proceeds to <strong>accumulate Bitcoin</strong> on its balance sheet. The Bitcoin appreciates independently of any operating business. The spread between what Strategy pays investors and what Bitcoin returns is the engine. The instruments are the access mechanism. In Saylor's own framing: <em>a Bitcoin refinery — raw BTC in, securitized BTC exposure out</em>.</p>
+            <ul class="cb-architecture-card__list">
+              <li><strong>Input:</strong> Capital raised at structured yields</li>
+              <li><strong>Engine:</strong> One asset compounding — Bitcoin</li>
+              <li><strong>Output:</strong> STRF · STRC · STRE · STRK · STRD · $MSTR</li>
+            </ul>
+          </article>
+
+          <article class="cb-architecture-card cb-architecture-card--tipolis">
+            <span class="cb-architecture-card__eyebrow">Tipolis</span>
+            <h4 class="cb-architecture-card__title">Three Compounding Layers</h4>
+            <p class="cb-architecture-card__body">Tipolis runs the <strong>same architecture but with a fundamentally richer set of inputs</strong>. Instead of one appreciating asset, Tipolis operates three compounding layers simultaneously: <strong>land</strong> (acquired at pre-development cost, generating income at target 11% cap rate once stabilized); <strong>governance</strong> (the legal and regulatory framework that transforms a cheap territory into a premium jurisdiction); and <strong>Bitcoin</strong> (10% of every capital raise, retained as a permanent strategic reserve).</p>
+            <ul class="cb-architecture-card__list">
+              <li><strong>Inputs:</strong> Land + Governance + Bitcoin</li>
+              <li><strong>Engine:</strong> Three layers compound simultaneously</li>
+              <li><strong>Output:</strong> CB-20 · CB-10 · CIP · TIP</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="cb-architecture-compare__synthesis">Tipolis issues City Bonds — <strong>CB-20, CB-10, CIP</strong> — and common stock (<strong>TIP</strong>) to raise capital, deploys <strong>90% of those proceeds into city operations</strong>, and keeps <strong>10% in Bitcoin</strong>. The operating business services the structured obligations. Bitcoin compounds independently. Governance transforms the underlying asset. The three layers are <strong>mutually reinforcing in a way that no pure Bitcoin treasury company and no pure real estate company can replicate alone</strong>.</p>
+      </div>
+
+      <div class="t-tinted" style="margin-top: 18px">
         <span class="t-tinted__eyebrow">Shared Structural Constants</span>
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
           <li class="t-body" style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent);">▸</span><strong>90/10 capital allocation:</strong> 90% deployed into city assets; 10% deployed into Bitcoin on day one.</li>
@@ -865,6 +1368,98 @@
           <li class="t-body" style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent);">▸</span><strong>Coupon rates:</strong> CB-20 at 8%, CB-10 at 12%, CIP floor at 5% — the headline parameters proposed for issuance, used throughout this document. <em>Each calculator below lets you test alternative coupons within product-specific ranges</em> to support sensitivity work and investor dialogue.</li>
           <li class="t-body" style="padding-left: 16px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent);">▸</span><strong>Payment frequency:</strong> all three instruments distribute on a <strong>monthly basis</strong>.</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ───────── §4 — Tipolis Investment Thesis Mind Map (interactive) ───────── -->
+    <section>
+      <span class="t-eyebrow">Investment Thesis Mind Map</span>
+      <h3 class="t-h3" style="font-size: 22px; margin-top: 6px;">The Full Thesis at a Glance</h3>
+      <p class="t-lead" style="margin-top: 8px">Six dimensions of the Tipolis investment thesis — industry positioning, business model, moat, KPIs, opportunities, and risks. Click any sub-item to see its detailed explanation in the panel on the right.</p>
+
+      <div class="cb-mindmap">
+        <!-- Anchor -->
+        <div class="cb-mindmap__anchor">
+          <div class="cb-mindmap__anchor-badge">
+            <span class="cb-mindmap__anchor-name">Tipolis</span>
+            <span class="cb-mindmap__anchor-symbol">₿</span>
+          </div>
+          <span class="cb-mindmap__anchor-label">Investment Thesis</span>
+        </div>
+
+        <!-- Tree -->
+        <div class="cb-mindmap__tree">
+
+          <div class="cb-mindmap__topic" data-topic="industry">
+            <span class="cb-mindmap__topic-label">Industry</span>
+            <ul class="cb-mindmap__items">
+              <li><button class="cb-mindmap__item" data-key="industry-1">Real Assets + Digital Finance</button></li>
+            </ul>
+          </div>
+
+          <div class="cb-mindmap__topic" data-topic="business">
+            <span class="cb-mindmap__topic-label">Business Model</span>
+            <ul class="cb-mindmap__items">
+              <li><button class="cb-mindmap__item" data-key="business-spread">Capture the spread: cost of capital vs. operational return + land + BTC ARR</button></li>
+              <li><button class="cb-mindmap__item" data-key="product-cb20">CB-20 (Senior Secured · 20y)</button></li>
+              <li><button class="cb-mindmap__item" data-key="product-cb10">CB-10 (Subordinated · 10y)</button></li>
+              <li><button class="cb-mindmap__item" data-key="product-cip">CIP (Perpetual Preferred Equity)</button></li>
+              <li><button class="cb-mindmap__item" data-key="product-tip">TIP (Common Stock · Residual Equity)</button></li>
+            </ul>
+          </div>
+
+          <div class="cb-mindmap__topic" data-topic="moat">
+            <span class="cb-mindmap__topic-label">Moat</span>
+            <ul class="cb-mindmap__items">
+              <li><button class="cb-mindmap__item" data-key="moat-firstmover">First Mover</button></li>
+              <li><button class="cb-mindmap__item" data-key="moat-category">Category Creator</button></li>
+              <li><button class="cb-mindmap__item" data-key="moat-governance">Governance Exclusivity</button></li>
+              <li><button class="cb-mindmap__item" data-key="moat-land">Land Cost Basis</button></li>
+              <li><button class="cb-mindmap__item" data-key="moat-issuance">Programmatic Issuance</button></li>
+              <li><button class="cb-mindmap__item" data-key="moat-visionary">Visionary</button></li>
+            </ul>
+          </div>
+
+          <div class="cb-mindmap__topic" data-topic="kpis">
+            <span class="cb-mindmap__topic-label">KPIs</span>
+            <ul class="cb-mindmap__items">
+              <li><button class="cb-mindmap__item" data-key="kpi-btc-city">Bitcoin per City</button></li>
+              <li><button class="cb-mindmap__item" data-key="kpi-btc-yield">Bitcoin Yield</button></li>
+              <li><button class="cb-mindmap__item" data-key="kpi-fee-resident">Operating Fee Revenue per Resident</button></li>
+              <li><button class="cb-mindmap__item" data-key="kpi-coverage">City Revenue Coverage Ratio</button></li>
+              <li><button class="cb-mindmap__item" data-key="kpi-divcoverage">Years of Dividend Coverage</button></li>
+            </ul>
+          </div>
+
+          <div class="cb-mindmap__topic" data-topic="opportunities">
+            <span class="cb-mindmap__topic-label">Opportunities</span>
+            <ul class="cb-mindmap__items">
+              <li><button class="cb-mindmap__item" data-key="opp-urban">2.5 Billion New Urban Dwellers by 2050</button></li>
+              <li><button class="cb-mindmap__item" data-key="opp-citymarket">Define the City Credit Market</button></li>
+              <li><button class="cb-mindmap__item" data-key="opp-governance">Global Governance Failure</button></li>
+            </ul>
+          </div>
+
+          <div class="cb-mindmap__topic" data-topic="risks">
+            <span class="cb-mindmap__topic-label">Risks</span>
+            <ul class="cb-mindmap__items">
+              <li><button class="cb-mindmap__item" data-key="risk-execution">Execution Risk</button></li>
+              <li><button class="cb-mindmap__item" data-key="risk-political">Political Risk with Host Nations</button></li>
+              <li><button class="cb-mindmap__item" data-key="risk-btc">Bitcoin Volatility</button></li>
+              <li><button class="cb-mindmap__item" data-key="risk-carry">Negative Carry During Ramp</button></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Detail panel -->
+        <aside class="cb-mindmap__detail">
+          <div class="cb-mindmap__detail-inner" id="cb-mindmap-detail">
+            <span class="cb-mindmap__detail-eyebrow">▌ Select any item to explore</span>
+            <h4 class="cb-mindmap__detail-title">Tipolis Investment Thesis</h4>
+            <p class="cb-mindmap__detail-body">Click any sub-item in the mind map to view its detailed explanation here. The thesis covers six dimensions: <strong>industry positioning</strong>, <strong>business model mechanics</strong>, <strong>competitive moats</strong>, <strong>key performance indicators</strong>, <strong>structural opportunities</strong>, and <strong>material risks</strong>.</p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -1369,6 +1964,97 @@
         </tbody>
       </table>
       </div>
+
+      <!-- City Capital Refinery infographic -->
+      <div class="cb-refinery">
+        <h3 class="cb-refinery__title">Tipolis is a City Capital Refinery</h3>
+
+        <div class="cb-refinery__flow">
+          <!-- LEFT: Inputs -->
+          <div class="cb-refinery__inputs">
+            <span class="cb-refinery__col-label">Inputs</span>
+            <span class="cb-refinery__col-sub">Land · Real Estate · Governance · Bitcoin</span>
+            <div class="cb-refinery__input-stack">
+              <div class="cb-refinery__input">
+                <span class="cb-refinery__input-icon" aria-hidden="true">🏔️</span>
+                <span class="cb-refinery__input-text"><strong>Raw Land</strong>Acquired at pre-development cost</span>
+              </div>
+              <div class="cb-refinery__input">
+                <span class="cb-refinery__input-icon" aria-hidden="true">🏗️</span>
+                <span class="cb-refinery__input-text"><strong>Real Estate</strong>Income-generating city assets</span>
+              </div>
+              <div class="cb-refinery__input">
+                <span class="cb-refinery__input-icon" aria-hidden="true">⚖️</span>
+                <span class="cb-refinery__input-text"><strong>Governance</strong>Legal &amp; regulatory framework</span>
+              </div>
+              <div class="cb-refinery__input">
+                <span class="cb-refinery__input-icon" aria-hidden="true">₿</span>
+                <span class="cb-refinery__input-text"><strong>Bitcoin</strong>10% of every raise, retained permanently</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipe -->
+          <div class="cb-refinery__pipe" aria-hidden="true"></div>
+
+          <!-- CENTER: Building -->
+          <div class="cb-refinery__building">
+            <svg viewBox="0 0 160 165" aria-hidden="true">
+              <!-- Roof -->
+              <polygon points="80,8 14,50 146,50" fill="var(--accent-bonds)"/>
+              <!-- Columns -->
+              <rect x="22" y="55" width="14" height="75" fill="var(--color-text-primary)"/>
+              <rect x="46" y="55" width="14" height="75" fill="var(--color-text-primary)"/>
+              <rect x="73" y="55" width="14" height="75" fill="var(--color-text-primary)"/>
+              <rect x="100" y="55" width="14" height="75" fill="var(--color-text-primary)"/>
+              <rect x="124" y="55" width="14" height="75" fill="var(--color-text-primary)"/>
+              <!-- Base -->
+              <rect x="10" y="130" width="140" height="14" fill="var(--accent-bonds)"/>
+              <!-- Door -->
+              <rect x="68" y="90" width="24" height="40" fill="var(--color-navy-1000)"/>
+              <!-- Pediment trim -->
+              <rect x="10" y="48" width="140" height="6" fill="var(--accent-bonds)"/>
+            </svg>
+            <span class="cb-refinery__building-name">Tipolis</span>
+            <span class="cb-refinery__building-sub">90/10 deploy split</span>
+          </div>
+
+          <!-- Pipe -->
+          <div class="cb-refinery__pipe" aria-hidden="true"></div>
+
+          <!-- RIGHT: Outputs -->
+          <div class="cb-refinery__outputs">
+            <span class="cb-refinery__col-label">Output</span>
+            <span class="cb-refinery__col-sub">Securitised City Assets</span>
+            <div class="cb-refinery__output-row">
+              <div class="cb-refinery__output cb-refinery__output--strategic">
+                <span class="cb-refinery__output-icon" aria-hidden="true">🎗️</span>
+                <span class="cb-refinery__output-name">CB-20</span>
+                <span class="cb-refinery__output-desc"><strong>Senior Secured</strong> · Fixed 8% Monthly · BTC Upside 50% at Maturity · Low Vol / High Yield / 20y</span>
+              </div>
+              <div class="cb-refinery__output cb-refinery__output--digital">
+                <span class="cb-refinery__output-icon" aria-hidden="true">📊</span>
+                <span class="cb-refinery__output-name">CB-10</span>
+                <span class="cb-refinery__output-desc"><strong>Subordinated</strong> · Fixed 12% Monthly · BTC Upside 50% at Maturity · Mod Vol / Max Yield / 10y</span>
+              </div>
+              <div class="cb-refinery__output cb-refinery__output--peer">
+                <span class="cb-refinery__output-icon" aria-hidden="true">♾️</span>
+                <span class="cb-refinery__output-name">CIP</span>
+                <span class="cb-refinery__output-desc"><strong>Equity Hybrid</strong> · Perpetual · 5% Floor + Equity Participation · No BTC to Investor (100% Tipolis)</span>
+              </div>
+              <div class="cb-refinery__output cb-refinery__output--treasury">
+                <span class="cb-refinery__output-icon" aria-hidden="true">📈</span>
+                <span class="cb-refinery__output-name">TIP</span>
+                <span class="cb-refinery__output-desc"><strong>Common Stock</strong> · No Guaranteed Distribution · Full Residual Upside · Max Vol / Max Upside / Permanent Equity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="cb-refinery__quote">
+          <p>Tipolis has made a strategic decision to <strong>securitize city development as an asset class</strong>.</p>
+        </blockquote>
+      </div>
     </section>
 
     <hr class="t-divider">
@@ -1473,14 +2159,6 @@
           <g class="tip" transform="translate(300,523.2) rotate(300)"><polygon points="0,-14 -11,9 11,9"/></g>
           <g class="tip" transform="translate(200,350) rotate(0)"><polygon points="0,-14 -11,9 11,9"/></g>
           <g class="tip" transform="translate(300,176.8) rotate(60)"><polygon points="0,-14 -11,9 11,9"/></g>
-
-          <!-- 6 numbered marker discs on the ring -->
-          <g><circle class="marker-bg" cx="400"   cy="150" r="22"/><text class="marker-num" x="400"   y="155" text-anchor="middle" dominant-baseline="middle">01</text></g>
-          <g><circle class="marker-bg" cx="573.2" cy="250" r="22"/><text class="marker-num" x="573.2" y="255" text-anchor="middle" dominant-baseline="middle">02</text></g>
-          <g><circle class="marker-bg" cx="573.2" cy="450" r="22"/><text class="marker-num" x="573.2" y="455" text-anchor="middle" dominant-baseline="middle">03</text></g>
-          <g><circle class="marker-bg" cx="400"   cy="550" r="22"/><text class="marker-num" x="400"   y="555" text-anchor="middle" dominant-baseline="middle">04</text></g>
-          <g><circle class="marker-bg" cx="226.8" cy="450" r="22"/><text class="marker-num" x="226.8" y="455" text-anchor="middle" dominant-baseline="middle">05</text></g>
-          <g><circle class="marker-bg" cx="226.8" cy="250" r="22"/><text class="marker-num" x="226.8" y="255" text-anchor="middle" dominant-baseline="middle">06</text></g>
         </svg>
 
         <div class="cb-flywheel__center">
@@ -1519,6 +2197,16 @@
           <span class="cb-flywheel__node-name">Broader Investor Base</span>
           <p class="cb-flywheel__node-desc">Broader universe enables faster, larger issuances → loops back to 01.</p>
         </article>
+
+        <!-- Marker discs in a top-layer SVG so they sit above every description box -->
+        <svg viewBox="0 0 800 700" class="cb-flywheel__markers" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g><circle class="marker-bg" cx="400"   cy="150" r="22"/><text class="marker-num" x="400"   y="155" text-anchor="middle" dominant-baseline="middle">01</text></g>
+          <g><circle class="marker-bg" cx="573.2" cy="250" r="22"/><text class="marker-num" x="573.2" y="255" text-anchor="middle" dominant-baseline="middle">02</text></g>
+          <g><circle class="marker-bg" cx="573.2" cy="450" r="22"/><text class="marker-num" x="573.2" y="455" text-anchor="middle" dominant-baseline="middle">03</text></g>
+          <g><circle class="marker-bg" cx="400"   cy="550" r="22"/><text class="marker-num" x="400"   y="555" text-anchor="middle" dominant-baseline="middle">04</text></g>
+          <g><circle class="marker-bg" cx="226.8" cy="450" r="22"/><text class="marker-num" x="226.8" y="455" text-anchor="middle" dominant-baseline="middle">05</text></g>
+          <g><circle class="marker-bg" cx="226.8" cy="250" r="22"/><text class="marker-num" x="226.8" y="255" text-anchor="middle" dominant-baseline="middle">06</text></g>
+        </svg>
       </div>
 
       <div class="grid-2" style="margin-top: 14px">
@@ -2051,6 +2739,172 @@
     bindAmountInput(totalIn, update);
     update();
   });
+
+  // ── Investment Thesis Mind Map ─────────────────────────────
+  const mindmapData = {
+    'industry-1': {
+      eyebrow: 'Industry',
+      accent: 'var(--accent-bonds)',
+      title: 'Real Assets + Digital Finance',
+      body: 'Tipolis operates at the intersection of autonomous city development, real estate, and institutional Bitcoin treasury management. The business creates, governs, and finances International Cities — privately operated jurisdictions that generate recurring fee revenue and compounding land value, structured as an investable asset class for the first time.'
+    },
+    'business-spread': {
+      eyebrow: 'Business Model',
+      accent: 'var(--accent-strategic)',
+      title: 'Spread Capture — Three Compounding Layers',
+      body: 'Tipolis raises capital through structured financial instruments at a known cost and deploys it into three reinforcing return streams: <strong>operational cash flow</strong> from city assets (cap rate target 11%), <strong>land value appreciation</strong> driven by the governance transformation, and <strong>Bitcoin appreciation</strong> on the 10% retained reserve. The spread between cost of capital and the blended return across the three layers is the engine.'
+    },
+    'product-cb20': {
+      eyebrow: 'Product · CB-20',
+      accent: 'var(--accent-strategic)',
+      title: 'CB-20 — Senior Secured · 20y',
+      body: '20-year senior secured bond. <strong>8% fixed monthly coupon</strong>. At maturity: full principal return plus <strong>50% of Bitcoin appreciation</strong> on a 10% notional allocation. Backed by real city assets at 1.24× debt service coverage at the proposed 11% cap rate. Anchor investors: sovereign wealth funds, pensions, insurance companies, infrastructure funds.'
+    },
+    'product-cb10': {
+      eyebrow: 'Product · CB-10',
+      accent: 'var(--accent-strategic)',
+      title: 'CB-10 — Subordinated · 10y',
+      body: '10-year subordinated bond. <strong>12% fixed monthly coupon</strong>. At maturity: full principal return plus 50% of Bitcoin appreciation. Higher yield reflects subordinated position in the capital stack. Negative carry by design — managed at the enterprise portfolio level rather than fully hedged at the instrument level.'
+    },
+    'product-cip': {
+      eyebrow: 'Product · CIP',
+      accent: 'var(--accent-strategic)',
+      title: 'CIP — Perpetual Preferred Equity',
+      body: 'City Equity Participation — perpetual preferred equity. <strong>5% guaranteed monthly distribution floor</strong>, unlimited upside tied to real estate project performance. No fixed maturity. <strong>Bitcoin accrues 100% to Tipolis</strong> — retained as a strategic risk buffer, never settled to the CIP investor.'
+    },
+    'product-tip': {
+      eyebrow: 'Product · TIP',
+      accent: 'var(--accent-strategic)',
+      title: 'TIP — Common Stock',
+      body: 'Tipolis common stock. No guaranteed yield. <strong>Maximum volatility and maximum upside</strong>. Represents residual ownership of all city assets, land portfolio, and accumulated Bitcoin treasury across all International Cities. Top of the capital structure for upside; last in the priority of claims.'
+    },
+    'moat-firstmover': {
+      eyebrow: 'Moat',
+      accent: 'var(--accent-digital)',
+      title: 'First Mover',
+      body: 'Tipolis is the first operator to combine <strong>autonomous city governance</strong> with a <strong>programmatic Bitcoin treasury strategy</strong> and a <strong>structured City Bond capital markets program</strong>. No incumbent currently occupies this position.'
+    },
+    'moat-category': {
+      eyebrow: 'Moat',
+      accent: 'var(--accent-digital)',
+      title: 'Category Creator',
+      body: 'Real Estate + Governance + Bitcoin has no prior investable form. Tipolis is not competing within an existing category — it is <strong>defining a new one</strong>, capturing the premium that category creators command before the market assigns a standard valuation framework.'
+    },
+    'moat-governance': {
+      eyebrow: 'Moat',
+      accent: 'var(--accent-digital)',
+      title: 'Governance Exclusivity',
+      body: 'Each International City is established through a <strong>Special Administrative Region agreement</strong> with the host country. These agreements are not replicable by a new entrant without years of diplomatic and legal work — and without Tipolis’s existing negotiation track record.'
+    },
+    'moat-land': {
+      eyebrow: 'Moat',
+      accent: 'var(--accent-digital)',
+      title: 'Land Cost Basis',
+      body: 'Tipolis acquires land at <strong>pre-development prices</strong>, before the governance transformation creates the value uplift. This cost basis advantage is <strong>permanent</strong> — no competitor can access the same land at the same price once the city is established.'
+    },
+    'moat-issuance': {
+      eyebrow: 'Moat',
+      accent: 'var(--accent-digital)',
+      title: 'Programmatic Issuance',
+      body: 'Tipolis builds a <strong>recurring capital markets program</strong>, not one-off project financing. Each successive issuance deepens investor relationships, lowers the cost of capital, and broadens the institutional investor base. The distribution channel compounds with every deal.'
+    },
+    'moat-visionary': {
+      eyebrow: 'Moat',
+      accent: 'var(--accent-digital)',
+      title: 'Visionary',
+      body: 'The International City model addresses two of the largest structural forces of the 21st century simultaneously: the <strong>global urbanization of 2.5 billion additional people by 2050</strong>, and the <strong>institutional adoption of Bitcoin</strong> as a corporate treasury reserve asset. Tipolis is the vehicle where both forces converge.'
+    },
+    'kpi-btc-city': {
+      eyebrow: 'KPI',
+      accent: 'var(--accent-peer)',
+      title: 'Bitcoin per City',
+      body: 'Total Bitcoin accumulated on Tipolis’s balance sheet attributable to each International City project, measured at current market value. Tracks the growth of the strategic reserve as a function of capital raise volume and Bitcoin price appreciation.'
+    },
+    'kpi-btc-yield': {
+      eyebrow: 'KPI',
+      accent: 'var(--accent-peer)',
+      title: 'Bitcoin Yield',
+      body: 'Annual BTC appreciation as a percentage of the total notional Bitcoin allocation across all outstanding City Bonds. Primary metric for evaluating the performance of the Bitcoin treasury layer relative to its cost of capital.'
+    },
+    'kpi-fee-resident': {
+      eyebrow: 'KPI',
+      accent: 'var(--accent-peer)',
+      title: 'Operating Fee Revenue per Resident',
+      body: 'Recurring contractual fee income generated per resident in each International City. Scales linearly with population growth and is the most stable, inflation-resistant component of Tipolis’s operating revenue.'
+    },
+    'kpi-coverage': {
+      eyebrow: 'KPI',
+      accent: 'var(--accent-peer)',
+      title: 'City Revenue Coverage Ratio',
+      body: 'Stabilized operational revenue divided by total annual City Bond distribution obligations. CB-20 targets <strong>1.24×</strong> at the headline parameter set. The portfolio-level coverage ratio is the primary measure of the operating business’s capacity to service its capital structure without relying on Bitcoin.'
+    },
+    'kpi-divcoverage': {
+      eyebrow: 'KPI',
+      accent: 'var(--accent-peer)',
+      title: 'Years of Dividend Coverage',
+      body: 'Number of years of monthly City Bond distributions that could be fully funded from Tipolis’s STRC liquidity position alone, at current market yield. Measures the depth of the corporate liquidity cushion independent of operational cash flows.'
+    },
+    'opp-urban': {
+      eyebrow: 'Opportunity',
+      accent: 'var(--accent-treasury)',
+      title: '2.5 Billion New Urban Dwellers by 2050',
+      body: 'The UN projects 2.5 billion additional people will move to urban areas by 2050. Governments in developing countries cannot build the required city infrastructure alone. <strong>Private city operators fill this gap</strong> — and generate returns doing it. Tipolis is structured to serve this demand at scale.'
+    },
+    'opp-citymarket': {
+      eyebrow: 'Opportunity',
+      accent: 'var(--accent-treasury)',
+      title: 'Define the City Credit Market',
+      body: 'City Bonds as an asset class do not yet exist in institutional portfolio allocation frameworks. Tipolis is building the first programmatic, market-recognized, institutionally distributed city debt program. <strong>The institution that defines a new fixed-income category captures the pricing power and investor relationships of an entire market</strong>.'
+    },
+    'opp-governance': {
+      eyebrow: 'Opportunity',
+      accent: 'var(--accent-treasury)',
+      title: 'Global Governance Failure',
+      body: 'Housing crises, crumbling infrastructure, and ballooning public debt in both developed and developing countries are creating structural demand for the private city model. Jurisdictions that deliver <strong>predictable rules, competitive taxation, and accountable governance</strong> attract capital that legacy cities cannot retain.'
+    },
+    'risk-execution': {
+      eyebrow: 'Risk',
+      accent: 'var(--accent-warning)',
+      title: 'Execution Risk',
+      body: 'Building and operating an International City requires sustained world-class capability across <strong>real estate development, infrastructure management, governance, and capital markets</strong> simultaneously. Timelines extend across decades. Operational failures in any layer affect investor confidence across the entire program.'
+    },
+    'risk-political': {
+      eyebrow: 'Risk',
+      accent: 'var(--accent-warning)',
+      title: 'Political Risk with Host Nations',
+      body: 'SAR agreements depend on the continued political will of the host country government. Changes in domestic politics — as observed in Honduras — can create legal uncertainty. <strong>Bilateral investment treaty protections and ICSID arbitration rights</strong> provide structural mitigation but add complexity and timeline risk.'
+    },
+    'risk-btc': {
+      eyebrow: 'Risk',
+      accent: 'var(--accent-warning)',
+      title: 'Bitcoin Volatility',
+      body: '10% of every capital raise is deployed into Bitcoin. A significant and sustained decline in Bitcoin’s price reduces the value of Tipolis’s strategic reserve and may affect its ability to meet the 50% appreciation settlement obligation at maturity on CB instruments in extreme scenarios.'
+    },
+    'risk-carry': {
+      eyebrow: 'Risk',
+      accent: 'var(--accent-warning)',
+      title: 'Negative Carry During Ramp',
+      body: 'All three City Bond instruments begin distributing to investors from month one, while operational revenue from deployed capital does not begin until year four. This <strong>3-year ramp creates a structural carry deficit</strong> that must be managed through the STRC liquidity cushion and portfolio-level carry from concurrent CB-20 issuances.'
+    }
+  };
+
+  const mindmapDetail = document.getElementById('cb-mindmap-detail');
+  if (mindmapDetail) {
+    document.querySelectorAll('.cb-mindmap__item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.key;
+        const data = mindmapData[key];
+        if (!data) return;
+        document.querySelectorAll('.cb-mindmap__item.is-active').forEach(el => el.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        mindmapDetail.style.setProperty('--detail-accent', data.accent);
+        mindmapDetail.innerHTML =
+          '<span class="cb-mindmap__detail-eyebrow">▌ ' + data.eyebrow + '</span>' +
+          '<h4 class="cb-mindmap__detail-title">' + data.title + '</h4>' +
+          '<p class="cb-mindmap__detail-body">' + data.body + '</p>';
+      });
+    });
+  }
 
   // ── Feedback box ─────────────────────────────
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzaW13ge8C6XohsAO_3c1ms9F2DT6nuT_uUiJrEHzyajr0DnmdeP1qCFVIsBytWLlV9/exec';
