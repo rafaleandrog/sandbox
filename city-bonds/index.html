@@ -340,8 +340,9 @@
     }
     .cb-mindmap__topic[data-topic="industry"]      { --topic-accent: var(--accent-bonds); }
     .cb-mindmap__topic[data-topic="business"]      { --topic-accent: var(--accent-strategic); }
-    .cb-mindmap__topic[data-topic="moat"]          { --topic-accent: var(--accent-digital); }
-    .cb-mindmap__topic[data-topic="kpis"]          { --topic-accent: var(--accent-peer); }
+    .cb-mindmap__topic[data-topic="products"]      { --topic-accent: var(--accent-digital); }
+    .cb-mindmap__topic[data-topic="moat"]          { --topic-accent: var(--accent-peer); }
+    .cb-mindmap__topic[data-topic="metrics"]       { --topic-accent: var(--accent-tools); }
     .cb-mindmap__topic[data-topic="opportunities"] { --topic-accent: var(--accent-treasury); }
     .cb-mindmap__topic[data-topic="risks"]         { --topic-accent: var(--accent-warning); }
 
@@ -359,6 +360,35 @@
       text-align: left;
       line-height: 1.1;
       align-self: start;
+    }
+
+    /* Subtitle / caption above the items list for grouped topics (Business Model, Financial Products) */
+    .cb-mindmap__items-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cb-mindmap__topic-caption {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--topic-accent);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.4;
+      opacity: 0.95;
+    }
+    .cb-mindmap__topic-caption::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 12px;
+      height: 1px;
+      background: var(--topic-accent);
+      opacity: 0.6;
     }
 
     .cb-mindmap__items {
@@ -1440,7 +1470,7 @@
     <section>
       <span class="t-eyebrow">Investment Thesis Mind Map</span>
       <h3 class="t-h3" style="font-size: 22px; margin-top: 6px;">The Full Thesis at a Glance</h3>
-      <p class="t-lead" style="margin-top: 8px">Six dimensions of the Tipolis investment thesis — industry positioning, business model, moat, KPIs, opportunities, and risks. Click any sub-item to see its detailed explanation in the panel on the right.</p>
+      <p class="t-lead" style="margin-top: 8px">Seven dimensions of the Tipolis investment thesis — industry positioning, business model, financial products, moat, key metrics, opportunities, and risks. Click any sub-item to see its detailed explanation in the panel on the right.</p>
 
       <div class="cb-mindmap">
         <!-- Tree -->
@@ -1455,13 +1485,26 @@
 
           <div class="cb-mindmap__topic" data-topic="business">
             <span class="cb-mindmap__topic-label">Business Model</span>
-            <ul class="cb-mindmap__items">
-              <li><button class="cb-mindmap__item" data-key="business-spread">Capture the spread: cost of capital vs. operational return + land + BTC ARR</button></li>
-              <li><button class="cb-mindmap__item" data-key="product-cb20">CB-20 (Senior Secured · 20y)</button></li>
-              <li><button class="cb-mindmap__item" data-key="product-cb10">CB-10 (Subordinated · 10y)</button></li>
-              <li><button class="cb-mindmap__item" data-key="product-cip">CIP (Perpetual Preferred Equity)</button></li>
-              <li><button class="cb-mindmap__item" data-key="product-tip">TIP (Common Stock · Residual Equity)</button></li>
-            </ul>
+            <div class="cb-mindmap__items-wrap">
+              <span class="cb-mindmap__topic-caption">Spread Capture — Two Compounding Revenue Engines</span>
+              <ul class="cb-mindmap__items">
+                <li><button class="cb-mindmap__item" data-key="business-land">Land Value Capture</button></li>
+                <li><button class="cb-mindmap__item" data-key="business-membership">Membership Revenue</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cb-mindmap__topic" data-topic="products">
+            <span class="cb-mindmap__topic-label">Financial Products</span>
+            <div class="cb-mindmap__items-wrap">
+              <span class="cb-mindmap__topic-caption">Structured Capital Instruments — Three Bonds + Common Equity</span>
+              <ul class="cb-mindmap__items">
+                <li><button class="cb-mindmap__item" data-key="product-cb20">CB-20 — Senior Secured · 20y</button></li>
+                <li><button class="cb-mindmap__item" data-key="product-cb10">CB-10 — Subordinated · 10y</button></li>
+                <li><button class="cb-mindmap__item" data-key="product-cip">CIP — Perpetual Preferred Equity</button></li>
+                <li><button class="cb-mindmap__item" data-key="product-tip">TIP — Common Stock</button></li>
+              </ul>
+            </div>
           </div>
 
           <div class="cb-mindmap__topic" data-topic="moat">
@@ -1472,27 +1515,27 @@
               <li><button class="cb-mindmap__item" data-key="moat-governance">Governance Exclusivity</button></li>
               <li><button class="cb-mindmap__item" data-key="moat-land">Land Cost Basis</button></li>
               <li><button class="cb-mindmap__item" data-key="moat-issuance">Programmatic Issuance</button></li>
-              <li><button class="cb-mindmap__item" data-key="moat-visionary">Visionary</button></li>
+              <li><button class="cb-mindmap__item" data-key="moat-narrative">Narrative</button></li>
             </ul>
           </div>
 
-          <div class="cb-mindmap__topic" data-topic="kpis">
-            <span class="cb-mindmap__topic-label">KPIs</span>
+          <div class="cb-mindmap__topic" data-topic="metrics">
+            <span class="cb-mindmap__topic-label">Key Metrics</span>
             <ul class="cb-mindmap__items">
-              <li><button class="cb-mindmap__item" data-key="kpi-btc-city">Bitcoin per City</button></li>
-              <li><button class="cb-mindmap__item" data-key="kpi-btc-yield">Bitcoin Yield</button></li>
-              <li><button class="cb-mindmap__item" data-key="kpi-fee-resident">Operating Fee Revenue per Resident</button></li>
-              <li><button class="cb-mindmap__item" data-key="kpi-coverage">City Revenue Coverage Ratio</button></li>
-              <li><button class="cb-mindmap__item" data-key="kpi-divcoverage">Years of Dividend Coverage</button></li>
+              <li><button class="cb-mindmap__item" data-key="metric-btc-yield">Bitcoin Yield</button></li>
+              <li><button class="cb-mindmap__item" data-key="metric-fee-resident">Operating Fee Revenue per Resident</button></li>
+              <li><button class="cb-mindmap__item" data-key="metric-coverage">City Revenue Coverage Ratio</button></li>
+              <li><button class="cb-mindmap__item" data-key="metric-strc">STRC Coverage Ratio</button></li>
             </ul>
           </div>
 
           <div class="cb-mindmap__topic" data-topic="opportunities">
             <span class="cb-mindmap__topic-label">Opportunities</span>
             <ul class="cb-mindmap__items">
-              <li><button class="cb-mindmap__item" data-key="opp-urban">2.5 Billion New Urban Dwellers by 2050</button></li>
-              <li><button class="cb-mindmap__item" data-key="opp-citymarket">Define the City Credit Market</button></li>
-              <li><button class="cb-mindmap__item" data-key="opp-governance">Global Governance Failure</button></li>
+              <li><button class="cb-mindmap__item" data-key="opp-nextgen">The Next Generation of Cities Is Being Built Now</button></li>
+              <li><button class="cb-mindmap__item" data-key="opp-ai">AI and Technological Disruption Will Amplify Bitcoin's Value</button></li>
+              <li><button class="cb-mindmap__item" data-key="opp-investors">A Captive, Conviction-Based Investor Segment</button></li>
+              <li><button class="cb-mindmap__item" data-key="opp-infra">Proprietary Financial and Legal Infrastructure as a Capital Magnet</button></li>
             </ul>
           </div>
 
@@ -1513,7 +1556,7 @@
           <div class="cb-mindmap__detail-inner" id="cb-mindmap-detail">
             <span class="cb-mindmap__detail-eyebrow">▌ Select any item to explore</span>
             <h4 class="cb-mindmap__detail-title">Tipolis Investment Thesis</h4>
-            <p class="cb-mindmap__detail-body">Click any sub-item in the mind map to view its detailed explanation here. The thesis covers six dimensions: <strong>industry positioning</strong>, <strong>business model mechanics</strong>, <strong>competitive moats</strong>, <strong>key performance indicators</strong>, <strong>structural opportunities</strong>, and <strong>material risks</strong>.</p>
+            <p class="cb-mindmap__detail-body">Click any sub-item in the mind map to view its detailed explanation here. The thesis covers seven dimensions: <strong>industry positioning</strong>, <strong>business model</strong>, <strong>financial products</strong>, <strong>competitive moats</strong>, <strong>key metrics</strong>, <strong>structural opportunities</strong>, and <strong>material risks</strong>.</p>
           </div>
         </aside>
       </div>
@@ -2806,119 +2849,125 @@
       title: 'Real Assets + Digital Finance',
       body: 'Tipolis operates at the intersection of autonomous city development, real estate, and institutional Bitcoin treasury management. The business creates, governs, and finances International Cities — privately operated jurisdictions that generate recurring fee revenue and compounding land value, structured as an investable asset class for the first time.'
     },
-    'business-spread': {
-      eyebrow: 'Business Model',
+    'business-land': {
+      eyebrow: 'Business Model · Spread Capture',
       accent: 'var(--accent-strategic)',
-      title: 'Spread Capture — Three Compounding Layers',
-      body: 'Tipolis raises capital through structured financial instruments at a known cost and deploys it into three reinforcing return streams: <strong>operational cash flow</strong> from city assets (cap rate target 11%), <strong>land value appreciation</strong> driven by the governance transformation, and <strong>Bitcoin appreciation</strong> on the 10% retained reserve. The spread between cost of capital and the blended return across the three layers is the engine.'
+      title: 'Land Value Capture',
+      body: 'Tipolis acquires land at pre-development cost and systematically transforms it through infrastructure investment, governance design, and community building. The governance framework applied to raw territory is the <strong>primary value creation mechanism</strong> — driving multipliers across master planning, land use liberation, hard infrastructure deployment, and urbanization. As each International City matures, the remaining land holdings on Tipolis’s balance sheet appreciate significantly. Unlike a conventional real estate developer that builds and exits, Tipolis retains its land position as a <strong>long-duration compounding asset</strong>, capturing value across decades rather than project cycles.'
+    },
+    'business-membership': {
+      eyebrow: 'Business Model · Spread Capture',
+      accent: 'var(--accent-strategic)',
+      title: 'Membership Revenue',
+      body: 'Residents and businesses operating within each International City pay <strong>fixed, transparent operating fees</strong> in exchange for a contractually defined package of governance services — security, legal framework, dispute resolution, administrative infrastructure, and urban services. This is <strong>governance as a subscription</strong>: recurring, inflation-resistant, and contractually protected from political interference. Fee revenue scales linearly with population growth, creating a predictable income stream that deepens as each city matures and attracts a larger, more economically active resident base.'
     },
     'product-cb20': {
-      eyebrow: 'Product · CB-20',
-      accent: 'var(--accent-strategic)',
+      eyebrow: 'Financial Products · CB-20',
+      accent: 'var(--accent-digital)',
       title: 'CB-20 — Senior Secured · 20y',
-      body: '20-year senior secured bond. <strong>8% fixed monthly coupon</strong>. At maturity: full principal return plus <strong>50% of Bitcoin appreciation</strong> on a 10% notional allocation. Backed by real city assets at 1.24× debt service coverage at the proposed 11% cap rate. Anchor investors: sovereign wealth funds, pensions, insurance companies, infrastructure funds.'
+      body: '20-year senior secured bond. <strong>Fixed monthly coupon</strong>. At maturity: full principal return plus <strong>50% of Bitcoin appreciation</strong> on a 10% notional allocation. Backed by real city assets at <strong>1.24× debt service coverage</strong> at the target cap rate. Anchor investors: sovereign wealth funds, pensions, insurance companies, infrastructure funds.'
     },
     'product-cb10': {
-      eyebrow: 'Product · CB-10',
-      accent: 'var(--accent-strategic)',
+      eyebrow: 'Financial Products · CB-10',
+      accent: 'var(--accent-digital)',
       title: 'CB-10 — Subordinated · 10y',
-      body: '10-year subordinated bond. <strong>12% fixed monthly coupon</strong>. At maturity: full principal return plus 50% of Bitcoin appreciation. Higher yield reflects subordinated position in the capital stack. Negative carry by design — managed at the enterprise portfolio level rather than fully hedged at the instrument level.'
+      body: '10-year subordinated bond. <strong>Higher fixed monthly coupon</strong>. At maturity: full principal return plus 50% of Bitcoin appreciation. Higher yield reflects subordinated position in the capital stack. <strong>Negative carry by design</strong> — managed at the enterprise portfolio level rather than fully hedged at the instrument level.'
     },
     'product-cip': {
-      eyebrow: 'Product · CIP',
-      accent: 'var(--accent-strategic)',
+      eyebrow: 'Financial Products · CIP',
+      accent: 'var(--accent-digital)',
       title: 'CIP — Perpetual Preferred Equity',
-      body: 'City Equity Participation — perpetual preferred equity. <strong>5% guaranteed monthly distribution floor</strong>, unlimited upside tied to real estate project performance. No fixed maturity. <strong>Bitcoin accrues 100% to Tipolis</strong> — retained as a strategic risk buffer, never settled to the CIP investor.'
+      body: 'City Equity Participation — perpetual preferred equity. <strong>Fixed monthly distribution floor</strong>, unlimited upside tied to real estate project performance. <strong>No fixed maturity</strong>. Bitcoin accrues <strong>100% to Tipolis</strong> — retained as a strategic reserve, never settled to the CIP investor. Exit via secondary market.'
     },
     'product-tip': {
-      eyebrow: 'Product · TIP',
-      accent: 'var(--accent-strategic)',
+      eyebrow: 'Financial Products · TIP',
+      accent: 'var(--accent-digital)',
       title: 'TIP — Common Stock',
       body: 'Tipolis common stock. No guaranteed yield. <strong>Maximum volatility and maximum upside</strong>. Represents residual ownership of all city assets, land portfolio, and accumulated Bitcoin treasury across all International Cities. Top of the capital structure for upside; last in the priority of claims.'
     },
     'moat-firstmover': {
       eyebrow: 'Moat',
-      accent: 'var(--accent-digital)',
+      accent: 'var(--accent-peer)',
       title: 'First Mover',
       body: 'Tipolis is the first operator to combine <strong>autonomous city governance</strong> with a <strong>programmatic Bitcoin treasury strategy</strong> and a <strong>structured City Bond capital markets program</strong>. No incumbent currently occupies this position.'
     },
     'moat-category': {
       eyebrow: 'Moat',
-      accent: 'var(--accent-digital)',
+      accent: 'var(--accent-peer)',
       title: 'Category Creator',
       body: 'Real Estate + Governance + Bitcoin has no prior investable form. Tipolis is not competing within an existing category — it is <strong>defining a new one</strong>, capturing the premium that category creators command before the market assigns a standard valuation framework.'
     },
     'moat-governance': {
       eyebrow: 'Moat',
-      accent: 'var(--accent-digital)',
+      accent: 'var(--accent-peer)',
       title: 'Governance Exclusivity',
       body: 'Each International City is established through a <strong>Special Administrative Region agreement</strong> with the host country. These agreements are not replicable by a new entrant without years of diplomatic and legal work — and without Tipolis’s existing negotiation track record.'
     },
     'moat-land': {
       eyebrow: 'Moat',
-      accent: 'var(--accent-digital)',
+      accent: 'var(--accent-peer)',
       title: 'Land Cost Basis',
       body: 'Tipolis acquires land at <strong>pre-development prices</strong>, before the governance transformation creates the value uplift. This cost basis advantage is <strong>permanent</strong> — no competitor can access the same land at the same price once the city is established.'
     },
     'moat-issuance': {
       eyebrow: 'Moat',
-      accent: 'var(--accent-digital)',
+      accent: 'var(--accent-peer)',
       title: 'Programmatic Issuance',
       body: 'Tipolis builds a <strong>recurring capital markets program</strong>, not one-off project financing. Each successive issuance deepens investor relationships, lowers the cost of capital, and broadens the institutional investor base. The distribution channel compounds with every deal.'
     },
-    'moat-visionary': {
+    'moat-narrative': {
       eyebrow: 'Moat',
-      accent: 'var(--accent-digital)',
-      title: 'Visionary',
-      body: 'The International City model addresses two of the largest structural forces of the 21st century simultaneously: the <strong>global urbanization of 2.5 billion additional people by 2050</strong>, and the <strong>institutional adoption of Bitcoin</strong> as a corporate treasury reserve asset. Tipolis is the vehicle where both forces converge.'
-    },
-    'kpi-btc-city': {
-      eyebrow: 'KPI',
       accent: 'var(--accent-peer)',
-      title: 'Bitcoin per City',
-      body: 'Total Bitcoin accumulated on Tipolis’s balance sheet attributable to each International City project, measured at current market value. Tracks the growth of the strategic reserve as a function of capital raise volume and Bitcoin price appreciation.'
+      title: 'Narrative',
+      body: 'The deliberate construction of a unique, coherent narrative — aligned across communications, investor relations, and regulatory positioning — is itself a <strong>structural asset</strong>. A company that controls its story controls the conviction of its capital base. Tipolis’s narrative unifies Real Estate, Governance, and Bitcoin into a <strong>single investable thesis</strong> that is intuitively compelling to a well-defined investor segment. This coherence makes it materially easier to attract, convince, and retain investors and shareholders who remain convicted across long development cycles — precisely when conviction is most valuable and most scarce.'
     },
-    'kpi-btc-yield': {
-      eyebrow: 'KPI',
-      accent: 'var(--accent-peer)',
+    'metric-btc-yield': {
+      eyebrow: 'Key Metric',
+      accent: 'var(--accent-tools)',
       title: 'Bitcoin Yield',
-      body: 'Annual BTC appreciation as a percentage of the total notional Bitcoin allocation across all outstanding City Bonds. Primary metric for evaluating the performance of the Bitcoin treasury layer relative to its cost of capital.'
+      body: 'The percentage change in the total USD value of Bitcoin held on Tipolis’s balance sheet over a given period, expressed as an annualized rate. This metric captures the contribution of the Bitcoin treasury layer to overall balance sheet growth, independently of operational performance. It is the <strong>primary lens</strong> through which Tipolis tracks whether its systematic BTC accumulation strategy is delivering value relative to the cost of capital it deployed to acquire that position.'
     },
-    'kpi-fee-resident': {
-      eyebrow: 'KPI',
-      accent: 'var(--accent-peer)',
+    'metric-fee-resident': {
+      eyebrow: 'Key Metric',
+      accent: 'var(--accent-tools)',
       title: 'Operating Fee Revenue per Resident',
       body: 'Recurring contractual fee income generated per resident in each International City. Scales linearly with population growth and is the most stable, inflation-resistant component of Tipolis’s operating revenue.'
     },
-    'kpi-coverage': {
-      eyebrow: 'KPI',
-      accent: 'var(--accent-peer)',
+    'metric-coverage': {
+      eyebrow: 'Key Metric',
+      accent: 'var(--accent-tools)',
       title: 'City Revenue Coverage Ratio',
       body: 'Stabilized operational revenue divided by total annual City Bond distribution obligations. CB-20 targets <strong>1.24×</strong> at the headline parameter set. The portfolio-level coverage ratio is the primary measure of the operating business’s capacity to service its capital structure without relying on Bitcoin.'
     },
-    'kpi-divcoverage': {
-      eyebrow: 'KPI',
-      accent: 'var(--accent-peer)',
-      title: 'Years of Dividend Coverage',
-      body: 'Number of years of monthly City Bond distributions that could be fully funded from Tipolis’s STRC liquidity position alone, at current market yield. Measures the depth of the corporate liquidity cushion independent of operational cash flows.'
+    'metric-strc': {
+      eyebrow: 'Key Metric',
+      accent: 'var(--accent-tools)',
+      title: 'STRC Coverage Ratio',
+      body: 'The ratio of net income generated by Tipolis’s STRC position on its corporate balance sheet to the total fixed monthly distribution obligations across all outstanding City Bond instruments. A ratio <strong>above 1.0×</strong> indicates that STRC income alone is sufficient to service all investor distributions — a direct measure of <strong>liquidity resilience</strong> during ramp periods and market stress. Reported quarterly as a guidance indicator for shareholders and institutional investors evaluating the financial health and strategic soundness of Tipolis’s capital structure.'
     },
-    'opp-urban': {
+    'opp-nextgen': {
       eyebrow: 'Opportunity',
       accent: 'var(--accent-treasury)',
-      title: '2.5 Billion New Urban Dwellers by 2050',
-      body: 'The UN projects 2.5 billion additional people will move to urban areas by 2050. Governments in developing countries cannot build the required city infrastructure alone. <strong>Private city operators fill this gap</strong> — and generate returns doing it. Tipolis is structured to serve this demand at scale.'
+      title: 'The Next Generation of Cities Is Being Built Now',
+      body: 'The UN projects <strong>2.5 billion additional people</strong> will move to urban areas by 2050. The majority of this growth will occur in countries where governments lack the institutional and fiscal capacity to build the required infrastructure alone. <strong>Private city operators fill this structural gap</strong> — efficiently, profitably, and at scale. Tipolis is positioned to serve this demand through a capital structure that finances city development without relying on sovereign budgets or multilateral institutions.'
     },
-    'opp-citymarket': {
+    'opp-ai': {
       eyebrow: 'Opportunity',
       accent: 'var(--accent-treasury)',
-      title: 'Define the City Credit Market',
-      body: 'City Bonds as an asset class do not yet exist in institutional portfolio allocation frameworks. Tipolis is building the first programmatic, market-recognized, institutionally distributed city debt program. <strong>The institution that defines a new fixed-income category captures the pricing power and investor relationships of an entire market</strong>.'
+      title: 'AI and Technological Disruption Will Amplify Bitcoin’s Value',
+      body: 'Artificial intelligence is accelerating the displacement of labor, compressing the cost of financial and compliance infrastructure, and concentrating economic output in fewer, higher-leverage assets. In an environment of accelerating productivity and monetary expansion, <strong>scarce, programmable, decentralized stores of value</strong> become structurally more attractive to institutional capital. Bitcoin benefits directly and disproportionately from this shift. Tipolis’s systematic Bitcoin accumulation strategy positions the company to capture this appreciation on its balance sheet — growing the strategic reserve as the macro environment increasingly supports it.'
     },
-    'opp-governance': {
+    'opp-investors': {
       eyebrow: 'Opportunity',
       accent: 'var(--accent-treasury)',
-      title: 'Global Governance Failure',
-      body: 'Housing crises, crumbling infrastructure, and ballooning public debt in both developed and developing countries are creating structural demand for the private city model. Jurisdictions that deliver <strong>predictable rules, competitive taxation, and accountable governance</strong> attract capital that legacy cities cannot retain.'
+      title: 'A Captive, Conviction-Based Investor Segment',
+      body: 'The convergence of Real Estate, Governance, and Bitcoin identifies a <strong>specific investor profile that does not yet have a dedicated vehicle</strong>: long-duration, conviction-oriented capital that believes in hard assets, sound institutional design, and Bitcoin’s role in the future financial system. This segment is underserved, coherent in its worldview, and highly loyal once the thesis is established. Tipolis is not competing for generic fixed-income or real estate allocations — it is <strong>creating its own allocation category</strong>, with a captive investor base that will return to fund successive projects as the track record compounds.'
+    },
+    'opp-infra': {
+      eyebrow: 'Opportunity',
+      accent: 'var(--accent-treasury)',
+      title: 'Proprietary Financial and Legal Infrastructure as a Capital Magnet',
+      body: 'By building its own financial, regulatory, and legal infrastructure — rather than outsourcing origination, structuring, distribution, and compliance to intermediaries — Tipolis becomes a <strong>platform rather than an issuer</strong>. This means lower cost of capital, faster execution, and direct investor relationships that deepen with every issuance. Capital that would ordinarily flow to conventional real estate funds, infrastructure bonds, or Bitcoin ETFs can be redirected into Tipolis’s instruments precisely because Tipolis offers something none of those vehicles can: <strong>the three layers simultaneously, in a single structured instrument, at institutional grade</strong>.'
     },
     'risk-execution': {
       eyebrow: 'Risk',
